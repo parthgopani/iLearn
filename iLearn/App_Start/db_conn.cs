@@ -41,11 +41,21 @@ namespace iLearn.App_Start
                 cn.Close();
                 return ds;
             }
-            catch
+            catch (Exception ex)
             {
                 cn.Close();
                 return null;
             }
+        }
+        public int getid(string q)
+        {
+            cmd.CommandText= q;
+            cmd.Connection= cn;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            cn.Open();
+            int id = (int)cmd.ExecuteNonQuery();
+            cn.Close();
+            return id;
         }
     }
 }

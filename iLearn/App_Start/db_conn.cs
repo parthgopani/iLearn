@@ -27,5 +27,25 @@ namespace iLearn.App_Start
                 cn.Close();
             }
         }
+        public DataSet select(string q)
+        {
+            try
+            {
+                DataSet ds = new DataSet();
+                cmd.CommandText = q;
+                cmd.Connection = cn;
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                cn.Open();
+                cmd.ExecuteNonQuery();
+                da.Fill(ds);
+                cn.Close();
+                return ds;
+            }
+            catch
+            {
+                cn.Close();
+                return null;
+            }
+        }
     }
 }

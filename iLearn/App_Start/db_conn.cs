@@ -9,7 +9,7 @@ namespace iLearn.App_Start
 {
     public class db_conn
     {
-        SqlConnection cn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\iLearn\\iLearn\\App_Data\\iLearn.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection cn = new SqlConnection("Server=myServerAddress;Database=myDatabase;Trusted_Connection=True;");
 
         SqlCommand cmd = new SqlCommand();
         public void modify(string q)

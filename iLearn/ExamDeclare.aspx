@@ -50,13 +50,29 @@
                       <label for="lbltotque">Total Question</label>
                       <asp:TextBox ID="txttotque" runat="server" CssClass="form-control" placeholder="Enter Total Question"></asp:TextBox>
                     </div>
-                    <asp:Button ID="btnsubmit" runat="server" Text="SUBMIT" class="btn btn-inverse-primary mr-2" />
-                    <asp:Button ID="btnupdate" runat="server" Text="UPDATE" class="btn btn-inverse-info mr-2" />
-                    <asp:Button ID="btndelete" runat="server" Text="DELETE" class="btn btn-inverse-danger mr-2" />
+                    <asp:Button ID="btnsubmit" runat="server" Text="SUBMIT" class="btn btn-inverse-primary mr-2" OnClick="btnsubmit_Click"/>
+                    <asp:Button ID="btnupdate" runat="server" Text="UPDATE" class="btn btn-inverse-info mr-2" OnClick="btnupdate_Click"/>
+                    <asp:Button ID="btndelete" runat="server" Text="DELETE" class="btn btn-inverse-danger mr-2" OnClick="btndelete_Click"/>
                     <asp:Button ID="btncancel" runat="server" Text="CANCEL" class="btn btn-inverse-dark" />
                   </form>
                 </div>
               </div>
             </div>
+    <div class="col-12 grid-margin stretch-card">
+      <div class="card">
+        <div class="card-body">
+            <asp:HiddenField ID="hdnfield" runat="server" />
+            <asp:GridView ID="grdexam" runat="server" AutoGenerateColumns="false" OnRowCommand="grdexam_RowCommand" AllowPaging="true" PageSize="15" OnPageIndexChanging="grdexam_PageIndexChanging" AllowSorting="true" OnSorting="grdexam_Sorting" HorizontalAlign="Center">
+                <Columns>
+                    <asp:TemplateField HeaderText="Exam">
+                        <ItemTemplate>
+                            <asp:LinkButton ID="lnkbtn" runat="server" Text="<%#Bind('[Exam_Id]') %>"></asp:LinkButton>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                </Columns>
+            </asp:GridView>
+            </div>
+          </div>
+        </div>
 </asp:Content>
 

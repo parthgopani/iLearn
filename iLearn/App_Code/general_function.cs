@@ -27,7 +27,7 @@ public class general_function
                 drpList.SelectedIndex = 0;
             }
         }
-        catch (Exception ex)
+        catch (Exception)
         {
             drpList.DataSource=null;
             drpList.DataBind();
@@ -49,7 +49,7 @@ public class general_function
                 dg.DataSource = null;
             }
         }
-        catch (Exception ex)
+        catch (Exception)
         {
 
         }

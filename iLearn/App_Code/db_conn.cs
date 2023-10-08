@@ -40,7 +40,7 @@ public class db_conn
             cn.Close();
             return ds;
         }
-        catch (Exception ex)
+        catch (Exception)
         {
             cn.Close();
             return null;

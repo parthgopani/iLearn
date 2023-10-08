@@ -16,6 +16,17 @@
     <link rel="shortcut icon" href="images/favicon.png" />
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
+    <style>
+    .gridview {
+        border-collapse: collapse;
+    }
+    .gridview th, .gridview td {
+        padding: 8px;
+        text-align: center;
+        vertical-align: middle;
+        border: 1px solid #ddd;
+    }
+</style>
 </head>
 <body>
     

@@ -3,6 +3,7 @@
     <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
 
         <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+            
         </asp:Content>
         <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
@@ -11,9 +12,6 @@
     <div class="col-md-12 grid-margin">
       <div class="row">
         <div class="col-12 col-xl-12 mb-4 mb-xl-0">
-
-
-          
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title">Exam Declararion</h4>
@@ -112,15 +110,16 @@
                             <asp:Button ID="btndelete" runat="server" Text="DELETE" class="btn btn-inverse-danger mr-2"
                                 OnClick="btndelete_Click" />
                             <asp:Button ID="btncancel" runat="server" Text="CANCEL" class="btn btn-inverse-dark" />
-
-                            <div class="col-12 grid-margin stretch-card">
+                            <div class="col-md-12 grid-margin">
+                                <div class="row">
+                                    <div class="col-12 col-xl-12 mb-4 mb-xl-0">
                                 <div class="card">
                                     <div class="card-body">
                                         <asp:HiddenField ID="hdnfield" runat="server" />
                                         <asp:GridView ID="grdexam" runat="server" AutoGenerateColumns="false"
                                             OnRowCommand="grdexam_RowCommand" AllowPaging="true" PageSize="15"
                                             OnPageIndexChanging="grdexam_PageIndexChanging" AllowSorting="true"
-                                            OnSorting="grdexam_Sorting" HorizontalAlign="Center">
+                                            OnSorting="grdexam_Sorting" HorizontalAlign="Center" CssClass="gridview">
                                             <Columns>
                                                 <asp:TemplateField HeaderText="Exam">
                                                     <ItemTemplate>
@@ -150,6 +149,8 @@
                                     </div>
                                 </div>
                             </div>
+                                    </div>
+                                </div>
                         </form>
                     </div>
                 </div>

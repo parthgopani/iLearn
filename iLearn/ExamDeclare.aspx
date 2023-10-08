@@ -18,7 +18,7 @@
                     </div>
                     <div class="form-group">
                       <label for="lblcourse">Course</label>
-                        <asp:DropDownList ID="drpcourse" CssClass="form-control" runat="server" AutoPostBack="false" >
+                        <asp:DropDownList ID="drpcourse" CssClass="form-control" runat="server" AutoPostBack="false" data-toggle="dropdown" >
                         </asp:DropDownList>
                     </div>
 
@@ -75,7 +75,7 @@
                 <Columns>
                     <asp:TemplateField HeaderText="Exam">
                         <ItemTemplate>
-                            
+                            <asp:LinkButton ID="LinkButton1" runat="server" Text='<%#Bind("[Exam_Id]") %>' CommandName="Exam_Id" CommandArgument='<%#Bind("[Exam_Id]") %>'></asp:LinkButton>
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:BoundField DataField="exam_name" HeaderText="Exam Name" />

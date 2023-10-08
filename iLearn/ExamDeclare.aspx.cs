@@ -16,6 +16,7 @@ public partial class ExamDeclare : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         txtstartdatecal.SelectedDate = DateTime.Now;
+        
         if (!IsPostBack)
         {
             bindgrid();
@@ -92,7 +93,7 @@ public partial class ExamDeclare : System.Web.UI.Page
                 Response.Write("<script>alert('There is no question available...!')</script>");
             }
         }
-        catch (Exception ex)
+        catch (Exception)
         {
             Response.Write("<script>alert('Exam not declared & Something went wrong...!')</script>");
         }
@@ -109,7 +110,7 @@ public partial class ExamDeclare : System.Web.UI.Page
             disabled_up_del();
             btnsubmit.Visible = true;
         }
-        catch (Exception ex)
+        catch (Exception)
         {
             Response.Write("<script>alert('Exam not updated & Something went wrong...!')</script>");
         }
@@ -127,7 +128,7 @@ public partial class ExamDeclare : System.Web.UI.Page
             disabled_up_del();
             btnsubmit.Visible = true;
         }
-        catch (Exception ex)
+        catch (Exception)
         {
             Response.Write("<script>alert('Exam not deleted & Something went wrong...!')</script>");
         }
@@ -169,7 +170,7 @@ public partial class ExamDeclare : System.Web.UI.Page
                 btnsubmit.Visible = false;
             }
         }
-        catch (Exception ex)
+        catch (Exception)
         {
             Response.Write("<script>alert('Something went wrong .... !')</script>");
         }
@@ -182,11 +183,18 @@ public partial class ExamDeclare : System.Web.UI.Page
         {
             DateTime sd = Convert.ToDateTime(txtstartdatecal.SelectedDate);
             hdnfield.Value = txtstartdatecal.SelectedDate.ToString();
-            txtstartdatecal.SelectedDate = Convert.ToDateTime(hdnfield.Value);
+            txtenddatecal.SelectedDate = Convert.ToDateTime(hdnfield.Value);
         }
         else
         {
             Timer1.Enabled = false;
         }
+    }
+
+    protected void calimgbtn_Click(object sender, ImageClickEventArgs e)
+    {
+        DateTime sd = Convert.ToDateTime(txtstartdatecal.SelectedDate);
+        hdnfield.Value = txtstartdatecal.SelectedDate.ToString();
+        txtenddatecal.SelectedDate = Convert.ToDateTime(hdnfield.Value);
     }
 }

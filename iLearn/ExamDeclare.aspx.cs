@@ -6,6 +6,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
+using System.Security.Cryptography;
+
 
 public partial class ExamDeclare : System.Web.UI.Page
 {
@@ -13,7 +15,7 @@ public partial class ExamDeclare : System.Web.UI.Page
     db_conn conn = new db_conn();
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        txtstartdatecal.SelectedDate = DateTime.Now;
         if (!IsPostBack)
         {
             bindgrid();
@@ -35,6 +37,7 @@ public partial class ExamDeclare : System.Web.UI.Page
     {
         DataSet ds = new DataSet();
         ds = conn.select("Select * from Exam e, Course c where e.Course_Id=c.Course_Id order by Exam_Id desc");
+        gf.fill_grid(ds, grdexam);
     }
     public void clearall(Control Parent)
     {
@@ -67,35 +70,39 @@ public partial class ExamDeclare : System.Web.UI.Page
 
     protected void btnsubmit_Click(object sender, EventArgs e)
     {
-        Int32 cnt = 0;
-        if(cnt >= Convert.ToInt32(txttotque.Text))
+        try
         {
-            try
+            DataSet ds = new DataSet();
+            string q1 = "select * from Question where Course_Id = " + drpcourse.SelectedValue + "";
+            ds = conn.select(q1);
+            Int32 cnt = 0;
+            
+            cnt += ds.Tables[0].Rows.Count;
+            if (cnt >= Convert.ToInt32(txttotque.Text))
             {
-                string q = "insert into Exam (Exam_Name, Course_Id, Exam_Start_Date, Exam_End_Date, Total_Marks, Passing_Marks, Duration, Total_Question) values ('" + txtexamname.Text + "'," + drpcourse.SelectedValue + ",'" + txtstartdate.Text + "10:00:00', '" + txtenddate.Text + "18:00:00', " + txttotmarks.Text + "," + txtpassmarks.Text + ", " + txtduration.Text + ", " + txttotque.Text + "); select @@IDENTITY;";
+                string q = "insert into Exam (Exam_Name, Course_Id, Exam_Start_Date, Exam_End_Date, Total_Marks, Passing_Marks, Duration, Total_Question) values ('" + txtexamname.Text + "'," + drpcourse.SelectedValue + ",'" + txtstartdate.Text + " 10:00:00','" + txtenddate.Text + " 18:00:00'," + txttotmarks.Text + "," + txtpassmarks.Text + "," + txtduration.Text + "," + txttotque.Text + ");select @@IDENTITY;";
                 conn.select(q);
                 Response.Write("<script>alert('Exam Declared Successfully')</script>");
                 bindgrid();
                 clearall(this);
                 disabled_up_del();
             }
-            catch (Exception ex)
+            else
             {
-                Response.Write("<script>alert('Exam not declared & Something went wrong...!')</script>");
+                Response.Write("<script>alert('There is no question available...!')</script>");
             }
         }
-        else
+        catch (Exception ex)
         {
-            Response.Write("<script>alert('There is no question available...!')</script>");
+            Response.Write("<script>alert('Exam not declared & Something went wrong...!')</script>");
         }
-        
-    }
 
+    }
     protected void btnupdate_Click(object sender, EventArgs e)
     {
         try
         {
-            string q = "uodate Exam set Exam_Name = '" + txtexamname.Text + "', Courese_Id = '" + drpcourse.SelectedValue + "', Exam_Start_Date = '" + Convert.ToDateTime(txtstartdate.Text).ToString("yyyy/MM/dd") + "10:00:00', Exam_End_Date = '" + Convert.ToDateTime(txtenddate.Text).ToString("yyyy/MM/dd") + "18:00:00', Total_Marks = " + txttotmarks.Text + ", Passing_Marks = " + txtpassmarks.Text + ", Duration =" + txtduration.Text + ", Total_Question = " + txttotque.Text + " where Exam_Id = " + hdnexam.Value;
+            string q = "update Exam set Exam_Name = '" + txtexamname.Text + "',Course_Id='" + drpcourse.SelectedValue + "',Exam_Start_Date = '" + Convert.ToDateTime(txtstartdate.Text).ToString("yyyy/MM/dd") + " 10:00:00',Exam_End_Date = '" + Convert.ToDateTime(txtenddate.Text).ToString("yyyy/MM/dd") + " 18:00:00',Total_Marks = " + txttotmarks.Text + ",Passing_Marks = " + txtpassmarks.Text + ",Duration=" + txtduration.Text + ",Total_Question=" + txttotque.Text + " where Exam_Id = " + hdnexam.Value;
             conn.modify(q);
             Response.Write("<script>alert('Exam Updated Successfully')</script>");
             bindgrid();
@@ -175,6 +182,7 @@ public partial class ExamDeclare : System.Web.UI.Page
         {
             DateTime sd = Convert.ToDateTime(txtstartdatecal.SelectedDate);
             hdnfield.Value = txtstartdatecal.SelectedDate.ToString();
+            txtstartdatecal.SelectedDate = Convert.ToDateTime(hdnfield.Value);
         }
         else
         {

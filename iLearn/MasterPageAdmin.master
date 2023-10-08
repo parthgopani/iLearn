@@ -80,18 +80,10 @@
         
     
     <div class="main-panel">
-        <div class="content-wrapper">
-          <div class="row">
-            <div class="col-md-12 grid-margin">
-              <div class="row">
-                <div class="col-12 col-xl-8 mb-4 mb-xl-0">
+        
                       <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
                       </asp:ContentPlaceHolder>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+                
       </div>
     </div>
         </div>

@@ -13,9 +13,20 @@
     <link rel="stylesheet" href="vendors/datatables.net-bs4/dataTables.bootstrap4.css">
     <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
     <link rel="stylesheet" type="text/css" href="js/select.dataTables.min.css">
-    <link rel="shortcut icon" href="images/favicon.png" />
+    <link rel="shortcut icon" href="images/logo-mini.png" />
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
+    <style>
+    .gridview {
+        border-collapse: collapse;
+    }
+    .gridview th, .gridview td {
+        padding: 8px;
+        text-align: center;
+        vertical-align: middle;
+        border: 1px solid #ddd;
+    }
+</style>
 </head>
 <body>
     
@@ -23,8 +34,8 @@
         
         <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-        <a class="navbar-brand brand-logo mr-5" href="index.html"><img src="images/logo.svg" class="mr-2" alt="logo"/></a>
-        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/logo-mini.svg" alt="logo"/></a>
+        <a class="navbar-brand brand-logo mr-5" href="index.html"><img src="images/logo.png" class="mr-2" alt="logo"/></a>
+        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/logo-mini.png" alt="logo"/></a>
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
         <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -80,18 +91,10 @@
         
     
     <div class="main-panel">
-        <div class="content-wrapper">
-          <div class="row">
-            <div class="col-md-12 grid-margin">
-              <div class="row">
-                <div class="col-12 col-xl-8 mb-4 mb-xl-0">
+        
                       <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
                       </asp:ContentPlaceHolder>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+                
       </div>
     </div>
         </div>

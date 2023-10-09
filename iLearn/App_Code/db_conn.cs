@@ -7,7 +7,7 @@ using System.Web;
 
 public class db_conn
 {
-    SqlConnection cn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\iLearn\\iLearn\\App_Data\\iLearn.mdf;Integrated Security=True");
+    SqlConnection cn = new SqlConnection("Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename=D:\\iLearn\\iLearn\\App_Data\\iLearn.mdf;Integrated Security = True");
 
 
     SqlCommand cmd = new SqlCommand();

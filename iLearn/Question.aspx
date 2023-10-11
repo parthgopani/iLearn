@@ -32,7 +32,7 @@
                                                 ErrorMessage="Course Required" ForeColor="Red" ValidationGroup="fieldcheck"></asp:RequiredFieldValidator>
                                         </div>
                                     </div>
-                                    <div class="form-group row">
+                               <!--     <div class="form-group row">
                                         <label for="lblquestiontype" class="col-sm-2 col-form-label">Question Type</label>
                                         <div class="col-sm-9">
                                             <asp:DropDownList ID="drpquestiontype" CssClass="form-control" runat="server"
@@ -43,7 +43,7 @@
                                             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="drpquestiontype"
                                                 ErrorMessage="Question Type Required" ForeColor="Red" ValidationGroup="fieldcheck"></asp:RequiredFieldValidator>
                                         </div>
-                                    </div>
+                                    </div>--->
                                     <div class="form-group row">
                                         <label for="lblcomplexcitytype" class="col-sm-2 col-form-label">Complexcity Type</label>
                                         <div class="col-sm-9">
@@ -132,7 +132,6 @@
                                                                             CommandArgument='<%#Bind("[Que_Id]") %>'></asp:LinkButton>
                                                                     </ItemTemplate>
                                                                 </asp:TemplateField>
-                                                                <asp:BoundField DataField="Sem_Name" HeaderText="Semester Name" />
                                                                 <asp:BoundField DataField="Course_Name" HeaderText="Course Name" />
                                                                 <asp:BoundField DataField="Complex_Type" HeaderText="Complexity" />
                                                                 <asp:BoundField DataField="Que_Text" HeaderText="Question Text" />

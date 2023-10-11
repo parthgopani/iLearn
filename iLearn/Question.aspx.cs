@@ -35,7 +35,6 @@ public partial class Question : System.Web.UI.Page
             {
                 if (ds.Tables[0].Rows.Count > 0)
                 {
-                    drpsemester.SelectedValue = ds.Tables[0].Rows[0]["Sem_Id"].ToString();
                     drpcourse.SelectedValue = ds.Tables[0].Rows[0]["Course_Id"].ToString();
                     drpcomplexcity.SelectedValue = ds.Tables[0].Rows[0]["Complex_Id"].ToString();
                     txtquestiontext.Text = ds.Tables[0].Rows[0]["Que_Text"].ToString();
@@ -83,17 +82,42 @@ public partial class Question : System.Web.UI.Page
         try
         {
             DataSet ds = new DataSet();
-            string qry = "if not exists (select * from Question where Course_Id = " + drpcourse.SelectedValue + " and Que_Text ='" + txtquestiontext.Text + "' and O1 = '" + txtoption1.Text + "' and O2 = '" + txtoption2.Text + "' and O3 = '" + txtoption3.Text + "' and O4 = '" + txtoption4.Text + "'  )insert into Question(Course_Id,Que_Text,O1,O2,O3,O4,Correct_Ans) values(" + drpcourse.SelectedValue + ","  + txtquestiontext.Text + "','" + txtoption1.Text + "','" + txtoption2.Text + "','" + txtoption3.Text + "','" + txtoption4.Text + "','" + txtcorrectanswer.Text + "')";
-            conn.modify(qry);
-        
+
+            int courseId = Convert.ToInt32(drpcourse.SelectedValue);
+            int complexityId = Convert.ToInt32(drpcomplexcity.SelectedValue);
+            string questionText = txtquestiontext.Text;
+            string option1 = txtoption1.Text;
+            string option2 = txtoption2.Text;
+            string option3 = txtoption3.Text;
+            string option4 = txtoption4.Text;
+            string correctAnswer = txtcorrectanswer.Text;
+
+            string existenceQuery = "SELECT * FROM Question WHERE Course_Id = " + courseId + " AND Que_Text = '" + questionText + "' AND O1 = '" + option1 + "' AND O2 = '" + option2 + "' AND O3 = '" + option3 + "' AND O4 = '" + option4 + "'";
+            DataSet existenceDs = conn.select(existenceQuery);
+
+            if (existenceDs != null && existenceDs.Tables.Count > 0 && existenceDs.Tables[0].Rows.Count > 0)
+            {
+                // A question with the same values already exists
+                Response.Write("<script>alert('Question already exists.')</script>");
+            }
+            else
+            {
+                // The question does not exist, proceed with insertion
+                string insertQuery = "INSERT INTO Question (Course_Id, Complex_Id, Que_Text, O1, O2, O3, O4, Correct_Ans, UploadDateTime) " +
+                    "VALUES (" + courseId + ", " + complexityId + ", '" + questionText + "', '" + option1 + "', '" + option2 + "', '" + option3 + "', '" + option4 + "', '" + correctAnswer + "', GETDATE())";
+
+                conn.modify(insertQuery);
+
+                Response.Write("<script>alert('Question Inserted Successfully')</script>");
+                bindgrid();
+                clearall(this);
+                disabled_up_del();
+            }
         }
         catch {
             Response.Write("<script>alert('Question Not Inserted & Something Went Wrong...!')</script>");
         }
-        Response.Write("<script>alert( Question Inserted Successfully')</script>");
-        bindgrid();
-        clearall(this);
-        disabled_up_del();
+      
 
     }
 
@@ -101,8 +125,20 @@ public partial class Question : System.Web.UI.Page
     {
         try
         {
-            string qry = "update Question set Course_Id='" + drpcourse.SelectedValue + "',Complex_Id='" + drpcomplexcity.SelectedValue + "',Que_Text = '" + txtquestiontext.Text + "',O1='" + txtoption1.Text + "',O2='" + txtoption2.Text + "',O3='" + txtoption3.Text + "',O4='" + txtoption4.Text + "',Correct_Ans = '" + txtcorrectanswer.Text + "'  where Que_Id = " + hdnquestion.Value;
-            conn.modify(qry);
+            int courseId = Convert.ToInt32(drpcourse.SelectedValue);
+            int complexityId = Convert.ToInt32(drpcomplexcity.SelectedValue);
+            string questionText = txtquestiontext.Text;
+            string option1 = txtoption1.Text;
+            string option2 = txtoption2.Text;
+            string option3 = txtoption3.Text;
+            string option4 = txtoption4.Text;
+            string correctAnswer = txtcorrectanswer.Text;
+            int questionId = Convert.ToInt32(hdnquestion.Value);
+
+            string updateQuery = "UPDATE Question SET Course_Id = " + courseId + ", Complex_Id = " + complexityId + ", Que_Text = '" + questionText + "', O1 = '" + option1 + "', O2 = '" + option2 + "', O3 = '" + option3 + "', O4 = '" + option4 + "', Correct_Ans = '" + correctAnswer + "' WHERE Que_Id = " + questionId;
+
+
+            conn.modify(updateQuery);
             Response.Write("<script>alert('Question Updated Successfully')</script>");
 
             bindgrid();

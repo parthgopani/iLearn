@@ -1,4 +1,5 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPageAdmin.master.cs" Inherits="MasterPageAdmin" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPageAdmin.master.cs"
+    Inherits="MasterPageAdmin" %>
 
 <!DOCTYPE html>
 
@@ -14,90 +15,137 @@
     <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
     <link rel="stylesheet" type="text/css" href="js/select.dataTables.min.css">
     <link rel="shortcut icon" href="images/logo-mini.png" />
-    <asp:ContentPlaceHolder id="head" runat="server">
+    <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <style>
-    .gridview {
-        border-collapse: collapse;
-    }
-    .gridview th, .gridview td {
-        padding: 8px;
-        text-align: center;
-        vertical-align: middle;
-        border: 1px solid #ddd;
-    }
-</style>
+        .gridview {
+            border-collapse: collapse;
+        }
+
+            .gridview th, .gridview td {
+                padding: 8px;
+                text-align: center;
+                vertical-align: middle;
+                border: 1px solid #ddd;
+            }
+    </style>
 </head>
 <body>
-    
+
     <div class="container-scroller">
-        
+
         <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
-      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-          <a class="navbar-brand brand-logo mr-5" href="index.html"><img src="images/logo.png" class="mr-2" alt="logo"/></a>
-        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/logo-mini.png" alt="logo"/></a>
-      </div>
-      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
-        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
-          <span class="icon-menu"></span>
-        </button>
-        <ul class="navbar-nav mr-lg-2">
-        </ul>
-        <ul class="navbar-nav navbar-nav-right">
-          <li class="nav-item nav-profile dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
-              <img src="images/faces/face28.jpg" alt="profile"/>
-            </a>
-            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-              <a class="dropdown-item">
-                <i class="ti-settings text-primary"></i>
-                Settings
-              </a>
-              <a class="dropdown-item">
-                <i class="ti-power-off text-primary"></i>
-                Logout
-              </a>
+            <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+                <a class="navbar-brand brand-logo mr-5" href="index.html">
+                    <img src="images/logo.png" class="mr-2" alt="logo" /></a>
+                <a class="navbar-brand brand-logo-mini" href="index.html">
+                    <img src="images/logo-mini.png" alt="logo" /></a>
             </div>
-          </li>
-        </ul>
-        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
-          <span class="icon-menu"></span>
-        </button>
-      </div>
-    </nav>
-    <div class="container-fluid page-body-wrapper">
-      <nav class="sidebar sidebar-offcanvas" id="sidebar">
-        <ul class="nav">
-          <li class="nav-item">
-            <a class="nav-link" href="AdminDashboard.aspx">
-              <i class="icon-grid menu-icon"></i>
-              <span class="menu-title">Dashboard</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="ExamDeclare.aspx">
-              <i class="icon-paper menu-icon"></i>
-              <span class="menu-title">Exam Declaration</span>
-            </a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="Question.aspx">
-                <i class="icon-paper menu-icon"></i>
-                <span class="menu-title">Question Management</span>
-              </a>
-            </li>
-        </ul>
-      </nav>
-        
-    
-    <div class="main-panel">
-        
-                      <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
-                      </asp:ContentPlaceHolder>
-                
-      </div>
-    </div>
+            <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+                <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+                    <span class="icon-menu"></span>
+                </button>
+                <ul class="navbar-nav mr-lg-2">
+                </ul>
+                <ul class="navbar-nav navbar-nav-right">
+                    <li class="nav-item nav-profile dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+                            <img src="images/faces/face28.jpg" alt="profile" />
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+                            <a class="dropdown-item">
+                                <i class="ti-settings text-primary"></i>
+                                Settings
+                            </a>
+                            <a class="dropdown-item" href="Login.aspx">
+                                <i class="ti-power-off text-primary"></i>
+                                Logout
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+                <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+                    data-toggle="offcanvas">
+                    <span class="icon-menu"></span>
+                </button>
+            </div>
+        </nav>
+        <div class="container-fluid page-body-wrapper">
+            <nav class="sidebar sidebar-offcanvas" id="sidebar">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="AdminDashboard.aspx">
+                            <i class="icon-grid menu-icon"></i>
+                            <span class="menu-title">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ExamDeclare.aspx">
+                            <i class="icon-paper menu-icon"></i>
+                            <span class="menu-title">Exam Declaration</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Question.aspx">
+                            <i class="icon-paper menu-icon"></i>
+                            <span class="menu-title">Question Management</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">
+                            <i class="icon-paper menu-icon"></i>
+                            <span class="menu-title">Import Question</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">
+                            <i class="icon-paper menu-icon"></i>
+                            <span class="menu-title">Program</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">
+                            <i class="icon-paper menu-icon"></i>
+                            <span class="menu-title">Semester</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">
+                            <i class="icon-paper menu-icon"></i>
+                            <span class="menu-title">Course</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">
+                            <i class="icon-paper menu-icon"></i>
+                            <span class="menu-title">Complexity</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">
+                            <i class="icon-paper menu-icon"></i>
+                            <span class="menu-title">State</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">
+                            <i class="icon-paper menu-icon"></i>
+                            <span class="menu-title">City</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+
+
+            <div class="main-panel">
+
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+
+            </div>
         </div>
+    </div>
     <script src="vendors/js/vendor.bundle.base.js"></script>
     <script src="vendors/chart.js/Chart.min.js"></script>
     <script src="vendors/datatables.net/jquery.dataTables.js"></script>

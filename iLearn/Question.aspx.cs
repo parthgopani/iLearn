@@ -81,45 +81,85 @@ public partial class Question : System.Web.UI.Page
     {
         try
         {
-            DataSet ds = new DataSet();
+            int courseId = 0;
+            int complexityId = 0;
 
-            int courseId = Convert.ToInt32(drpcourse.SelectedValue);
-            int complexityId = Convert.ToInt32(drpcomplexcity.SelectedValue);
-            string questionText = txtquestiontext.Text;
-            string option1 = txtoption1.Text;
-            string option2 = txtoption2.Text;
-            string option3 = txtoption3.Text;
-            string option4 = txtoption4.Text;
-            string correctAnswer = txtcorrectanswer.Text;
+            // Retrieve Course ID
+            string selectedCourseName = drpcourse.SelectedItem.Text;
+            string courseQuery = "SELECT Course_Id FROM Course WHERE Course_Name = '" + selectedCourseName + "'";
+            DataSet courseResult = conn.select(courseQuery);
 
-            string existenceQuery = "SELECT * FROM Question WHERE Course_Id = " + courseId + " AND Que_Text = '" + questionText + "' AND O1 = '" + option1 + "' AND O2 = '" + option2 + "' AND O3 = '" + option3 + "' AND O4 = '" + option4 + "'";
-            DataSet existenceDs = conn.select(existenceQuery);
-
-            if (existenceDs != null && existenceDs.Tables.Count > 0 && existenceDs.Tables[0].Rows.Count > 0)
+            if (courseResult != null && courseResult.Tables.Count > 0 && courseResult.Tables[0].Rows.Count > 0)
             {
-                // A question with the same values already exists
-                Response.Write("<script>alert('Question already exists.')</script>");
+                courseId = Convert.ToInt32(courseResult.Tables[0].Rows[0]["Course_Id"]);
+            }
+
+            // Retrieve Complexity ID
+            string selectedComplexityName = drpcomplexcity.SelectedItem.Text;
+            string complexityQuery = "SELECT Complex_Id FROM Complexity WHERE Complex_Type = '" + selectedComplexityName + "'";
+            DataSet complexityResult = conn.select(complexityQuery);
+
+            if (complexityResult != null && complexityResult.Tables.Count > 0 && complexityResult.Tables[0].Rows.Count > 0)
+            {
+                complexityId = Convert.ToInt32(complexityResult.Tables[0].Rows[0]["Complex_Id"]);
+            }
+
+            // Check if Course ID and Complexity ID are not null or 0
+            if (courseId != 0 && complexityId != 0)
+            {
+                string questionText = txtquestiontext.Text.Trim();
+                string option1 = txtoption1.Text.Trim();
+                string option2 = txtoption2.Text.Trim();
+                string option3 = txtoption3.Text.Trim();
+                string option4 = txtoption4.Text.Trim();
+                string correctAnswer = txtcorrectanswer.Text.Trim();
+
+                // Check if all fields are filled
+                if (!string.IsNullOrEmpty(questionText) && !string.IsNullOrEmpty(option1) &&
+                    !string.IsNullOrEmpty(option2) && !string.IsNullOrEmpty(option3) && !string.IsNullOrEmpty(option4) && !string.IsNullOrEmpty(correctAnswer))
+                {
+                    // Check if the question already exists
+                    string existenceQuery = "SELECT COUNT(*) FROM Question WHERE Course_Id = " + courseId +
+                        " AND Que_Text = '" + questionText + "' AND O1 = '" + option1 + "' AND O2 = '" + option2 + "'" +
+                        " AND O3 = '" + option3 + "' AND O4 = '" + option4 + "'";
+                    DataSet result = conn.select(existenceQuery);
+                    int questionCount = result != null && result.Tables.Count > 0 && result.Tables[0].Rows.Count > 0 ? 1 : 0;
+
+                    if (questionCount > 0)
+                    {
+                        Response.Write("<script>alert('Question already exists.')</script>");
+                    }
+                    else
+                    {
+                        // Insert the question into the database
+                        string insertQuery = "INSERT INTO Question (Course_Id, Complex_Id, Que_Text, O1, O2, O3, O4, Correct_Ans, UploadDateTime) " +
+                            "VALUES (" + courseId + ", " + complexityId + ", '" + questionText + "', '" + option1 + "', '" + option2 + "', '" +
+                            option3 + "', '" + option4 + "', '" + correctAnswer + "', GETDATE())";
+
+                        conn.modify(insertQuery);
+
+                        Response.Write("<script>alert('Question Inserted Successfully')</script>");
+                        bindgrid();
+                        clearall(this);
+                        disabled_up_del();
+                    }
+                }
+                else
+                {
+                    Response.Write("<script>alert('Please fill in all required fields.')</script>");
+                }
             }
             else
             {
-                // The question does not exist, proceed with insertion
-                string insertQuery = "INSERT INTO Question (Course_Id, Complex_Id, Que_Text, O1, O2, O3, O4, Correct_Ans, UploadDateTime) " +
-                    "VALUES (" + courseId + ", " + complexityId + ", '" + questionText + "', '" + option1 + "', '" + option2 + "', '" + option3 + "', '" + option4 + "', '" + correctAnswer + "', GETDATE())";
-
-                conn.modify(insertQuery);
-
-                Response.Write("<script>alert('Question Inserted Successfully')</script>");
-                bindgrid();
-                clearall(this);
-                disabled_up_del();
+                Response.Write("<script>alert('Invalid Course or Complexity ID.')</script>");
             }
         }
-        catch {
-            Response.Write("<script>alert('Question Not Inserted & Something Went Wrong...!')</script>");
+        catch (Exception ex)
+        {
+            Response.Write("<script>alert('Question Not Inserted & Something Went Wrong... " + ex.Message + "')</script>");
         }
-      
-
     }
+
 
     protected void btnupdate_Click(object sender, EventArgs e)
     {
@@ -173,19 +213,7 @@ public partial class Question : System.Web.UI.Page
         clearall(this);
 
     }
-    protected void drpquestiontype_SelectedIndexChanged(object sender, EventArgs e)
-    {
-        if (Convert.ToString(drpquestiontype.SelectedItem) == "True False")
-        {
-            txtoption3.Enabled = false;
-            txtoption4.Enabled = false;
-        }
-        else
-        {
-            txtoption3.Enabled = true;
-            txtoption4.Enabled = true;
-        }
-    }
+   
     public void clearall(Control Parent)
     {
         foreach (Control x in Parent.Controls)
@@ -217,7 +245,9 @@ public partial class Question : System.Web.UI.Page
     {
         try
         {
-            gf.fillcombo("select * from Course c,Semester s where c.Sem_Id=" + drpsemester.SelectedValue + " and s.Sem_Id=s.Sem_Id", drpcourse, "Course_Name", "Course_Id", "");
+            drpcourse.Items.Clear();
+            gf.fillcombo("SELECT DISTINCT c.Course_Id, c.Course_Name FROM Course c INNER JOIN Semester s ON c.Sem_Id = s.Sem_Id WHERE s.Sem_Id = " + drpsemester.SelectedValue, drpcourse, "Course_Name", "Course_Id", "");
+
         }
         catch
         {

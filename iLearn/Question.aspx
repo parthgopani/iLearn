@@ -16,7 +16,7 @@
                                         <label for="lblsemester" class="col-sm-2 col-form-label">Semester</label>
                                         <div class="col-sm-9">
                                             <asp:DropDownList ID="drpsemester" CssClass="form-control" runat="server"
-                                                AutoPostBack="false" data-toggle="dropdown">
+                                                AutoPostBack="true" data-toggle="dropdown" OnSelectedIndexChanged="drpsemester_SelectedIndexChanged">
                                             </asp:DropDownList>
                                             <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ControlToValidate="drpsemester"
                                                 ErrorMessage="Semester Required" ForeColor="Red" ValidationGroup="fieldcheck"></asp:RequiredFieldValidator>
@@ -26,29 +26,18 @@
                                         <label for="lblcourse" class="col-sm-2 col-form-label">Course</label>
                                         <div class="col-sm-9">
                                             <asp:DropDownList ID="drpcourse" CssClass="form-control" runat="server"
-                                                AutoPostBack="false" data-toggle="dropdown">
+                                                AutoPostBack="true" data-toggle="dropdown">
                                             </asp:DropDownList>
                                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="drpcourse"
                                                 ErrorMessage="Course Required" ForeColor="Red" ValidationGroup="fieldcheck"></asp:RequiredFieldValidator>
                                         </div>
                                     </div>
-                               <!--     <div class="form-group row">
-                                        <label for="lblquestiontype" class="col-sm-2 col-form-label">Question Type</label>
-                                        <div class="col-sm-9">
-                                            <asp:DropDownList ID="drpquestiontype" CssClass="form-control" runat="server"
-                                                AutoPostBack="false" data-toggle="dropdown" OnSelectedIndexChanged="drpquestiontype_SelectedIndexChanged">
-                                                <asp:ListItem Value="1">MCQ</asp:ListItem>
-                                                <asp:ListItem Value="2">True False</asp:ListItem>
-                                            </asp:DropDownList>
-                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="drpquestiontype"
-                                                ErrorMessage="Question Type Required" ForeColor="Red" ValidationGroup="fieldcheck"></asp:RequiredFieldValidator>
-                                        </div>
-                                    </div>--->
+                               
                                     <div class="form-group row">
                                         <label for="lblcomplexcitytype" class="col-sm-2 col-form-label">Complexcity Type</label>
                                         <div class="col-sm-9">
                                             <asp:DropDownList ID="drpcomplexcity" CssClass="form-control" runat="server"
-                                                AutoPostBack="false" data-toggle="dropdown">
+                                                AutoPostBack="true" data-toggle="dropdown">
                                             </asp:DropDownList>
                                             <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ControlToValidate="drpcomplexcity"
                                                 ErrorMessage="Complexcity Type Required" ForeColor="Red" ValidationGroup="fieldcheck"></asp:RequiredFieldValidator>

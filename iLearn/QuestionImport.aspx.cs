@@ -90,7 +90,7 @@ public partial class QuestionImport : System.Web.UI.Page
                             O3 = ProcessLatexEquations(O3);
                             O4 = ProcessLatexEquations(O4);
 
-                            query = "if not exists (select * from Question where Course_Id = '" + course + " and Que_text ='" + Que + "' and O1 = '" + O1 + "' and O2 = '" + O2 + "' and O3 = '" + O3 + "' and O4 = '" + O4 + "'  )insert into Question(Course_Id,Complex_Id,Que_Text,O1,O2,O3,O4,Correct_Ans) values(" + course + "," + Complexid + ",'" + Que + "','" + O1 + "','" + O2 + "','" + O3 + "','" + O4 + "','" + CorrectAnswer + "')";
+                            query = "if not exists (select * from Question where Course_Id = '" + courseId + "' and Que_text ='" + Que + "' and O1 = '" + O1 + "' and O2 = '" + O2 + "' and O3 = '" + O3 + "' and O4 = '" + O4 + "'  )insert into Question(Course_Id,Complex_Id,Que_Text,O1,O2,O3,O4,Correct_Ans,UploadDateTime) values(" + courseId + "," + Complexid + ",'" + Que + "','" + O1 + "','" + O2 + "','" + O3 + "','" + O4 + "','" + CorrectAnswer + "',GETDATE())";
                             cn.modify(query);
                         }
                         r++;

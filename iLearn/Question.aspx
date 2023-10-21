@@ -1,6 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPageAdmin.master" AutoEventWireup="true" CodeFile="Question.aspx.cs" Inherits="Question" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/mml-chtml.min.js"></script>
+    <script type='text/x-mathjax-config'>
+    MathJax.Hub.Config({
+        tex2jax: { inlineMath: [['$', '$']]
+        }
+    });
+</script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div class="content-wrapper">
@@ -123,6 +130,7 @@
                                                                 </asp:TemplateField>
                                                                 <asp:BoundField DataField="Course_Name" HeaderText="Course Name" />
                                                                 <asp:BoundField DataField="Complex_Type" HeaderText="Complexity" />
+                                                               
                                                                 <asp:BoundField DataField="Que_Text" HeaderText="Question Text" />
                                                                 <asp:BoundField DataField="O1" HeaderText="Option 1" />
                                                                 <asp:BoundField DataField="O2" HeaderText="Option 2" />

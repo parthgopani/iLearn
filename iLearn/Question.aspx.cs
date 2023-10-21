@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+
 
 public partial class Question : System.Web.UI.Page
 {
@@ -67,9 +69,51 @@ public partial class Question : System.Web.UI.Page
     {
         DataSet ds = new DataSet();
         ds = conn.select("select * from Question q,Course c,Semester sem,Complexity complex where q.Course_Id = c.Course_Id and sem.Sem_Id = C.Sem_Id and complex.Complex_Id = q.Complex_Id order by q.Que_Id desc");
+
+        // Process the "Que_Text" column using ProcessLatexEquations method
+        foreach (DataRow row in ds.Tables[0].Rows)
+        {
+            string queText = row["Que_Text"].ToString();
+            row["Que_Text"] = ProcessLatexEquations(queText);
+        }
+
+      
         gf.fill_grid(ds, grdquestion);
     }
-    public void binddrp()
+    private void ProcessLatexInDataSet(DataSet ds)
+    {
+        // Loop through each table in the dataset
+        foreach (DataTable dt in ds.Tables)
+        {
+            // Loop through each row in the table
+            foreach (DataRow row in dt.Rows)
+            {
+                // Process LaTeX equations in each column containing text
+                foreach (DataColumn col in dt.Columns)
+                {
+                    if (col.DataType == typeof(string))
+                    {
+                        row[col] = ProcessLatexEquations(row[col].ToString());
+                    }
+                }
+            }
+        }
+    }
+    protected string ProcessLatexEquations(string input)
+    {
+       
+        // Check if the input contains LaTeX equations (identified by $$)
+        if (input.Contains("$"))
+        {
+            // Wrap the input in a MathJax block to render LaTeX equations
+
+            input = $@"{input}";
+        }
+
+        return input;
+    }
+
+public void binddrp()
     {
         gf.fillcombo("select * from Semester", drpsemester, "Sem_Name", "Sem_Id", "");
         gf.fillcombo("select * from Complexity", drpcomplexcity, "Complex_Type", "Complex_Id", "");
@@ -118,31 +162,16 @@ public partial class Question : System.Web.UI.Page
                 if (!string.IsNullOrEmpty(questionText) && !string.IsNullOrEmpty(option1) &&
                     !string.IsNullOrEmpty(option2) && !string.IsNullOrEmpty(option3) && !string.IsNullOrEmpty(option4) && !string.IsNullOrEmpty(correctAnswer))
                 {
-                    // Check if the question already exists
-                    string existenceQuery = "SELECT COUNT(*) FROM Question WHERE Course_Id = " + courseId +
-                        " AND Que_Text = '" + questionText + "' AND O1 = '" + option1 + "' AND O2 = '" + option2 + "'" +
-                        " AND O3 = '" + option3 + "' AND O4 = '" + option4 + "'";
-                    DataSet result = conn.select(existenceQuery);
-                    int questionCount = result != null && result.Tables.Count > 0 && result.Tables[0].Rows.Count > 0 ? 1 : 0;
 
-                    if (questionCount > 0)
-                    {
-                        Response.Write("<script>alert('Question already exists.')</script>");
-                    }
-                    else
-                    {
-                        // Insert the question into the database
-                        string insertQuery = "INSERT INTO Question (Course_Id, Complex_Id, Que_Text, O1, O2, O3, O4, Correct_Ans, UploadDateTime) " +
-                            "VALUES (" + courseId + ", " + complexityId + ", '" + questionText + "', '" + option1 + "', '" + option2 + "', '" +
-                            option3 + "', '" + option4 + "', '" + correctAnswer + "', GETDATE())";
-
-                        conn.modify(insertQuery);
+                    // Insert the question into the database
+                   string insertQuery = "if not exists (select * from Question where Course_Id = '" + courseId + "' and Que_text ='" + questionText + "' and O1 = '" + option1 + "' and O2 = '" + option2 + "' and O3 = '" + option3 + "' and O4 = '" + option4 + "'  )insert into Question(Course_Id,Complex_Id,Que_Text,O1,O2,O3,O4,Correct_Ans,UploadDateTime) values(" + courseId + "," + complexityId + ",'" + questionText + "','" + option1 + "','" + option2 + "','" + option3 + "','" + option4 + "','" + correctAnswer + "',GETDATE())";
+                    conn.modify(insertQuery);
 
                         Response.Write("<script>alert('Question Inserted Successfully')</script>");
                         bindgrid();
                         clearall(this);
                         disabled_up_del();
-                    }
+                    
                 }
                 else
                 {

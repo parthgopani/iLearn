@@ -113,20 +113,16 @@ public partial class QuestionImport : System.Web.UI.Page
     }
     private string ProcessLatexEquations(string input)
     {
-        string mathJaxScript = "<script type='text/javascript' async src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML'></script>";
-
+      
         // Check if the input contains LaTeX equations (identified by $$)
-        if (input.Contains("$$"))
-        {
-            // Wrap the input in a MathJax block to render LaTeX equations
-            input = $@"{mathJaxScript}
-            <span id='latex-container'>{input}</span>
-            <script type='text/x-mathjax-config'>
-                MathJax.Hub.Config({{tex2jax: {{inlineMath: [['$$','$$']]}});
-                MathJax.Hub.Queue(['Typeset', MathJax.Hub, 'latex-container']);
-            </script>";
-        }
+            if (input.Contains("$"))
+            {
+                // Wrap the input in a MathJax block to render LaTeX equations
 
-        return input;
+                input = $@"{input}";
+            }
+
+            return input;
+        
     }
 }

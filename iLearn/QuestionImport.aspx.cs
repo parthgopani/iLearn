@@ -16,7 +16,7 @@ public partial class QuestionImport : System.Web.UI.Page
     Int32 course;
     protected void Page_Load(object sender, EventArgs e)
     {
-        if(!IsPostBack)
+        if (!IsPostBack)
         {
             bindsemdrp();
             bindcoursedrp();
@@ -100,7 +100,8 @@ public partial class QuestionImport : System.Web.UI.Page
 
 
             }
-            catch (Exception ex){
+            catch (Exception ex)
+            {
                 lblmsg.Text = ex.ToString() + " Total " + r + " Question Imported";
             }
         }
@@ -126,6 +127,6 @@ public partial class QuestionImport : System.Web.UI.Page
             </script>";
         }
 
-        return input; 
+        return input;
     }
 }

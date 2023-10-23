@@ -53,16 +53,7 @@
                   </div>
                 </div>
               </div>
-              <div class="row">
-                <div class="col-md-12 mb-4 mb-lg-0 stretch-card transparent">
-                  <div class="card card-light-danger">
-                    <div class="card-body">
-                      <p class="mb-4">Exam Report</p>
-                      <p class="fs-30 mb-2"></p>
-                      <p></p>
-                    </div>
-                  </div>
-                </div>
+              
                 
               </div>
 

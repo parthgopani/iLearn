@@ -1,6 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPageAdmin.master" AutoEventWireup="true" CodeFile="Question.aspx.cs" Inherits="Question" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/mml-chtml.min.js"></script>
+    <script type='text/x-mathjax-config'>
+    MathJax.Hub.Config({
+        tex2jax: { inlineMath: [['$', '$']]
+        }
+    });
+</script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div class="content-wrapper">
@@ -16,7 +23,7 @@
                                         <label for="lblsemester" class="col-sm-2 col-form-label">Semester</label>
                                         <div class="col-sm-9">
                                             <asp:DropDownList ID="drpsemester" CssClass="form-control" runat="server"
-                                                AutoPostBack="false" data-toggle="dropdown">
+                                                AutoPostBack="true" data-toggle="dropdown" OnSelectedIndexChanged="drpsemester_SelectedIndexChanged">
                                             </asp:DropDownList>
                                             <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ControlToValidate="drpsemester"
                                                 ErrorMessage="Semester Required" ForeColor="Red" ValidationGroup="fieldcheck"></asp:RequiredFieldValidator>
@@ -26,29 +33,18 @@
                                         <label for="lblcourse" class="col-sm-2 col-form-label">Course</label>
                                         <div class="col-sm-9">
                                             <asp:DropDownList ID="drpcourse" CssClass="form-control" runat="server"
-                                                AutoPostBack="false" data-toggle="dropdown">
+                                                AutoPostBack="true" data-toggle="dropdown">
                                             </asp:DropDownList>
                                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="drpcourse"
                                                 ErrorMessage="Course Required" ForeColor="Red" ValidationGroup="fieldcheck"></asp:RequiredFieldValidator>
                                         </div>
                                     </div>
-                                    <div class="form-group row">
-                                        <label for="lblquestiontype" class="col-sm-2 col-form-label">Question Type</label>
-                                        <div class="col-sm-9">
-                                            <asp:DropDownList ID="drpquestiontype" CssClass="form-control" runat="server"
-                                                AutoPostBack="false" data-toggle="dropdown" OnSelectedIndexChanged="drpquestiontype_SelectedIndexChanged">
-                                                <asp:ListItem Value="1">MCQ</asp:ListItem>
-                                                <asp:ListItem Value="2">True False</asp:ListItem>
-                                            </asp:DropDownList>
-                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="drpquestiontype"
-                                                ErrorMessage="Question Type Required" ForeColor="Red" ValidationGroup="fieldcheck"></asp:RequiredFieldValidator>
-                                        </div>
-                                    </div>
+                               
                                     <div class="form-group row">
                                         <label for="lblcomplexcitytype" class="col-sm-2 col-form-label">Complexcity Type</label>
                                         <div class="col-sm-9">
                                             <asp:DropDownList ID="drpcomplexcity" CssClass="form-control" runat="server"
-                                                AutoPostBack="false" data-toggle="dropdown">
+                                                AutoPostBack="true" data-toggle="dropdown">
                                             </asp:DropDownList>
                                             <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ControlToValidate="drpcomplexcity"
                                                 ErrorMessage="Complexcity Type Required" ForeColor="Red" ValidationGroup="fieldcheck"></asp:RequiredFieldValidator>
@@ -132,9 +128,9 @@
                                                                             CommandArgument='<%#Bind("[Que_Id]") %>'></asp:LinkButton>
                                                                     </ItemTemplate>
                                                                 </asp:TemplateField>
-                                                                <asp:BoundField DataField="Sem_Name" HeaderText="Semester Name" />
                                                                 <asp:BoundField DataField="Course_Name" HeaderText="Course Name" />
                                                                 <asp:BoundField DataField="Complex_Type" HeaderText="Complexity" />
+                                                               
                                                                 <asp:BoundField DataField="Que_Text" HeaderText="Question Text" />
                                                                 <asp:BoundField DataField="O1" HeaderText="Option 1" />
                                                                 <asp:BoundField DataField="O2" HeaderText="Option 2" />

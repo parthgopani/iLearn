@@ -1,8 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPageAdmin.master" AutoEventWireup="true" CodeFile="QuestionImport.aspx.cs" Inherits="QuestionImport" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div class="content-wrapper">
         <div class="row">
             <div class="col-md-12 grid-margin">
@@ -31,7 +31,7 @@
                                             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="drpcourse"
                                                 ErrorMessage="Course Required" ForeColor="Red" ValidationGroup="fieldcheck"></asp:RequiredFieldValidator>
                                         </div>
-</div>
+                                    </div>
                                     <div class="form-group row">
                                         <label for="lblupload" class="col-sm-2 col-form-label">Import Questions:</label>
                                         <div class="col-sm-9">
@@ -44,7 +44,7 @@
                                         OnClick="btnupload_Click" />
                                     <div class="col-sm-9">
                                         <asp:Label runat="server" ID="lblmsg"></asp:Label>
-</div>
+                                    </div>
                                 </form>
                             </div>
                         </div>

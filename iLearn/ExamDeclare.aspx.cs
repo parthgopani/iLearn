@@ -73,6 +73,7 @@ public partial class ExamDeclare : System.Web.UI.Page
     {
         try
         {
+            btnsubmit.Enabled = false;
             DataSet ds = new DataSet();
             string q1 = "select * from Question where Course_Id = " + drpcourse.SelectedValue + "";
             ds = conn.select(q1);
@@ -81,12 +82,13 @@ public partial class ExamDeclare : System.Web.UI.Page
             cnt += ds.Tables[0].Rows.Count;
             if (cnt >= Convert.ToInt32(txttotque.Text))
             {
-                string q = "insert into Exam (Exam_Name, Course_Id, Exam_Start_Date, Exam_End_Date, Total_Marks, Passing_Marks, Duration, Total_Question) values ('" + txtexamname.Text + "'," + drpcourse.SelectedValue + ",'" + txtstartdate.Text + " 10:00:00','" + txtenddate.Text + " 18:00:00'," + txttotmarks.Text + "," + txtpassmarks.Text + "," + txtduration.Text + "," + txttotque.Text + ");select @@IDENTITY;";
+                string q = "insert into Exam (Exam_Name, Course_Id, Exam_Start_Date, Exam_End_Date, Total_Marks, Passing_Marks, Duration, Total_Question) values ('" + txtexamname.Text + "'," + drpcourse.SelectedValue + ",'" + txtstartdate.Text + " 10:00:00','" + txtenddate.Text + " 18:00:00'," + txttotmarks.Text + "," + txtpassmarks.Text + "," + txtduration.Text + "," + txttotque.Text + "); select max(exam_id) from exam_m";
                 conn.select(q);
                 Response.Write("<script>alert('Exam Declared Successfully')</script>");
                 bindgrid();
                 clearall(this);
                 disabled_up_del();
+                btnsubmit.Enabled = true;
             }
             else
             {

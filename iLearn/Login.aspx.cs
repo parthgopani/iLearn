@@ -46,13 +46,13 @@ public partial class Login : System.Web.UI.Page
                 string userType = ds.Tables[0].Rows[0]["Type"].ToString();
 
                 lblmsg.Text = "Login Success";
-                if (userType.ToString().ToLower().Trim() == "Student")
+                if (userType.ToString().ToLower().Trim() == "u")
                 {
-                    Server.Transfer("Default.aspx", false);
+                    Server.Transfer("UserDashboard.aspx", false);
                 }
                 else if (userType.ToString().ToLower().Trim() == "a")
                 {
-                    Response.Redirect("ExamDeclare.aspx");
+                    Response.Redirect("AdminDashboard.aspx");
                 }
                 else
                 {

@@ -50,46 +50,46 @@
                 </div>
                 <div class="box-body">
                     <asp:GridView ID="grdcurrexam" runat="server" AutoGenerateColumns="false" CssClass="table table-mailbox"
-                        HorizontalAlign="Center" OnRowCommand="grdcurrexam">
+                        HorizontalAlign="Center" OnRowCommand="grdcurrexam_RowCommand">
                         <Columns>
                             <asp:TemplateField HeaderText="Exam Name">
                                 <ItemTemplate>
-                                    <asp:LinkButton ID="linkbtnexamname" runat="server" Text="<%#Bind('[Exam_Name]') %>"
+                                    <asp:LinkButton ID="linkbtnexamname" runat="server" Text='<%#Bind("[Exam_Name]") %>'
                                         CommandName="Exam_Id" CommandArgument='<%#Bind("[Exam_Id]") %>'>
                                     </asp:LinkButton>
                                 </ItemTemplate>
                             </asp:TemplateField>
                             <asp:TemplateField HeaderText="Exam Start Date">
                                 <ItemTemplate>
-                                    <asp:LinkButton ID="linkbtn_exam_start_date" runat="server" Text="<%#Bind('[Exam_Start_Date]') %>"
+                                    <asp:LinkButton ID="linkbtn_exam_start_date" runat="server" Text='<%#Bind("[Exam_Start_Date]") %>'
                                         CommandName="Exam_Id" CommandArgument='<%#Bind("[Exam_Id]") %>'>
                                     </asp:LinkButton>
                                 </ItemTemplate>
                             </asp:TemplateField>
                             <asp:TemplateField HeaderText="Exam End Date">
                                 <ItemTemplate>
-                                    <asp:LinkButton ID="linkbtn_exam_end_date" runat="server" Text="<%#Bind('[Exam_End_Date]') %>"
+                                    <asp:LinkButton ID="linkbtn_exam_end_date" runat="server" Text='<%#Bind("[Exam_End_Date]") %>'
                                         CommandName="Exam_Id" CommandArgument='<%#Bind("[Exam_Id]") %>'>
                                     </asp:LinkButton>
                                 </ItemTemplate>
                             </asp:TemplateField>
                             <asp:TemplateField HeaderText="Registration Date">
                                 <ItemTemplate>
-                                        <asp:LinkButton ID="linkbtn_reg_date" runat="server" Text="<%#Bind('[Reg_Date]') %>"
+                                        <asp:LinkButton ID="linkbtn_reg_date" runat="server" Text='<%#Bind("[Reg_Date]") %>'
                                             CommandName="Exam_Id" CommandArgument='<%#Bind("[Exam_Id]") %>'>
                                         </asp:LinkButton>
                                 </ItemTemplate>
                             </asp:TemplateField>
                             <asp:TemplateField HeaderText="Total Mark">
                                 <ItemTemplate>
-                                    <asp:LinkButton ID="linkbtn_tot_marks" runat="server" Text="<%#Bind('[Tot_Marks]') %>"
+                                    <asp:LinkButton ID="linkbtn_tot_marks" runat="server" Text='<%#Bind("[Tot_Marks]") %>'
                                         CommandName="Exam_Id" CommandArgument='<%#Bind("[Exam_Id]") %>'>
                                     </asp:LinkButton>
                                 </ItemTemplate>
                             </asp:TemplateField>
                             <asp:TemplateField HeaderText="Passing Mark">
                                 <ItemTemplate>
-                                    <asp:LinkButton ID="linkbtn_passing_marks" runat="server" Text="<%#Bind('[Passing_Marks]') %>"
+                                    <asp:LinkButton ID="linkbtn_passing_marks" runat="server" Text='<%#Bind("[Passing_Marks]") %>'
                                         CommandName="Exam_Id" CommandArgument='<%#Bind("[Exam_Id]") %>'>
                                     </asp:LinkButton>
                                 </ItemTemplate>
@@ -122,11 +122,11 @@
 
 
 
-                    <asp:GridView ID="grdresult" runat="server" AutoGenerateColumns="false" CssClass="table table-mailbox" HorizontalAlign="Center" OnRowCommand="grd_result_RowCommand"> 
+                    <asp:GridView ID="grdresult" runat="server" AutoGenerateColumns="false" CssClass="table table-mailbox" HorizontalAlign="Center" OnRowCommand="grdresult_RowCommand"> 
                     <Columns>
                     <asp:TemplateField HeaderText="Exam Name">
                                 <ItemTemplate>
-                                    <asp:LinkButton ID="linkbtnexamname1" runat="server" Text="<%#Bind('[Exam_Name]') %>"
+                                    <asp:LinkButton ID="linkbtnexamname1" runat="server" Text='<%#Bind("[Exam_Name]") %>'
                                         CommandName="Exam_Id" CommandArgument='<%#Bind("[Exam_Id]") %>'>
                                     </asp:LinkButton>
                                 </ItemTemplate>

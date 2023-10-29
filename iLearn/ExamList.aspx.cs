@@ -12,12 +12,6 @@ public partial class ExamList : System.Web.UI.Page
 
     }
 
-    protected void grdcurrexam(object sender, GridViewCommandEventArgs e)
-    {
-
-    }
-
-  
     protected void btnresult_Click(object sender, EventArgs e)
     {
 
@@ -26,6 +20,16 @@ public partial class ExamList : System.Web.UI.Page
 
 
     protected void btncurrexam_Click(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void grdcurrexam_RowCommand(object sender, GridViewCommandEventArgs e)
+    {
+
+    }
+
+    protected void grdresult_RowCommand(object sender, GridViewCommandEventArgs e)
     {
 
     }

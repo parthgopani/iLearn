@@ -84,8 +84,8 @@ public partial class ExamList : System.Web.UI.Page
                 if (ds.Tables[0].Rows.Count > 0)
                 {
                     Session["eid"] = hdnexamlist.Value;
-                    Session["sid"] = ds.Tables[0].Rows[0]["sub_id"].ToString();
-                    Server.Transfer("");
+                    Session["cid"] = ds.Tables[0].Rows[0]["Course_Id"].ToString();
+                    Server.Transfer("Quiz.aspx");
                 }
                 else if (ds.Tables[0].Rows.Count <= 0)
                 {

@@ -25,6 +25,7 @@
 </head>
 <body>
    <div class="site-wrapper">
+       <form id="form1" runat="server">
         <!--<div class="main-overlay"></div>-->
         <header class="header-default">
             <nav class="navbar navbar-expand-lg">
@@ -77,6 +78,7 @@
                             <button class="search icon-button">
                                 <i class="icon-magnifier"></i>
                             </button>
+                            <asp:Button ID="btnlogout" runat="server" Text="Logout" Width="60px" class="search icon-button" OnClick="btnlogout_Click"/>
                             <button class="burger-menu icon-button">
                                 <span class="burger-icon"></span>
                             </button>
@@ -90,12 +92,12 @@
         </header>
 
     <div class="main-panel">
-        <form id="form1" runat="server">
+        
             <div>
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>
             </div>
-        </form>
+        
        <!-- search pop up  -->
     <div class="search-popup">
         <button class="btn-close" aria-label="Close" type="button"></button>
@@ -152,6 +154,7 @@
 
 
     </div>
+           </form>
    </div>
     <script src="vendors/js/vendor.bundle.base.js"></script>
     <script src="vendors/chart.js/Chart.min.js"></script>

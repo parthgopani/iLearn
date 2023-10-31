@@ -6,7 +6,7 @@
 <html>
 <head runat="server">
     <title>iLearn</title>
-    <!--<script language="javascript">
+    <script language="javascript">
     function FullScreen() {
         top.resizeTo(window.screen.availWidth, window.screen.availHeight);
         top.moveTo(0, 0);
@@ -45,7 +45,7 @@
             return false;
     }
 
-    </script>-->
+    </script>
     <style>
         .gridview {
             border-collapse: collapse;
@@ -125,7 +125,7 @@
                 </div>
             </nav>
         <div class="container-fluid page-body-wrapper">
-            <div class="main-panel">
+            <div class="main-panel" style="width: 100%;">
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>
             </div>

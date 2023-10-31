@@ -106,7 +106,7 @@ public partial class ExamDeclare : System.Web.UI.Page
 
                     if (sem >= 1 && sem <= 6)
                     {
-                        string userFilter = $"select Reg_Id from Registeration where Email != '{admin}'";
+                        string userFilter = $"select Reg_Id from Registration where Email != '{admin}'";
 
                         DataSet userDs = conn.select(userFilter);
 

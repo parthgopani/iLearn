@@ -24,9 +24,9 @@ public partial class ExamResult : System.Web.UI.Page
         {
             if (Request.QueryString != null)
             {
-                Session["sid"] = Convert.ToInt16(Request.QueryString["studentId"]);
-                Session["eid"] = Convert.ToInt16(Request.QueryString["examId"]);
-                Session["c_id"] = Convert.ToInt16(Request.QueryString["courseId"]);
+                Session["Reg_Id"] = Convert.ToInt16(Request.QueryString["User_Id"]);
+                Session["eid"] = Convert.ToInt16(Request.QueryString["Exam_Id"]);
+                Session["cid"] = Convert.ToInt16(Request.QueryString["Course_Id"]);
 
 
             }
@@ -36,30 +36,30 @@ public partial class ExamResult : System.Web.UI.Page
         }
         catch
         {
-           // Response.Redirect("ExamList.aspx?stud_id=" + Session["regid"] + "&examId=" + Session["eid"]);
+            Response.Redirect("ExamList.aspx?User_Id=" + Session["Reg_Id"] + "&Exam_Id=" + Session["eid"]);
         }
     }
     public void display()
     {
         DataSet ds = new DataSet();
-        string qry = "select Exam_Name,status_pf,score,percentage,Total_Question,Passing_Marks,Total_Marks , e.Exam_Id from stud_exam_reg s inner join exam_m e  on e.Exam_Id = s.Exam_Id where s.Stud_Id = " + Session["regid"] + " and s.Exam_Id = " + Session["eid"] + "";
+        string qry = "select Exam_Name, Status_PF, Score, Percentage, Total_Question, Passing_Marks, Total_Marks , e.Exam_Id from Exam_Reg e inner join Exam e1  on e1.Exam_Id = e.Exam_Id where e.User_Id = " + Session["Reg_Id"] + " and e.Exam_Id = " + Session["eid"] + "";
         ds = conn.select(qry);
-        int mks = Convert.ToInt32(ds.Tables[0].Rows[0]["score"]) * 2;
-        Session["marks"] = ds.Tables[0].Rows[0]["score"];
-        Session["passmarks"] = ds.Tables[0].Rows[0]["passing_marks"];
-        Session["percent"] = ds.Tables[0].Rows[0]["percentage"];
+        int mks = Convert.ToInt32(ds.Tables[0].Rows[0]["Score"]) * 2;
+        Session["marks"] = ds.Tables[0].Rows[0]["Score"];
+        Session["passmarks"] = ds.Tables[0].Rows[0]["Passing_Marks"];
+        Session["percent"] = ds.Tables[0].Rows[0]["Percentage"];
         if (ds.Tables[0].Rows.Count > 0)
         {
 
-            lblExamName.Text = ds.Tables[0].Rows[0]["exam_name"].ToString();
-            lblTotalQuestions.Text = ds.Tables[0].Rows[0]["tot_que"].ToString();
+            lblExamName.Text = ds.Tables[0].Rows[0]["Exam_Name"].ToString();
+            lblTotalQuestions.Text = ds.Tables[0].Rows[0]["Total_Question"].ToString();
             lblRightAns.Text = Right.ToString();
             lblWrongAns.Text = Wrong.ToString();
-            lblStatus.Text = ds.Tables[0].Rows[0]["status_pf"].ToString();
+            lblStatus.Text = ds.Tables[0].Rows[0]["Status_PF"].ToString();
             lblScore.Text = mks.ToString();
-            lblPassing.Text = ds.Tables[0].Rows[0]["passing_marks"].ToString();
-            lblTotalmarks.Text = ds.Tables[0].Rows[0]["tot_marks"].ToString();
-            lblPercentage.Text = ds.Tables[0].Rows[0]["percentage"].ToString() + "%";
+            lblPassing.Text = ds.Tables[0].Rows[0]["Passing_Marks"].ToString();
+            lblTotalmarks.Text = ds.Tables[0].Rows[0]["Total_Marks"].ToString();
+            lblPercentage.Text = ds.Tables[0].Rows[0]["Percentage"].ToString() + "%";
         }
     }
 
@@ -70,11 +70,11 @@ public partial class ExamResult : System.Web.UI.Page
 
         string qry = "select * from Exam e where e.Exam_Id = " + Session["eid"] + "";
         ds1 = conn.select(qry);
-        Total = Convert.ToInt32(ds1.Tables[0].Rows[0]["tot_que"]);
+        Total = Convert.ToInt32(ds1.Tables[0].Rows[0]["Total_Question"]);
 
 
         DataSet ds = new DataSet();
-        string qry1 = "select COUNT(*) from Attempt_Question a, Question b where a.Que_Id = b.Que_Id and a.Exam_Id=" + Session["eid"] + " and a.User_Id=" + Session["regid"] + " and a.Given_Answer=b.Correct_Ans";
+        string qry1 = "select COUNT(*) from Quiz q, Question q1 where q.Que_Id = q1.Que_Id and q.Exam_Id = " + Session["eid"] + " and q.User_Id = " + Session["Reg_Id"] + " and q.Given_Ans = q1.Correct_Ans";
         ds = conn.select(qry1);
         Right = Convert.ToInt32(ds.Tables[0].Rows[0][0].ToString());
         Wrong = Total - Right;
@@ -82,7 +82,7 @@ public partial class ExamResult : System.Web.UI.Page
 
         TotalPercentage = Right * 100 / Total;
 
-        PassingMarks = Convert.ToInt32(ds1.Tables[0].Rows[0]["passing_marks"]);
+        PassingMarks = Convert.ToInt32(ds1.Tables[0].Rows[0]["Passing_Marks"]);
         if (Right >= PassingMarks)
         {
             status = "Congratulations!!! You Are PASS.";
@@ -101,13 +101,18 @@ public partial class ExamResult : System.Web.UI.Page
     {
         DataSet ds = new DataSet();
         string gd = DateTime.Now.ToString("yyyy/MM/dd");
-        string qry = "update stud_exam_reg set status_pf = '" + status + "', score = " + Right + ", percentage = '" + TotalPercentage + "',exam_given_date = '" + gd + "'  where stud_id = " + Session["sid"] + " and Exam_Id = " + Session["eid"].ToString();
+        string qry = "update Exam_Reg set Status_PF = '" + status + "', Score = " + Right + ", Percentage = '" + TotalPercentage + "', Exam_Given_Date = '" + gd + "'  where User_Id = " + Session["Reg_Id"] + " and Exam_Id = " + Session["eid"].ToString();
         conn.modify(qry);
     }
 
     protected void btnview_Click(object sender, EventArgs e)
     {
-        Response.Redirect("ViewAnswer.aspx");
+        Response.Redirect("");
     }
 
+
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("ExamList.aspx");
+    }
 }

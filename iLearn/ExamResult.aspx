@@ -80,7 +80,8 @@
                  </div> 
                   <div class="row">
     <div class="col-md-12 text-center">
-        <asp:Button ID="btnview" runat="server" Text="View Answers" CssClass="btn btn-primary btn-sm" OnClick="btnview_Click" />
+        <!-- <asp:Button ID="btnview" runat="server" Text="View Answers" CssClass="btn btn-primary btn-sm" OnClick="btnview_Click" /> -->
+        <asp:Button ID="Button1" runat="server" Text="Back" CssClass="btn btn-primary btn-sm" OnClick="Button1_Click" />
     </div>
 </div>
               </div>

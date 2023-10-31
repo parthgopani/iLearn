@@ -57,7 +57,7 @@ public partial class ExamList : System.Web.UI.Page
         {
             for (i = 0; i <= grdcurrexam.Rows.Count; i++)
             {
-                lblmsg.Text = i + " " + "Record Appear in Current exam";
+                lblmsg.Text = i + " " + "Record Appear in Current Quiz";
                 grdcurrexam.Visible = true;
             }
         }

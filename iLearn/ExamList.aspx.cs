@@ -106,7 +106,7 @@ public partial class ExamList : System.Web.UI.Page
             {
                 hdnexamlist.Value = e.CommandArgument.ToString();
                 Session["eid"] = hdnexamlist.Value;
-                Server.Transfer("ViewAnswer.aspx?" + Session["eid"] + " & " + Session["Reg_Id"] + "");
+                Server.Transfer("ExamResult.aspx?" + Session["eid"] + " & " + Session["Reg_Id"] + "");
             }
         }
         catch (Exception)

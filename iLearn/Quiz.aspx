@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPageUser.master" AutoEventWireup="true"
-    CodeFile="Quiz.aspx.cs" Inherits="Quiz" %>
+    CodeFile="Quiz.aspx.cs" Inherits="Quiz" EnableViewState="true" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <script type="text/javascript">
@@ -9,27 +9,76 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <asp:Label ID="lblquestion" runat="server" Text=""></asp:Label>
-    <br />
-    <asp:RadioButton ID="o1" runat="server" GroupName="options" AutoPostBack="false" /><br />
-    <asp:RadioButton ID="o2" runat="server" GroupName="options" AutoPostBack="false" /><br />
-    <asp:RadioButton ID="o3" runat="server" GroupName="options" AutoPostBack="false" /><br />
-    <asp:RadioButton ID="o4" runat="server" GroupName="options" AutoPostBack="false" />
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-md-12 grid-margin">
+                <div class="row">
+                    <div class="col-12 col-xl-12 mb-4 mb-xl-0">
+                        <div class="card">
+                            <div class="card-body">
 
-    <asp:Button ID="btnnext" runat="server" Text="Next" Width="58px" class="btn btn-success btn-sm" OnClick="btnnext_Click"/>
-    <asp:Button ID="btnsubmit" runat="server" Text="SUBMIT" Visible="False" class="btn btn-success btn-sm" OnClick="btnsubmit_Click"/>
-    <asp:Button ID="btncancel" runat="server" Text="Cancel" class="btn btn-success btn-sm" OnClick="btncancel_Click1"/>
-    <asp:UpdateProgress ID="proans" runat="server">
-    </asp:UpdateProgress>
-    <asp:Label ID="lblmsg" runat="server" Text=""></asp:Label>
-    <asp:Label ID="lblque" runat="server" Text=""></asp:Label>
-    <asp:HiddenField ID="hdnqueid" runat="server" />
-    <asp:HiddenField ID="hdnque" runat="server" />
-    <asp:HiddenField ID="hdntotque" runat="server" />
-    <asp:HiddenField ID="hdnnum" runat="server" Value="0" />
-    <asp:HiddenField ID="hdnres" runat="server" />
+                                <div class="col-lg-12">
+                                    <div class="padding-30 rounded bordered">
+                                        <div class="row gy-12">
+                                            <div class="col-sm-12">
+                                                <div class="post">
+                                                    <div class="thumb rounded">
+                                                        <h3>
+                                                            <asp:Label ID="lblquestion" runat="server" Text=""></asp:Label>
+                                                        </h3>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <div class="form-check">
+                                                                    <asp:RadioButton ID="o1" runat="server" GroupName="options" AutoPostBack="false"
+                                                                        class="form-check-input" /><br />
+                                                                </div>
+                                                                <div class="form-check">
+                                                                    <asp:RadioButton ID="o2" runat="server" GroupName="options" AutoPostBack="false"
+                                                                        class="form-check-input" /><br />
+                                                                </div>
+                                                                <div class="form-check">
+                                                                    <asp:RadioButton ID="o3" runat="server" GroupName="options" AutoPostBack="false"
+                                                                        class="form-check-input" /><br />
+                                                                </div>
+                                                                <div class="form-check">
+                                                                    <asp:RadioButton ID="o4" runat="server" GroupName="options" AutoPostBack="false"
+                                                                        class="form-check-input" /><br />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <asp:Button ID="btnsubmit" runat="server" Text="Next" OnClick="btnsubmit_Click"
+                                                            class="btn btn-inverse-primary mr-2" />
+                                                        <asp:Button ID="btn_end" runat="server" Text="Submit" Visible="False" OnClick="btn_end_Click"
+                                                            class="btn btn-inverse-info mr-2" />
+                                                        <asp:Button ID="btncancel" runat="server" Text="Cancel" OnClick="btncancel_Click"
+                                                            class="btn btn-inverse-dark" />
+                                                        <asp:UpdateProgress ID="prg_ans" runat="server">
+                                                        </asp:UpdateProgress>
+                                                        <h3>
+                                                            <asp:Label ID="lblmsg" runat="server" Text=""></asp:Label>
+                                                            <asp:Label ID="lbl_questions" runat="server" Text=""></asp:Label>
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <asp:HiddenField ID="hdn_que_id" runat="server" />
+    <asp:HiddenField ID="hdnquestion" runat="server" />
+    <asp:HiddenField ID="hdntotQ" runat="server" />
+    <asp:HiddenField ID="hdn_number" runat="server" Value="0" />
+    <asp:HiddenField ID="hdn_result" runat="server" />
     <br />
-    <asp:ScriptManager ID="script" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
     </asp:ScriptManager>
+    >
 </asp:Content>
 

@@ -59,7 +59,7 @@ public partial class Quiz : System.Web.UI.Page
     {
         DataSet ds = new DataSet();
         ds = conn.select("select * from Quiz where User_Id = '" + Session["Reg_Id"].ToString() + "' and Exam_Id='" + Session["eid"].ToString() + "'");
-        Session["totq"] = ds.Tables[0].Rows.Count - 1;
+        //Session["totq"] = ds.Tables[0].Rows.Count - 1;
 
         DataSet ds1 = new DataSet();
         ds1 = conn.select("select count(*) from Quiz q, Question q1, Exam_Reg e where q.User_Id = " + Session["Reg_Id"] + " and q.Que_Id = q1.Que_Id and q.Exam_Id = " + Session["eid"] + " group by q.Que_Id ");

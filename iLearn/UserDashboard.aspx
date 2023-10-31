@@ -6,7 +6,7 @@
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <div class="content-wrapper" style="margin-top: 5%; margin-left: 8%;">
+    <div class="content-wrapper" style="margin-top: 5%;">
         <div class="row">
             <div class="col-md-12 grid-margin">
                 <div class="row">

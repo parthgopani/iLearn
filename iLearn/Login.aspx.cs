@@ -70,7 +70,7 @@ public partial class Login : System.Web.UI.Page
 
         }
         
-        catch (Exception ex)
+        catch (Exception)
         {
             lblmsg.Text = "Incorrect Email or Password !!!";
             lblmsg.ForeColor = System.Drawing.Color.Black;

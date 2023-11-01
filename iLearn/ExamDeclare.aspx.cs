@@ -82,7 +82,10 @@ public partial class ExamDeclare : System.Web.UI.Page
             cnt += ds.Tables[0].Rows.Count;
             if (cnt >= Convert.ToInt32(txttotque.Text))
             {
-                string q = "insert into Exam (Exam_Name, Course_Id, Exam_Start_Date, Exam_End_Date, Total_Marks, Passing_Marks, Duration, Total_Question) values ('" + txtexamname.Text + "'," + drpcourse.SelectedValue + ",'" + txtstartdate.Text + " 10:00:00','" + txtenddate.Text + " 18:00:00'," + txttotmarks.Text + "," + txtpassmarks.Text + "," + txtduration.Text + "," + txttotque.Text + "); select max(exam_id) from exam_m";
+                //string q = "insert into Exam (Exam_Name, Course_Id, Exam_Start_Date, Exam_End_Date, Total_Marks, Passing_Marks, Duration, Total_Question) values ('" + txtexamname.Text + "'," + drpcourse.SelectedValue + ",'" + txtstartdate.Text + " 10:00:00','" + txtenddate.Text + " 18:00:00'," + txttotmarks.Text + "," + txtpassmarks.Text + "," + txtduration.Text + "," + txttotque.Text + "); select max(exam_id) from exam_m";
+                string q = "insert into Exam (Exam_Name, Course_Id, Exam_Start_Date, Exam_End_Date, Total_Marks, Passing_Marks, Duration, Total_Question) " +
+                   "values ('" + txtexamname.Text + "'," + drpcourse.SelectedValue + ",'" + txtstartdate.Text + "','"
+                   + txtenddate.Text + "'," + txttotmarks.Text + "," + txtpassmarks.Text + "," + txtduration.Text + "," + txttotque.Text + "); select max(exam_id) from exam_m";
                 conn.select(q);
 
                 string selectQuery = "SELECT MAX(exam_id) FROM Exam";

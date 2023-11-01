@@ -130,11 +130,13 @@ public partial class Quiz : System.Web.UI.Page
             Int16 tot;
 
             tot = Convert.ToInt16(rnd.Next(1, 10));
+            ds = conn.select("SELECT TOP 1 * FROM Question WHERE Course_Id = '" + Session["cid"] + "' AND (Que_Id NOT IN (SELECT Que_Id FROM Quiz WHERE User_Id='" + Session["Reg_Id"].ToString() + "' AND Exam_Id ='" + Session["eid"] + "')) ORDER BY NEWID()");
 
-            if (tot % 2 == 0)
-                ds = conn.select("select * from Question where Course_Id = '" + Session["cid"] + "' and ( Que_Id NOT IN (Select Que_Id FROM Quiz where User_Id='" + Session["Reg_Id"].ToString() + "' AND Exam_Id ='" + Session["eid"] + "' ))order by Que_Id ");
-            else
-                ds = conn.select("select * from Question where Course_Id = '" + Session["cid"] + "' and ( Que_Id NOT IN (Select Que_Id FROM Quiz where User_Id='" + Session["Reg_Id"].ToString() + "' AND Exam_Id ='" + Session["eid"] + "' ))order by Que_Id Desc");
+
+            //  if (tot % 2 == 0)
+            // ds = conn.select("select * from Question where Course_Id = '" + Session["cid"] + "' and ( Que_Id NOT IN (Select Que_Id FROM Quiz where User_Id='" + Session["Reg_Id"].ToString() + "' AND Exam_Id ='" + Session["eid"] + "' ))order by Que_Id ");
+            // else
+            //ds = conn.select("select * from Question where Course_Id = '" + Session["cid"] + "' and ( Que_Id NOT IN (Select Que_Id FROM Quiz where User_Id='" + Session["Reg_Id"].ToString() + "' AND Exam_Id ='" + Session["eid"] + "' ))order by Que_Id Desc");
 
             if (ds.Tables[0].Rows.Count < 0)
             { Response.Write("<script>alert('There Is No Question Availaible!')</script>"); }

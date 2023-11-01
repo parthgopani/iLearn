@@ -148,8 +148,8 @@
                                                                 </asp:TemplateField>
                                                                 <asp:BoundField DataField="exam_name" HeaderText="Exam Name" />
                                                                 <asp:BoundField DataField="course_name" HeaderText="Course Name" />
-                                                                <asp:BoundField DataField="exam_start_date" HeaderText="Exam Start Date" />
-                                                                <asp:BoundField DataField="exam_end_date" HeaderText="Exam End Date" />
+                                                                <asp:BoundField DataField="exam_start_date" HeaderText="Exam Start Date" DataFormatString="{0:yyyy-MM-dd}" />
+                                                                <asp:BoundField DataField="exam_end_date" HeaderText="Exam End Date" DataFormatString="{0:yyyy-MM-dd}" />
                                                                 <asp:BoundField DataField="total_marks" HeaderText="Total Marks" />
                                                                 <asp:BoundField DataField="passing_marks" HeaderText="Passing Marks" />
                                                                 <asp:BoundField DataField="duration" HeaderText="Duration" />

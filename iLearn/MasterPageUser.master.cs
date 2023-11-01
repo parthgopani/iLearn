@@ -11,4 +11,14 @@ public partial class MasterPageUser : System.Web.UI.MasterPage
     {
 
     }
+
+    protected void btnlogout_Click(object sender, EventArgs e)
+    {
+        Session["eid"] = "";
+        Session["uid"] = "";
+        Session["stime"] = "";
+        Session["totq"] = "";
+        Session["Reg_Id"] = "";
+        Response.Redirect("Login.aspx");
+    }
 }

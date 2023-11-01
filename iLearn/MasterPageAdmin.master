@@ -92,7 +92,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="QuestionImport.aspx">
+                        <a class="nav-link" href="">
                             <i class="icon-paper menu-icon"></i>
                             <span class="menu-title">Import Question</span>
                         </a>
@@ -121,6 +121,19 @@
                             <span class="menu-title">Complexity</span>
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">
+                            <i class="icon-paper menu-icon"></i>
+                            <span class="menu-title">State</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">
+                            <i class="icon-paper menu-icon"></i>
+                            <span class="menu-title">City</span>
+                        </a>
+                    </li>
+
                 </ul>
             </nav>
 

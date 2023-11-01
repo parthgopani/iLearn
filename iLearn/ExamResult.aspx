@@ -1,5 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPageUser.master" AutoEventWireup="true"
-    CodeFile="ExamResult.aspx.cs" Inherits="ExamResult" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPageUser.master" AutoEventWireup="true" CodeFile="ExamResult.aspx.cs" Inherits="ExamResult" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
@@ -102,4 +101,3 @@
     </div>
 
 </asp:Content>
-

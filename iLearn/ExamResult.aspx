@@ -16,7 +16,7 @@
                                         <div class="card-body" style="margin-left: auto; margin-right: auto; justify-items: center">
                                             <h4 class="card-title">Result</h4>
                                             <div class="table-responsive">
-                                                <table class="table table-hover" >
+                                                <table class="table table-hover">
 
                                                     <tbody>
                                                         <tr>
@@ -84,14 +84,13 @@
                                             </div>
                                         </div>
                                         <div class="row">
-    <div class="col-md-12 text-center">
-        <!-- <asp:Button ID="btnview" runat="server" Text="View Answers" CssClass="btn btn-primary btn-sm" OnClick="btnview_Click" /> -->
-        <asp:Button ID="Button1" runat="server" Text="Back" CssClass="btn btn-primary btn-sm"
-            OnClick="Button1_Click" />
-    </div>
-</div>
+                                            <div class="col-md-12 text-center">
+                                                <asp:Button ID="Button1" runat="server" Text="Back" CssClass="btn btn-primary btn-sm"
+                                                    OnClick="Button1_Click" />
+                                            </div>
+                                        </div>
                                     </div>
-                                    
+
                                 </div>
                             </div>
                         </div>

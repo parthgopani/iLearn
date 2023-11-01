@@ -42,7 +42,7 @@ public partial class ExamResult : System.Web.UI.Page
     public void display()
     {
         DataSet ds = new DataSet();
-        string qry = "select Exam_Name, Status_PF, Score,Percentage, Total_Question, Passing_Marks, Total_Marks, e.Exam_Id from Exam_Reg e inner join Exam e1  on e1.Exam_Id = e.Exam_Id where e.Exam_Id = " + Session["Reg_Id"] + " and e.Exam_Id = " + Session["eid"] + "";
+        string qry = "select Exam_Name, Status_PF, Score, Percentage, Total_Question, Passing_Marks, Total_Marks, e.Exam_Id from Exam_Reg e inner join Exam e1  on e1.Exam_Id = e.Exam_Id where e.User_Id = " + Session["Reg_Id"] + " and e.Exam_Id = " + Session["eid"] + "";
         ds = conn.select(qry);
         int mks = Convert.ToInt32(ds.Tables[0].Rows[0]["Score"]) * 2;
         Session["marks"] = ds.Tables[0].Rows[0]["Score"];

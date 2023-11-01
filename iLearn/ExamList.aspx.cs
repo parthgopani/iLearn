@@ -51,7 +51,8 @@ public partial class ExamList : System.Web.UI.Page
         grdresult.Visible = false;
         Int16 i;
         DataSet ds = new DataSet();
-        ds = conn.select("SELECT e.Exam_id, e.Exam_Name, c.Course_Name, e.Exam_Start_Date, e.Exam_End_Date, er.Reg_Date, e.Total_Marks, e.Passing_Marks FROM Exam AS e INNER JOIN Exam_Reg AS er ON e.Exam_Id = er.Exam_Id INNER JOIN Course AS c ON e.Course_Id = c.Course_Id  WHERE (er.User_id = " + Session["Reg_Id"] + ")");
+        //ds = conn.select("SELECT e.Exam_id, e.Exam_Name, c.Course_Name, e.Exam_Start_Date, e.Exam_End_Date, er.Reg_Date, e.Total_Marks, e.Passing_Marks FROM Exam AS e INNER JOIN Exam_Reg AS er ON e.Exam_Id = er.Exam_Id INNER JOIN Course AS c ON e.Course_Id = c.Course_Id  WHERE (er.User_id = " + Session["Reg_Id"] + ")");
+        ds = conn.select("SELECT e.Exam_id, e.Exam_Name, c.Course_Name, e.Exam_Start_Date, e.Exam_End_Date, er.Reg_Date, e.Total_Marks, e.Passing_Marks FROM Exam AS e INNER JOIN Exam_Reg AS er ON e.Exam_Id = er.Exam_Id INNER JOIN Course AS c ON e.Course_Id = c.Course_Id  WHERE (e.Exam_End_Date > { fn NOW() }) AND (er.Exam_Given_Date IS NULL) AND(er.User_id = 4) AND DAY(Exam_Start_Date) >= DAY({ FN NOW()}) AND MONTH(EXAM_START_DATE)<= MONTH({FN NOW()})");
         bindgrid(ds);
         if (ds.Tables[0].Rows.Count > 0)
         {
@@ -105,8 +106,12 @@ public partial class ExamList : System.Web.UI.Page
             if(e.CommandName == "Exam_Id")
             {
                 hdnexamlist.Value = e.CommandArgument.ToString();
+                string str1 = "select * from Exam e, Exam_Reg er, Question q WHERE e.Exam_Id ='" + hdnexamlist.Value + "' and e.exam_id = er.exam_id and e.Course_Id = q.Course_Id";
+                DataSet ds = new DataSet();
+                ds = conn.select(str1);
                 Session["eid"] = hdnexamlist.Value;
-                Server.Transfer("ExamResult.aspx?" + Session["eid"] + " & " + Session["Reg_Id"] + "");
+                Session["cid"] = ds.Tables[0].Rows[0]["Course_Id"].ToString();
+                Server.Transfer("ExamResult.aspx?User_Id=" + Session["Reg_Id"] + "&Exam_Id=" + Session["eid"] + "&Course_Id=" + Session["cid"] + "", false);
             }
         }
         catch (Exception)

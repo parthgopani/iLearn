@@ -17,7 +17,7 @@
                                     <div class="col-md-6 d-flex flex-column justify-content-start">
                                         <div class="ml-xl-4 mt-3">
                                             <p class="card-title">My ScoreBoard</p>
-                                            <h1 class="text-primary">Hi Bhakti!</h1>
+                                            <h1 class="text-primary">Hello Parth</h1>
                                             <h5 class="font-weight-500 mb-xl-4 text-primary">Welcome to your Scoreboard at iLearn
                                             </h5>
                                             <p class="mb-2 mb-xl-0">
@@ -33,7 +33,7 @@
                                             <div class="circular-progress" data-inner-circle-color="white" data-percentage="80"
                                                 data-progress-color="#7978E9" data-bg-color="white">
                                                 <div class="inner-circle"></div>
-                                                <p class="percentage">0%</p>
+                                                <p class="percentage" >0%</p>
                                             </div>
                                             <div class="row">
                                                 <div class="label-card">
@@ -267,14 +267,13 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="card-body">
+                                    <div class="card-body" style="padding-top:30%";>
                                         <p class="card-title">
                                             <a href="https://www.pythonmorsels.com/lambda-expressions/">What
                                             are Lambda Expressions?</a>
                                         </p>
                                         <p class="font-weight-500">
-                                            What are lambda expressions and how are they used in python?
-                                            Learn here.
+                                            Lambda expressions, also known as lambda functions or anonymous functions, are a feature in Python that allows you to create small, unnamed functions on the fly. They are used when you need a simple function for a short period, often for operations like filtering, mapping, or sorting lists. Lambda expressions are concise and can be defined in a single line of code.
                                         </p>
                                     </div>
                                 </div>
@@ -288,7 +287,6 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="card-body">
-                                        <p class="card-title">Latest Posts</p>
                                         <div class="card tale-bg">
                                             <div class="card-people mt-auto">
                                                 <img src="images/posts/latest2.jpg" alt="">
@@ -297,16 +295,14 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="card-body">
+                                    <div class="card-body" style="padding-top:30%";>
                                         <p class="card-title">
                                             <a href="https://planetpython.org/">From concepts to MVPs. Validate your ideas in few
                                                 lines of code with streamlit.
                                             </a>
                                         </p>
                                         <p class="font-weight-500">
-                                            In this article, we’ll walk you through the process of turning your concept into
-                                            a Minimum Viable Product (MVP) with few lines of code using Streamlit.
-                                            Learn here.
+                                            Streamlit is a popular Python library that allows you to quickly create web applications and interactive data dashboards with minimal code. It's an excellent tool for prototyping and validating ideas by turning data scripts into shareable web apps. Streamlit simplifies the process of turning your data-related ideas into functional applications, making it an excellent choice for data scientists, developers, and entrepreneurs looking to validate their concepts quickly and effectively.
                                         </p>
                                     </div>
                                 </div>
@@ -320,7 +316,6 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="card-body">
-                                        <p class="card-title">Latest Posts</p>
                                         <div class="card tale-bg">
                                             <div class="card-people mt-auto">
                                                 <img src="images/posts/latest1.jpg" alt="">
@@ -329,18 +324,28 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="card-body">
+                                    <div class="card-body" style="padding-top:15%";>
                                         <p class="card-title">
                                             <a href="https://realpython.com/courses/building-systems-classes-exercises/">Python
                                                 Basics Exercises: Building Systems With Classes
                                             </a>
                                         </p>
                                         <p class="font-weight-500">
-                                            In Python Basics: Building Systems With Classes, you moved beyond the basics of
-                                            object-oriented programming (OOP), and started to put those classes to work. In
-                                            this exercise course you will employ these capabilities to build more complex systems
-                                            and write readable, reusable code.
-                                            Learn here.
+                                            Exercise 1: Creating a Class Create a class Person with name and age attributes. Implement methods for setting and getting these attributes.
+                                            <br />
+                                            Exercise 2: Inheritance Create a class Student that inherits from Person. Add student-specific attributes and methods. Demonstrate inheritance.
+                                            <br />
+                                            Exercise 3: Class Composition Create a Course class to manage students. Implement methods for adding and removing students.
+                                            <br />
+                                            Exercise 4: Building a Simple Calculator Create a class Calculator for basic arithmetic operations. Implement addition, subtraction, multiplication, and division methods.
+                                            <br />
+                                            Exercise 5: Building a Library System Create a class to manage a library. Implement methods for adding/removing books, displaying available books, and checking out books.
+                                            <br />
+                                            Exercise 6: Implementing a To-Do List Create a class for managing a to-do list. Implement methods to add tasks, mark tasks as completed, and list tasks.
+                                            <br />
+                                            Exercise 7: Modeling a Bank Account Create a class to model a bank account. Implement methods for depositing, withdrawing, and checking the balance.
+                                            <br />
+                                            Exercise 8: Implementing a Contact List Create a class to manage a contact list. Implement methods for adding, deleting, and searching contacts.
                                         </p>
                                     </div>
                                 </div>
@@ -348,10 +353,8 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
     <script src="UserMaster_Js/circularprogressbar.js"></script>
-
 </asp:Content>

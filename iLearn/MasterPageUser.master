@@ -6,7 +6,7 @@
 <html>
 <head runat="server">
     <title>iLearn</title>
-    <!--<script language="javascript">
+    <script language="javascript">
     function FullScreen() {
         top.resizeTo(window.screen.availWidth, window.screen.availHeight);
         top.moveTo(0, 0);
@@ -45,7 +45,7 @@
             return false;
     }
 
-    </script>-->
+    </script>
     <style>
         .gridview {
             border-collapse: collapse;

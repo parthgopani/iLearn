@@ -32,7 +32,7 @@ public partial class Login : System.Web.UI.Page
 
            // string qry = "select L.Email, L.Password, L.Type from Login L, Registeration R where L.Email = '" + txtEmail.Text + "' and L.Password = '" + txtPassword.Text + "' and L.Email = R.Email";
 
-			string qry = "select l.Email,l.Password,Type, Reg_id  from Login l, Registeration r where l.Email = '" + txtEmail.Text + "' and l.Password = '" + txtPassword.Text + "' and l.Email=r.Email";
+			string qry = "select l.Email,l.Password,Type, Reg_id  from Login l, Registration r where l.Email = '" + txtEmail.Text + "' and l.Password = '" + txtPassword.Text + "' and l.Email=r.Email";
 			ds = conn.select(qry);
             // String type = ds.Tables[0].Rows[0][2].ToString();
             /*if (type == "student")
@@ -46,13 +46,13 @@ public partial class Login : System.Web.UI.Page
                 string userType = ds.Tables[0].Rows[0]["Type"].ToString();
 
                 lblmsg.Text = "Login Success";
-                if (userType.ToString().ToLower().Trim() == "Student")
+                if (userType.ToString().ToLower().Trim() == "a")
                 {
-                    Server.Transfer("Default.aspx", false);
+                    Server.Transfer("AdminDashboard.aspx", false);
                 }
-                else if (userType.ToString().ToLower().Trim() == "a")
+                else if (userType.ToString().ToLower().Trim() == "u")
                 {
-                    Response.Redirect("ExamDeclare.aspx");
+                    Response.Redirect("UserDashboard.aspx");
                 }
                 else
                 {

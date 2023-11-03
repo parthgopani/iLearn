@@ -2,7 +2,6 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <link href="UserMaster_CSS/UserDashboard.css" rel="stylesheet" />
-
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div class="content-wrapper" style="margin-top: 5%;">
@@ -29,10 +28,9 @@
                                         <div class="horizontal-rectangle-card">
                                             <h1 class="card-heading">Welcome</h1>
                                             <h4 class="card-subheading">Your Score</h4>
-                                            <div class="circular-progress" data-inner-circle-color="white" data-percentage="80"
-                                                data-progress-color="#7978E9" data-bg-color="white">
+                                            <div class="circular-progress" data-inner-circle-color="white" data-percentage="80" data-progress-color="#4B49AC" data-bg-color="white">
                                                 <div class="inner-circle"></div>
-                                                <p class="percentage" >0%</p>
+                                                <p class="percentage">0%</p>
                                             </div>
                                             <div class="row">
                                                 <div class="label-card">
@@ -355,5 +353,5 @@
             </div>
         </div>
     </div>
-    <script src="UserMaster_Js/circularprogressbar.js"></script>
+    <script src="js/CircularProgress.js"></script>
 </asp:Content>

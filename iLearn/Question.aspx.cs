@@ -24,13 +24,13 @@ public partial class Question : System.Web.UI.Page
         }
 
     }
-    protected void grdquestion_RowCommand(object sender,GridViewCommandEventArgs e)
+    protected void grdquestion_RowCommand(object sender, GridViewCommandEventArgs e)
     {
         if (e.CommandName == "Que_Id")
-        { 
-            hdnquestion.Value=e.CommandArgument.ToString();
+        {
+            hdnquestion.Value = e.CommandArgument.ToString();
             String str1 = "select * from Question WHERE Que_Id='" + hdnquestion.Value + "'";
-            DataSet ds = new DataSet(); 
+            DataSet ds = new DataSet();
             ds = conn.select(str1);
 
             try
@@ -77,10 +77,28 @@ public partial class Question : System.Web.UI.Page
             row["Que_Text"] = ProcessLatexEquations(queText);
         }
 
-      
+
         gf.fill_grid(ds, grdquestion);
     }
-   
+    private void ProcessLatexInDataSet(DataSet ds)
+    {
+        // Loop through each table in the dataset
+        foreach (DataTable dt in ds.Tables)
+        {
+            // Loop through each row in the table
+            foreach (DataRow row in dt.Rows)
+            {
+                // Process LaTeX equations in each column containing text
+                foreach (DataColumn col in dt.Columns)
+                {
+                    if (col.DataType == typeof(string))
+                    {
+                        row[col] = ProcessLatexEquations(row[col].ToString());
+                    }
+                }
+            }
+        }
+    }
     protected string ProcessLatexEquations(string input)
     {
 
@@ -88,12 +106,13 @@ public partial class Question : System.Web.UI.Page
         if (input.Contains("$"))
         {
             // Wrap the input in a MathJax block to render LaTeX equations
+
             input = $@"{input}";
         }
 
         return input;
     }
-  
+
     public void binddrp()
     {
         gf.fillcombo("select * from Semester", drpsemester, "Sem_Name", "Sem_Id", "");
@@ -145,14 +164,14 @@ public partial class Question : System.Web.UI.Page
                 {
 
                     // Insert the question into the database
-                   string insertQuery = "if not exists (select * from Question where Course_Id = '" + courseId + "' and Que_text ='" + questionText + "' and O1 = '" + option1 + "' and O2 = '" + option2 + "' and O3 = '" + option3 + "' and O4 = '" + option4 + "'  )insert into Question(Course_Id,Complex_Id,Que_Text,O1,O2,O3,O4,Correct_Ans,UploadDateTime) values(" + courseId + "," + complexityId + ",'" + questionText + "','" + option1 + "','" + option2 + "','" + option3 + "','" + option4 + "','" + correctAnswer + "',GETDATE())";
+                    string insertQuery = "if not exists (select * from Question where Course_Id = '" + courseId + "' and Que_text ='" + questionText + "' and O1 = '" + option1 + "' and O2 = '" + option2 + "' and O3 = '" + option3 + "' and O4 = '" + option4 + "'  )insert into Question(Course_Id,Complex_Id,Que_Text,O1,O2,O3,O4,Correct_Ans,UploadDateTime) values(" + courseId + "," + complexityId + ",'" + questionText + "','" + option1 + "','" + option2 + "','" + option3 + "','" + option4 + "','" + correctAnswer + "',GETDATE())";
                     conn.modify(insertQuery);
 
-                        Response.Write("<script>alert('Question Inserted Successfully')</script>");
-                        bindgrid();
-                        clearall(this);
-                        disabled_up_del();
-                    
+                    Response.Write("<script>alert('Question Inserted Successfully')</script>");
+                    bindgrid();
+                    clearall(this);
+                    disabled_up_del();
+
                 }
                 else
                 {
@@ -213,7 +232,7 @@ public partial class Question : System.Web.UI.Page
             disabled_up_del();
             btnadd.Visible = true;
         }
-        catch 
+        catch
         {
             Response.Write("<script>alert('Question Not Deleted. Something Went Wrong...!')</script>");
         }
@@ -223,7 +242,7 @@ public partial class Question : System.Web.UI.Page
         clearall(this);
 
     }
-   
+
     public void clearall(Control Parent)
     {
         foreach (Control x in Parent.Controls)
@@ -267,4 +286,3 @@ public partial class Question : System.Web.UI.Page
 
 }
 
-   

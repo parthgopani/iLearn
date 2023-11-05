@@ -131,7 +131,11 @@ public partial class Quiz : System.Web.UI.Page
 
             tot = Convert.ToInt16(rnd.Next(1, 10));
             ds = conn.select("SELECT TOP 1 * FROM Question WHERE Course_Id = '" + Session["cid"] + "' AND (Que_Id NOT IN (SELECT Que_Id FROM Quiz WHERE User_Id='" + Session["Reg_Id"].ToString() + "' AND Exam_Id ='" + Session["eid"] + "')) ORDER BY NEWID()");
-
+            foreach (DataRow row in ds.Tables[0].Rows)
+            {
+                string queText = row["Que_Text"].ToString();
+                row["Que_Text"] = ProcessLatexEquations(queText);
+            }
 
             //  if (tot % 2 == 0)
             // ds = conn.select("select * from Question where Course_Id = '" + Session["cid"] + "' and ( Que_Id NOT IN (Select Que_Id FROM Quiz where User_Id='" + Session["Reg_Id"].ToString() + "' AND Exam_Id ='" + Session["eid"] + "' ))order by Que_Id ");
@@ -196,7 +200,19 @@ public partial class Quiz : System.Web.UI.Page
         }
     }
 
+    protected string ProcessLatexEquations(string input)
+    {
 
+        // Check if the input contains LaTeX equations (identified by $$)
+        if (input.Contains("$"))
+        {
+            // Wrap the input in a MathJax block to render LaTeX equations
+
+            input = $@"{input}";
+        }
+
+        return input;
+    }
     protected void btnsubmit_Click(object sender, EventArgs e)
     {
         if (o1.Checked == false && o2.Checked == false && o3.Checked == false && o4.Checked == false)

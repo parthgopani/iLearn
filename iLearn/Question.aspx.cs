@@ -80,40 +80,21 @@ public partial class Question : System.Web.UI.Page
       
         gf.fill_grid(ds, grdquestion);
     }
-    private void ProcessLatexInDataSet(DataSet ds)
-    {
-        // Loop through each table in the dataset
-        foreach (DataTable dt in ds.Tables)
-        {
-            // Loop through each row in the table
-            foreach (DataRow row in dt.Rows)
-            {
-                // Process LaTeX equations in each column containing text
-                foreach (DataColumn col in dt.Columns)
-                {
-                    if (col.DataType == typeof(string))
-                    {
-                        row[col] = ProcessLatexEquations(row[col].ToString());
-                    }
-                }
-            }
-        }
-    }
+   
     protected string ProcessLatexEquations(string input)
     {
-       
+
         // Check if the input contains LaTeX equations (identified by $$)
         if (input.Contains("$"))
         {
             // Wrap the input in a MathJax block to render LaTeX equations
-
             input = $@"{input}";
         }
 
         return input;
     }
-
-public void binddrp()
+  
+    public void binddrp()
     {
         gf.fillcombo("select * from Semester", drpsemester, "Sem_Name", "Sem_Id", "");
         gf.fillcombo("select * from Complexity", drpcomplexcity, "Complex_Type", "Complex_Id", "");

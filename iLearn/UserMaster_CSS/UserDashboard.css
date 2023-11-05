@@ -1,0 +1,128 @@
+﻿.horizontal-rectangle-card {
+    position: relative;
+    background-color: #fff; /* Background color of the card */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Adjust border-radius as needed for the shape */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a box shadow for depth */
+    /* Set the width and height for the rectangular shape */
+    width: 80%;
+    height: 400px; /* Adjust the height as needed */
+    /* Position the card to overlap the content */
+    position: absolute;
+    top: -90px;
+    right: 40px;
+    z-index: 1; /* Make it overlap the other content */
+}
+
+.card-heading {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.card-subheading {
+    font-size: 1rem;
+    color: #555;
+    text-align: center;
+}
+
+
+.label {
+    margin-top: 5px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.label-card {
+    display: flex;
+    align-items: center;
+    margin-top: 55px;
+    position: relative;
+    background-color: #fff; /* Background color of the card */
+
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Adjust border-radius as needed for the shape */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 45%;
+    height: 80px;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.row {
+    margin: 0 -5px;
+}
+
+.color-strip {
+    width: 5px; /* Adjust the width as needed */
+    height: 100%; /* Extends the full height of the card */
+}
+
+.color-strip1 {
+    background-color: #ff5722; /* Color for the first strip */
+}
+
+.color-strip2 {
+    background-color: #4caf50; /* Color for the second strip */
+}
+
+.label-content {
+    padding: 10px;
+}
+
+    .label-content h3 {
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+        color: #333;
+    }
+
+    .label-content p {
+        font-size: 1rem;
+        color: #555;
+    }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    /* Adjust styles for screens with a max-width of 768px */
+    .horizontal-rectangle-card {
+        width: 100%; /* Make it full-width */
+        top: 0; /* Remove top positioning */
+        right: 0; /* Remove right positioning */
+    }
+
+    .label-card {
+        width: 100%; /* Make label cards full-width */
+        margin-top: 20px; /* Adjust margin */
+    }
+}
+:root {
+    --progress-bar-width: 150px;
+    --progress-bar-height: 150px;
+    --font-size: 2rem;
+}
+
+.circular-progress {
+    width: var(--progress-bar-width);
+    height: var(--progress-bar-height);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left:125px;
+    margin-top:5%;
+}
+
+.inner-circle {
+    position: absolute;
+    width: calc(var(--progress-bar-width) - 30px);
+    height: calc(var(--progress-bar-height) - 30px);
+    border-radius: 50%;
+    background-color: lightgrey;
+}
+
+.percentage {
+    position: relative;
+    font-size: var(--font-size);
+    color: #4B49AC;
+}

@@ -44,7 +44,7 @@ public partial class ExamResult : System.Web.UI.Page
         DataSet ds = new DataSet();
         string qry = "select Exam_Name, Status_PF, Score, Percentage, Total_Question, Passing_Marks, Total_Marks, e.Exam_Id from Exam_Reg e inner join Exam e1  on e1.Exam_Id = e.Exam_Id where e.User_Id = " + Session["Reg_Id"] + " and e.Exam_Id = " + Session["eid"] + "";
         ds = conn.select(qry);
-        int mks = Convert.ToInt32(ds.Tables[0].Rows[0]["Score"]) * 2;
+        int mks = Convert.ToInt32(ds.Tables[0].Rows[0]["Score"]);
         Session["marks"] = ds.Tables[0].Rows[0]["Score"];
         Session["passmarks"] = ds.Tables[0].Rows[0]["Passing_Marks"];
         Session["percent"] = ds.Tables[0].Rows[0]["Percentage"];

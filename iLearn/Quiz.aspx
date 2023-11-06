@@ -60,6 +60,7 @@
                                                             class="btn btn-inverse-info mr-2" />
                                                         <asp:Button ID="btncancel" runat="server" Text="Cancel" OnClick="btncancel_Click"
                                                             class="btn btn-inverse-dark" />
+                                                        <br />
                                                         <asp:UpdateProgress ID="prg_ans" runat="server">
                                                         </asp:UpdateProgress>
                                                         <h3>

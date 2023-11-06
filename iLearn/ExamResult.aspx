@@ -84,7 +84,7 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-md-12 text-center">
-                                                <asp:Button ID="Button1" runat="server" Text="Back" CssClass="btn btn-primary btn-sm"
+                                                <asp:Button ID="Button1" runat="server" Text="View Answers" class="btn btn-inverse-primary mr-2"
                                                     OnClick="Button1_Click" />
                                             </div>
                                         </div>

@@ -45,14 +45,25 @@ public partial class View_Answers : System.Web.UI.Page
     public void bindgrid()
     {
         DataSet ds = new DataSet();
-        ds = conn.select("select q.Que_Text,q.O1,q.O2,q.O3,q.O4,q.Correct_Ans,a.Given_Ans from Question q,Quiz q1 where q.Que_Id = q1.Que_Id and q1.User_Id = " + Session["Reg_Id"] + " and q1.Exam_Id = " + Session["eid"] + "");
+        ds = conn.select("select q.Que_Text,q.O1,q.O2,q.O3,q.O4,q.Correct_Ans,q1.Given_Ans from Question q,Quiz q1 where q.Que_Id = q1.Que_Id and q1.User_Id = " + Session["Reg_Id"] + " and q1.Exam_Id = " + Session["eid"] + "");
+        foreach (DataRow row in ds.Tables[0].Rows)
+        {
+            string queText = row["Que_Text"].ToString();
+            row["Que_Text"] = ProcessLatexEquations(queText);
+        }
         gf.fill_grid(ds, grdview);
     }
+    protected string ProcessLatexEquations(string input)
+    {
 
+        if (input.Contains("$"))
+        {
 
+            input = $@"{input}";
+        }
 
-
-
+        return input;
+    }
     protected void grdview_RowDataBound11(object sender, GridViewRowEventArgs e)
     {
         DataSet ds = new DataSet();

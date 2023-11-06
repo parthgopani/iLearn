@@ -109,6 +109,6 @@ public partial class ExamResult : System.Web.UI.Page
 
     protected void Button1_Click(object sender, EventArgs e)
     {
-        Response.Redirect("ViewAnswer.aspx");
+        Server.Transfer("View_Answers.aspx?User_Id=" + Session["Reg_Id"] + "&Exam_Id=" + Session["eid"] + "&Course_Id=" + Session["cid"] + "", false);
     }
 }

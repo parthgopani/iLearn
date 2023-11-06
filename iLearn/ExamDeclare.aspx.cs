@@ -83,14 +83,47 @@ public partial class ExamDeclare : System.Web.UI.Page
             if (cnt >= Convert.ToInt32(txttotque.Text))
             {
                 //string q = "insert into Exam (Exam_Name, Course_Id, Exam_Start_Date, Exam_End_Date, Total_Marks, Passing_Marks, Duration, Total_Question) values ('" + txtexamname.Text + "'," + drpcourse.SelectedValue + ",'" + txtstartdate.Text + " 10:00:00','" + txtenddate.Text + " 18:00:00'," + txttotmarks.Text + "," + txtpassmarks.Text + "," + txtduration.Text + "," + txttotque.Text + "); select max(exam_id) from exam_m";
-                string q = "insert into Exam (Exam_Name, Course_Id, Exam_Start_Date, Exam_End_Date, Total_Marks, Passing_Marks, Duration, Total_Question) " +
-                   "values ('" + txtexamname.Text + "'," + drpcourse.SelectedValue + ",'" + txtstartdate.Text + "','"
-                   + txtenddate.Text + "'," + txttotmarks.Text + "," + txtpassmarks.Text + "," + txtduration.Text + "," + txttotque.Text + "); select max(Exam_Id) from Exam";
-                conn.select(q);
+                //string q = "insert into Exam (Exam_Name, Course_Id, Exam_Start_Date, Exam_End_Date, Total_Marks, Passing_Marks, Duration, Total_Question) " + "values ('" + txtexamname.Text + "'," + drpcourse.SelectedValue + ",'" + txtstartdate.Text + "','" + txtenddate.Text + "'," + txttotmarks.Text + "," + txtpassmarks.Text + "," + txtduration.Text + "," + txttotque.Text + "); select max(Exam_Id) from Exam";
+
+                string q = "insert into Exam (Exam_Name, Course_Id, Exam_Start_Date, Exam_End_Date, Total_Marks, Passing_Marks, Duration, Total_Question) values ('" + txtexamname.Text + "', " + drpcourse.SelectedValue + ", '" + txtstartdate.Text + "', '" + txtenddate.Text + "', " + txttotmarks.Text + ", " + txtpassmarks.Text + ", " + txtduration.Text + ", " + txttotque.Text + ")";
+                conn.modify(q);
+
+                // Get the last inserted exam_id
+                string selectQuery = "SELECT MAX(exam_id) FROM Exam";
+                ds = conn.select(selectQuery);
+                string examId = ds.Tables[0].Rows[0][0].ToString();
+
                 Response.Write("<script>alert('Exam Declared Successfully')</script>");
                 bindgrid();
                 clearall(this);
                 disabled_up_del();
+
+                DataSet ds1 = new DataSet();
+                string q2 = "SELECT s.Sem_Id, e.Exam_Start_Date FROM Semester s, Course c, Exam e WHERE c.Course_Id = e.Course_Id AND e.Exam_Id = " + examId + " AND s.Sem_Id = c.Sem_Id";
+                ds1 = conn.select(q2);
+
+                if (ds1.Tables[0].Rows.Count > 0)
+                {
+                    DateTime start_date = Convert.ToDateTime(ds1.Tables[0].Rows[0]["Exam_Start_Date"]);
+                    Int32 sem = Convert.ToInt32(ds1.Tables[0].Rows[0]["Sem_Id"]);
+
+                    string admin = "a@a.com";
+
+                    if (sem >= 1 && sem <= 6)
+                    {
+                        string userFilter = $"SELECT Reg_Id FROM Registration WHERE Email != '{admin}'";
+
+                        DataSet userDs = conn.select(userFilter);
+
+                        for (int i = 0; i < userDs.Tables[0].Rows.Count; i++)
+                        {
+                            string userInsert = "INSERT INTO Exam_Reg(User_Id, Exam_Id, Reg_Date, Exam_Date) " + $"VALUES({userDs.Tables[0].Rows[i][0]}, {examId}, " + $"'{start_date}', '{start_date}'";
+
+                            conn.modify(userInsert);
+                        }
+                    }
+                }
+
                 btnsubmit.Enabled = true;
             }
             else

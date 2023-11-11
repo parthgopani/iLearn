@@ -15,7 +15,8 @@
                                     <div class="col-md-6 d-flex flex-column justify-content-start">
                                         <div class="ml-xl-4 mt-3">
                                             <p class="card-title">My ScoreBoard</p>
-                                            <h1 class="text-primary">Hello Parth</h1>
+                                            
+                                            <asp:Label ID="lblname" runat="server" CssClass="text-primary"></asp:Label>
                                             <h5 class="font-weight-500 mb-xl-4 text-primary">Welcome to your Scoreboard at iLearn
                                             </h5>
                                             <p class="mb-2 mb-xl-0">

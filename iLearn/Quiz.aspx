@@ -15,7 +15,25 @@
         tex2jax: { inlineMath: [['$', '$']]}
     });
 </script>
+    <!--<script>
+        function startTimer(duration) {
+            var timer = duration, minutes, seconds;
+            setInterval(function () {
+                minutes = parseInt(timer / 60, 10);
+                seconds = parseInt(timer % 60, 10);
 
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                $('#<%= lblTimer.ClientID %>').text(minutes + ":" + seconds);
+
+            if (--timer < 0) {
+                // Automatically submit the quiz when the timer reaches 0
+                __doPostBack('<%= btn_end.UniqueID %>', '');
+            }
+        }, 1000);
+        }
+    </script>-->
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div class="content-wrapper">
@@ -60,13 +78,11 @@
                                                             class="btn btn-inverse-info mr-2" />
                                                         <asp:Button ID="btncancel" runat="server" Text="Cancel" OnClick="btncancel_Click"
                                                             class="btn btn-inverse-dark" />
-                                                        <br />
                                                         <asp:UpdateProgress ID="prg_ans" runat="server">
                                                         </asp:UpdateProgress>
-                                                        <h3>
-                                                            <asp:Label ID="lblmsg" runat="server" Text=""></asp:Label>
-                                                            <asp:Label ID="lbl_questions" runat="server" Text=""></asp:Label>
-                                                        </h3>
+                                                        <asp:Label ID="lblTimer" runat="server" Text=""></asp:Label>
+                                                        <asp:Label ID="lblmsg" runat="server" Text=""></asp:Label>
+                                                        <asp:Label ID="lbl_questions" runat="server" Text=""></asp:Label>
                                                     </div>
                                                 </div>
                                             </div>

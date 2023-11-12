@@ -23,10 +23,6 @@
                       <div>
                         <h2 class="mb-0 font-weight-normal"><i class="icon-sun mr-2"></i>10<sup>C</sup></h2>
                       </div>
-                      <div class="ml-2">
-                        <h4 class="location font-weight-normal">Waterloo</h4>
-                        <h6 class="font-weight-normal">Canada</h6>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -39,7 +35,7 @@
                     <div class="card-body">
                       <p class="mb-4">Total Users</p>
                       <p class="fs-30 mb-2"></p>
-                      <p></p>
+                      <p><asp:Label ID="lblUserCount" runat="server" Text=""></asp:Label></p>
                     </div>
                   </div>
                 </div>
@@ -48,7 +44,7 @@
                     <div class="card-body">
                       <p class="mb-4">Total Exams</p>
                       <p class="fs-30 mb-2"></p>
-                      <p></p>
+                      <p><asp:Label ID="lblExamCount" runat="server" Text=""></asp:Label></p>
                     </div>
                   </div>
                 </div>
@@ -60,6 +56,5 @@
             </div>
           </div>
 
-        </div>
 </asp:Content>
 

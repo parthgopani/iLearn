@@ -196,12 +196,7 @@ public partial class Quiz : System.Web.UI.Page
                             hdntotQ.Value = Convert.ToInt16(Session["totq"].ToString()).ToString();
                     }
                     lblquestion.Text = "Q." + hdntotQ.Value + "  " + s1 + s2 +"<br /><br/> <font size=3 color=red> Please Select Any One Option.</font>";
-
-
                 }
-
-
-
             }
         }
         else

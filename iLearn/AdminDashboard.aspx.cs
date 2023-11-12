@@ -19,6 +19,11 @@ public partial class AdminDashboard : System.Web.UI.Page
             lblUserCount.Text = userCount.ToString();
             int examCount = GetExamCount();
             lblExamCount.Text = examCount.ToString();
+            int totalQuestions = GetTotalQuestions();
+            lbltotquestion.Text = totalQuestions.ToString();
+            decimal averageScore = GetAverageScore();
+            lblaverageScore.Text = averageScore.ToString("0.00");
+            ScriptManager.RegisterStartupScript(this, GetType(), "displayChart", $"displayDoughnutChart({averageScore});", true);
         }
     }
     private int GetUserCount()
@@ -54,5 +59,40 @@ public partial class AdminDashboard : System.Web.UI.Page
         }
 
         return examCount;
+    }
+    private int GetTotalQuestions()
+    {
+        int totalQuestions = 0;
+
+        try
+        {
+            string query = "SELECT COUNT(*) FROM Question";
+            totalQuestions = Convert.ToInt32(conn.select(query).Tables[0].Rows[0][0]);
+        }
+        catch (Exception)
+        {
+        }
+
+        return totalQuestions;
+    }
+    private decimal GetAverageScore()
+    {
+        decimal averageScore = 0;
+
+        try
+        {
+            string query = "SELECT AVG(Score) FROM Exam_Reg WHERE Status_PF = 'Congratulations!!! You Are PASS.'";
+            object result = conn.select(query).Tables[0].Rows[0][0];
+
+            if (result != DBNull.Value)
+            {
+                averageScore = Convert.ToDecimal(result);
+            }
+        }
+        catch (Exception)
+        {
+        }
+
+        return averageScore;
     }
 }

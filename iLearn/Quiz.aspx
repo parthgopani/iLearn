@@ -78,15 +78,11 @@
                                                             class="btn btn-inverse-info mr-2" />
                                                         <asp:Button ID="btncancel" runat="server" Text="Cancel" OnClick="btncancel_Click"
                                                             class="btn btn-inverse-dark" />
-                                                        <br />
                                                         <asp:UpdateProgress ID="prg_ans" runat="server">
                                                         </asp:UpdateProgress>
                                                         <asp:Label ID="lblTimer" runat="server" Text=""></asp:Label>
-
-                                                        <h3>
-                                                            <asp:Label ID="lblmsg" runat="server" Text=""></asp:Label>
-                                                            <asp:Label ID="lbl_questions" runat="server" Text=""></asp:Label>
-                                                        </h3>
+                                                        <asp:Label ID="lblmsg" runat="server" Text=""></asp:Label>
+                                                        <asp:Label ID="lbl_questions" runat="server" Text=""></asp:Label>
                                                     </div>
                                                 </div>
                                             </div>

@@ -31,24 +31,24 @@ public partial class UserDashboard : System.Web.UI.Page
                 string lname = ds.Tables[0].Rows[0]["L_Name"].ToString();
                 lblname.Text = "Hello, " + fname + " " + lname;
 
-                double averageScore = CalculateAverageScore(username);
-                string script = $@"
-<script>
+                //double averageScore = CalculateAverageScore(username);
+                //string script = $@"
+//<script>
     // Function to update the circular progress bar
-    function updateCircularProgress(percentage) {{
-        const circularProgress = document.querySelector('.circular-progress');
-        const percentageElement = circularProgress.querySelector('.percentage');
+    //function updateCircularProgress(percentage) {{
+       // const circularProgress = document.querySelector('.circular-progress');
+        //const percentageElement = circularProgress.querySelector('.percentage');
 
-        circularProgress.setAttribute('data-percentage', percentage);
-        percentageElement.textContent = percentage + '%';
-    }}
+       // circularProgress.setAttribute('data-percentage', percentage);
+       // percentageElement.textContent = percentage + '%';
+    //}}
 
     // Update the circular progress to show the average score
-    updateCircularProgress({averageScore});
-</script>
+   // updateCircularProgress({averageScore});
+//</script>
 
-                ";
-                ClientScript.RegisterStartupScript(this.GetType(), "UpdateCircularProgress", script);
+               // ";
+               // ClientScript.RegisterStartupScript(this.GetType(), "UpdateCircularProgress", script);
             }
             else
             {

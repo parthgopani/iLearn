@@ -30,6 +30,7 @@ public partial class Quiz : System.Web.UI.Page
     {
         if (!IsPostBack)
         {
+            
             if (Request.QueryString != null)
             {
                 Session["stime"] = DateTime.Now.ToString();
@@ -44,6 +45,7 @@ public partial class Quiz : System.Web.UI.Page
             {
                 Response.Redirect("ExamList.aspx");
             }
+            
             check_exam();
             display();
 
@@ -53,8 +55,6 @@ public partial class Quiz : System.Web.UI.Page
         }
 
     }
-
-
     public void check_exam()
     {
         DataSet ds = new DataSet();
@@ -70,22 +70,18 @@ public partial class Quiz : System.Web.UI.Page
         if (Convert.ToInt16(ds1.Tables[0].Rows.Count) >= Convert.ToInt16(ds2.Tables[0].Rows[0]["Total_Question"]))
         {
             Response.Redirect("");
-
         }
-
         else if (Convert.ToInt16(ds1.Tables[0].Rows.Count) <= Convert.ToInt16(ds2.Tables[0].Rows[0]["Total_Question"]))
         {
             display();
-
         }
-
     }
-
     public void increment()
     {
         DataSet ds = new DataSet();
         string str = "select Total_Question, Duration from Exam where Exam_Id = " + Session["eid"] + "";
         ds = conn.select(str);
+
 
         tot_q = Convert.ToInt32(ds.Tables[0].Rows[0][0]);
         Session["totq"] = Convert.ToInt16(Session["totq"]) + 1;
@@ -94,7 +90,7 @@ public partial class Quiz : System.Web.UI.Page
             if (Convert.ToInt16(Session["totq"].ToString()) > 0)
                 hdntotQ.Value = Convert.ToInt16(Session["totq"].ToString()).ToString();
         }
-
+        //lblquestion.Text = "Q. " + hdntotQ.Value + "";
         lbl_questions.Text = "Question : " + hdntotQ.Value + "/" + tot_q + "";
         if (Convert.ToInt16(hdntotQ.Value) > tot_q)
         {
@@ -111,6 +107,7 @@ public partial class Quiz : System.Web.UI.Page
     }
     public void display()
     {
+        
         DataSet ds1 = new DataSet();
         string startstop = "select Start_Stop from Exam where Exam_Id = " + Session["eid"];
         ds1 = conn.select(startstop);
@@ -185,7 +182,20 @@ public partial class Quiz : System.Web.UI.Page
                     hdn_que_id.Value = ds.Tables[0].Rows[0]["Que_Id"].ToString();
 
                     //lblquestion.Text =  "Q. " + ds.Tables[0].Rows[0]["que_text"].ToString() + "<br /> Please Select Any One Option.";
-                    lblquestion.Text = "Q. " + s1 + s2 + "<br /><br/> <font size=3 color=red> Please Select Any One Option.</font>";
+
+                    DataSet ds2 = new DataSet();
+                    string str = "select Total_Question, Duration from Exam where Exam_Id = " + Session["eid"] + "";
+                    ds2 = conn.select(str);
+
+
+                    tot_q = Convert.ToInt32(ds2.Tables[0].Rows[0][0]);
+                    Session["totq"] = Convert.ToInt16(Session["totq"]) + 1;
+                    if (hdntotQ.Value == "0" && Session["totq"].ToString() != "-1")
+                    {
+                        if (Convert.ToInt16(Session["totq"].ToString()) > 0)
+                            hdntotQ.Value = Convert.ToInt16(Session["totq"].ToString()).ToString();
+                    }
+                    lblquestion.Text = "Q." + hdntotQ.Value + "  " + s1 + s2 +"<br /><br/> <font size=3 color=red> Please Select Any One Option.</font>";
 
 
                 }
@@ -225,9 +235,6 @@ public partial class Quiz : System.Web.UI.Page
             DataSet ds = new DataSet();
             try
             {
-
-
-
                 if (o1.Checked)
                 {
                     ans = "a";
@@ -338,8 +345,9 @@ public partial class Quiz : System.Web.UI.Page
             lblmsg.Text = ex.ToString();
         }
 
-        string qry2 = "update Exam_Reg set S_Duration = '" + Session["dur"] + "' where User_Id = '" + Session["Reg_Id"] + "' and Exam_Id='" + Session["eid"] + "'";
+        //string qry2 = "update Exam_Reg set S_Duration = '" + Session["dur"] + "' where User_Id = '" + Session["Reg_Id"] + "' and Exam_Id='" + Session["eid"] + "'";
+        //conn.modify(qry2);
+        string qry2 = $"UPDATE Exam_Reg SET S_Duration = '{Session["dur"]}' WHERE User_Id = '{Session["Reg_Id"]}' AND Exam_Id = '{Session["eid"]}'";
         conn.modify(qry2);
-
     }
 }

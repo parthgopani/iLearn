@@ -1,4 +1,5 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPageUser.master" AutoEventWireup="true" CodeFile="Login.aspx.cs" Inherits="Login" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true"
+    CodeFile="Login.aspx.cs" Inherits="Login" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
@@ -15,30 +16,34 @@
             </div>
             <div class="form-group">
                 <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" placeholder="Eg : user@iLearn.com"></asp:TextBox>
-                <asp:RegularExpressionValidator ID="RegularExpressionEmailValidate" runat="server" ControlToValidate="txtEmail"
-                    ErrorMessage="Please Enter Valid Email Address!" ForeColor="#CC0000" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
-                <asp:RequiredFieldValidator ID="rfvtxtEmail" runat="server" ControlToValidate="txtEmail"
-                    ErrorMessage="Email Required" ForeColor="#CC0000" ValidationGroup="submit1"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RfvUserName" runat="server" ErrorMessage="Please enter your Email!"
+                    ForeColor="red" ControlToValidate="txtEmail"></asp:RequiredFieldValidator>
+                <asp:RegularExpressionValidator ID="RxvEmail" runat="server" ControlToValidate="txtEmail"
+                    ErrorMessage="Email address is invalid!" ForeColor="#FF3300" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
             </div>
             <div class="form-group">
                 Password
             </div>
             <div class="form-group">
-                <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" CssClass="form-control" placeholder="*****"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="rfvtxtPassword" runat="server" ControlToValidate="txtPassword"
-                    ErrorMessage="Password Required" ForeColor="#CC0000" ValidationGroup="submit1"></asp:RequiredFieldValidator>
+                <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" CssClass="form-control"
+                    placeholder="*****"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RfvPwd" runat="server" ErrorMessage="Please enter your password!"
+                    ForeColor="Red" ControlToValidate="txtPassword"></asp:RequiredFieldValidator>
             </div>
-            <asp:Button ID="btnLogin" runat="server" CssClass="btn bg-olive btn-block" OnClick="btnLogin_Click"
-                Text="Login" ValidationGroup="submitLogin" />
-            <asp:Button ID="btnCancle" runat="server" CssClass="btn bg-olive btn-block" Text="Cancel"
-                OnClick="btnCancle_Click" />
-            <div class="text-center">
+            <div class="form-group">
+                <asp:Button ID="btnLogin" runat="server" class="btn btn-inverse-primary mr-2" OnClick="btnLogin_Click"
+                    Text="Login" />
+                <asp:Button ID="btnCancle" runat="server" class="btn btn-inverse-dark" Text="Cancel"
+                    OnClick="btnCancle_Click" />
+            </div>
+            <div class="form-group">
                 <p>Don't have an account? <a href="Registration.aspx">Register</a></p>
             </div>
         </div>
+        <div class="form-group">
+            <asp:Label ID="lblmsg" runat="server" Text=""></asp:Label>
 
-        <asp:Label ID="lblmsg" runat="server" Text=""></asp:Label>
-
+        </div>
 
     </div>
 </asp:Content>

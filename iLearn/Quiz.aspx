@@ -36,6 +36,7 @@
     </script>-->
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <div class="main-panel" style="width: 100%;">
     <div class="content-wrapper">
         <div class="row">
             <div class="col-md-12 grid-margin">
@@ -96,6 +97,7 @@
             </div>
         </div>
     </div>
+        </div>
     <asp:HiddenField ID="hdn_que_id" runat="server" />
     <asp:HiddenField ID="hdnquestion" runat="server" />
     <asp:HiddenField ID="hdntotQ" runat="server" />

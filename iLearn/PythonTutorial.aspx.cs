@@ -13,5 +13,10 @@ public partial class PythonTutorial : System.Web.UI.Page
     {
         
     }
-   
+
+
+    protected void btnlearnmore_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("pythonlearn_files/Part1.aspx");
+    }
 }

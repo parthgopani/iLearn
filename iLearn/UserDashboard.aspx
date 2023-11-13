@@ -4,6 +4,7 @@
     <link href="UserMaster_CSS/UserDashboard.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <div class="main-panel" style="width: 100%;">
     <div class="content-wrapper" style="margin-top: 5%;">
         <div class="row">
             <div class="col-md-12 grid-margin">
@@ -354,5 +355,6 @@
             </div>
         </div>
     </div>
+        </div>
     <script src="js/CircularProgress.js"></script>
 </asp:Content>

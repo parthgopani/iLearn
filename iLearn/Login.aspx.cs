@@ -39,14 +39,8 @@ public partial class Login : System.Web.UI.Page
             {
                 string qry1 = "Update Login set status=1"
             }*/
-            if (Session["IsLoggedIn"] != null && (bool)Session["IsLoggedIn"])
+            if (ds.Tables[0].Rows.Count > 0)
             {
-                lblmsg.Text = "You are already logged in!";
-                lblmsg.ForeColor = System.Drawing.Color.Black;
-            }
-            else if (ds.Tables[0].Rows.Count > 0)
-            {
-                Session["IsLoggedIn"] = true;
                 Session["Email"] = txtEmail.Text;
                 Session["Reg_Id"] = ds.Tables[0].Rows[0]["Reg_Id"].ToString();
                 string userType = ds.Tables[0].Rows[0]["Type"].ToString();
@@ -64,6 +58,11 @@ public partial class Login : System.Web.UI.Page
                 {
                     Response.Redirect("AdminDashboard.aspx");
                 }
+                else
+                {
+                    Response.Write("<script>alert('You are Already LoggedIn !')</script>");
+                }
+
             }
             else
             {
@@ -74,7 +73,7 @@ public partial class Login : System.Web.UI.Page
 
         }
         
-        catch (Exception ex)
+        catch (Exception)
         {
             lblmsg.Text = "Incorrect Email or Password !!!";
             lblmsg.ForeColor = System.Drawing.Color.Black;

@@ -15,22 +15,22 @@
                                     <div class="card">
                                         <div class="card-body">
                                             <a href="part24.aspx">
-                                                <button type="button" class="btn btn-outline-primary btn-icon-text">
-                                                    <i class="ti-file btn-icon-prepend"></i>
-                                                    Previous
-                                                </button>
+                                                <button type="button" class="btn btn-outline-secondary btn-icon-text">
+                                    <i class="fa-solid fa-arrow-left" style="color: #000f;"></i>
+                                    Previous
+                                </button>
                                             </a>
                                             <a href="part1.aspx">
                                                 <button type="button" class="btn btn-outline-secondary btn-icon-text">
-                                                    <i class="ti-file btn-icon-append"></i>
-                                                    Contents
-                                                </button>
+                                    <i class="fa-solid fa-file" style="color: #000f;"></i>
+                                    Contents
+                                </button>
                                             </a>
                                             <a href="part26.aspx">
-                                                <button type="button" class="btn btn-outline-success btn-icon-text">
-                                                    <i class="ti-alert btn-icon-prepend"></i>
-                                                    Next
-                                                </button>
+                                                <button type="button" class="btn btn-outline-secondary btn-icon-text">
+                                    Next
+                                     <i class="fa-solid fa-arrow-right" style="color: #000f;"></i>
+                                </button>
                                             </a>
                                             <div class="card-body" style="text-align: center;">
                                                 <h2>2.10  Asking the user for input
@@ -175,22 +175,22 @@
                                             <p style="padding-left: 6pt; text-indent: 0pt; text-align: justify;">We will see how
                                                 to handle this kind of error later.</p>
                                             <a href="part24.aspx">
-                                                <button type="button" class="btn btn-outline-primary btn-icon-text">
-                                                    <i class="ti-file btn-icon-prepend"></i>
-                                                    Previous
-                                                </button>
+                                                <button type="button" class="btn btn-outline-secondary btn-icon-text">
+                                    <i class="fa-solid fa-arrow-left" style="color: #000f;"></i>
+                                    Previous
+                                </button>
                                             </a>
                                             <a href="part1.aspx">
                                                 <button type="button" class="btn btn-outline-secondary btn-icon-text">
-                                                    <i class="ti-file btn-icon-append"></i>
-                                                    Contents
-                                                </button>
+                                    <i class="fa-solid fa-file" style="color: #000f;"></i>
+                                    Contents
+                                </button>
                                             </a>
                                             <a href="part26.aspx">
-                                                <button type="button" class="btn btn-outline-success btn-icon-text">
-                                                    <i class="ti-alert btn-icon-prepend"></i>
-                                                    Next
-                                                </button>
+                                                <button type="button" class="btn btn-outline-secondary btn-icon-text">
+                                    Next
+                                     <i class="fa-solid fa-arrow-right" style="color: #000f;"></i>
+                                </button>
                                             </a>
                                         </div>
                                     </div>

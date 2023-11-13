@@ -15,21 +15,21 @@
                                     <div class="card">
                                         <div class="card-body">
                                             <a href="part9.aspx">
-                                                <button type="button" class="btn btn-outline-primary btn-icon-text">
-                                                    <i class="ti-file btn-icon-prepend"></i>
+                                                <button type="button" class="btn btn-outline-secondary btn-icon-text">
+                                                    <i class="fa-solid fa-arrow-left" style="color: #000f;"></i>
                                                     Previous
                                                 </button>
                                             </a>
                                             <a href="part1.aspx">
                                                 <button type="button" class="btn btn-outline-secondary btn-icon-text">
-                                                    <i class="ti-file btn-icon-append"></i>
+                                                    <i class="fa-solid fa-file" style="color: #000f;"></i>
                                                     Contents
                                                 </button>
                                             </a>
                                             <a href="part11.aspx">
-                                                <button type="button" class="btn btn-outline-success btn-icon-text">
-                                                    <i class="ti-alert btn-icon-prepend"></i>
+                                                <button type="button" class="btn btn-outline-secondary btn-icon-text">
                                                     Next
+     <i class="fa-solid fa-arrow-right" style="color: #000f;"></i>
                                                 </button>
                                             </a>
                                             <div class="card-body" style="text-align: center;">
@@ -46,17 +46,20 @@
                                             <p style="padding-top: 6pt; padding-left: 7pt; text-indent: 0pt; text-align: justify;">
                                                 It might be easiest to understand what a program is by thinking about a problem
                                                 that a program might be built to solve, and then looking at a program that would
-                                                solve that problem.</p>
+                                                solve that problem.
+                                            </p>
                                             <p style="padding-top: 6pt; padding-left: 6pt; text-indent: 0pt; text-align: justify;">
                                                 Lets say you are doing Social Computing research on Facebook posts and you are interested
                                                 in the most frequently used word in a series of posts. You could print out the stream
                                                 of Facebook posts and pore over the text looking for the most common word, but that
                                                 would take a long time and be very mistake prone. You would be smart to write a
                                                 Python program to handle the task quickly and accurately so you can spend the weekend
-                                                doing something fun.</p>
+                                                doing something fun.
+                                            </p>
                                             <p style="padding-top: 6pt; padding-left: 7pt; text-indent: 0pt; text-align: justify;">
                                                 For example, look at the following text about a clown and a car. Look at the text
-                                                and figure out the most common word and how many times it occurs.</p>
+                                                and figure out the most common word and how many times it occurs.
+                                            </p>
                                             <p class="s5" style="padding-top: 1pt; padding-left: 52pt; text-indent: 0pt; text-align: left;">
                                                 <a name="bookmark32">1.9. THE BUILDING BLOCKS OF PROGRAMS</a>
                                                 <span class="s11"></span>
@@ -65,20 +68,24 @@
                                             <p style="text-indent: 0pt; text-align: left;">
                                                 <br />
                                             </p>
-                                            <p class="s25" style="padding-left: 52pt; text-indent: 0pt; text-align: left;">the clown
+                                            <p class="s25" style="padding-left: 52pt; text-indent: 0pt; text-align: left;">
+                                                the clown
                                                 ran after the car and the car ran into the tent and the tent fell down on the clown
-                                                and the car</p>
+                                                and the car
+                                            </p>
                                             <p style="text-indent: 0pt; text-align: left;">
                                                 <br />
                                             </p>
                                             <p style="padding-top: 6pt; padding-left: 51pt; text-indent: 0pt; text-align: justify;">
                                                 Then imagine that you are doing this task looking at millions of lines of text.
                                                 Frankly it would be quicker for you to learn Python and write a Python program to
-                                                count the words than it would be to manually scan the words.</p>
+                                                count the words than it would be to manually scan the words.
+                                            </p>
                                             <p style="padding-top: 6pt; padding-left: 51pt; text-indent: 0pt; text-align: justify;">
                                                 The even better news is that I already came up with a simple program to find the
                                                 most common word in a text file. I wrote it, tested it, and now I am giving it to
-                                                you to use so you can save some time.</p>
+                                                you to use so you can save some time.
+                                            </p>
                                             <p style="text-indent: 0pt; text-align: left;">
                                                 <br />
                                             </p>
@@ -159,22 +166,22 @@
     <span class="s5">through </span>Python.
                                             </p>
                                             <a href="part9.aspx">
-                                                <button type="button" class="btn btn-outline-primary btn-icon-text">
-                                                    <i class="ti-file btn-icon-prepend"></i>
-                                                    Previous
-                                                </button>
+                                                <button type="button" class="btn btn-outline-secondary btn-icon-text">
+                                    <i class="fa-solid fa-arrow-left" style="color: #000f;"></i>
+                                    Previous
+                                </button>
                                             </a>
                                             <a href="part1.aspx">
                                                 <button type="button" class="btn btn-outline-secondary btn-icon-text">
-                                                    <i class="ti-file btn-icon-append"></i>
-                                                    Contents
-                                                </button>
+                                    <i class="fa-solid fa-file" style="color: #000f;"></i>
+                                    Contents
+                                </button>
                                             </a>
                                             <a href="part11.aspx">
-                                                <button type="button" class="btn btn-outline-success btn-icon-text">
-                                                    <i class="ti-alert btn-icon-prepend"></i>
-                                                    Next
-                                                </button>
+                                                <button type="button" class="btn btn-outline-secondary btn-icon-text">
+                                    Next
+                                     <i class="fa-solid fa-arrow-right" style="color: #000f;"></i>
+                                </button>
                                             </a>
                                         </div>
                                     </div>

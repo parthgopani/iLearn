@@ -75,6 +75,7 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/contactUs.css">
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -143,7 +144,10 @@
                                 <a href="./../ExamList.aspx" class="nav-link">Quiz</a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link">About Us</a>
+                                <a href="./../ContactUs.aspx" class="nav-link">Contact Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./../AboutUs.aspx" class="nav-link">About Us</a>
                             </li>
                         </ul>
                         <ul class="navbar-nav navbar-nav-right">
@@ -171,10 +175,10 @@
             </asp:Panel>
 
             <div class="container-fluid page-body-wrapper">
-                <div class="main-panel" style="width: 100%;">
+                
                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                     </asp:ContentPlaceHolder>
-                </div>
+                
             </div>
         </div>
     </form>

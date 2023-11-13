@@ -25,13 +25,13 @@ public partial class Course : System.Web.UI.Page
         {
             String qry = "insert into Course(Course_Name,Course_Code,Sem_Id) values('" + txtsubname.Text + "','" + txtsubcode.Text + "'," + dropsem.SelectedValue + ")";
             con.modify(qry);
-            Response.Write("<script>alert('Subject Inserted Successfully')</script>");
+            Response.Write("<script>alert('Course Inserted Successfully')</script>");
             bind_grid();
             ClearAll(this);
         }
         catch (Exception ex)
         {
-            Response.Write("<script>alert('Subject Not Inserted & Something Went Wrong...!')</script>");
+            Response.Write("<script>alert('Course Not Inserted & Something Went Wrong...!')</script>");
         }
     }
     public void bind_grid()
@@ -56,14 +56,14 @@ public partial class Course : System.Web.UI.Page
         {
             String qry = "update Course set Course_Name='" + txtsubname.Text + "',Course_Code='" + txtsubcode.Text + "',Sem_Id=" + dropsem.SelectedValue + " where Course_Id=" + hiddensubid.Value;
             con.modify(qry);
-            Response.Write("<script>alert('Subject Updated Successfully')</script>");
+            Response.Write("<script>alert('Course Updated Successfully')</script>");
             bind_grid();
             SubmitShow();
             ClearAll(this);
         }
         catch (Exception ex)
         {
-            Response.Write("<script>alert('Subject Not Updated & Something Went Wrong...!')</script>");
+            Response.Write("<script>alert('Course Not Updated & Something Went Wrong...!')</script>");
         }
     }
     protected void sub_rowcmd(object sender, GridViewCommandEventArgs e)
@@ -97,14 +97,14 @@ public partial class Course : System.Web.UI.Page
         {
             String qry = "delete from Course where Course_Id=" + hiddensubid.Value;
             con.modify(qry);
-            Response.Write("<script>alert('Subject Deleted Successfully')</script>");
+            Response.Write("<script>alert('Course Deleted Successfully')</script>");
             bind_grid();
             SubmitShow();
             ClearAll(this);
         }
         catch (Exception ex)
         {
-            Response.Write("<script>alert('Subject Not Deleted & Something Went Wrong...!')</script>");
+            Response.Write("<script>alert('Course Not Deleted & Something Went Wrong...!')</script>");
         }
     }
     public void ClearAll(Control parent)

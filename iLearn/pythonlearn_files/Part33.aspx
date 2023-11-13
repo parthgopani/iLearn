@@ -2,6 +2,7 @@
     CodeFile="Part33.aspx.cs" Inherits="pythonlearn_files_Part33" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+       <script src="ReadAloud.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div class="content-wrapper">
@@ -36,24 +37,22 @@
                                                 <h2>3.4  Alternative execution
                                                 </h2>
                                             </div>
-
-                                            <p style="padding-bottom: 3pt; padding-left: 51pt; text-indent: 0pt; text-align: justify;">
+                                            <div class="card-body">
+                                            <p >
                                                 A second form of the
     <span class="s3">if </span>statement is
     <span class="s5">alternative execution</span>, in which there are two possibilities and the condition determines which one gets
                                                 executed. The syntax looks like this:
                                             </p>
-                                            <p style="padding-left: 52pt; text-indent: 0pt; line-height: 1pt; text-align: left;">
-                                                <span>
-                                                    <img width="190" height="1" alt="image" src="Image_010.png" /></span>
-                                            </p>
-                                            <p class="s8" style="padding-left: 63pt; text-indent: 0pt; text-align: left;">
-                                                1
+                                                </div>
+                                            <div class="card-body">
+                                            <p class="s8" >
+                                               
     <span class="s9">We will learn about functions in Chapter 4 and loops in Chapter 5.</span>
                                             </p>
-                                            <p style="text-indent: 0pt; text-align: left;">
-                                                <br />
-                                            </p>
+                                                </div>
+                                           
+                                            <div class="card-body">
                                             <p class="s22" style="padding-top: 3pt; padding-left: 7pt; text-indent: 0pt; text-align: left;">
                                                 <a name="bookmark109"><span class="s23">if </span></a>
                                                 <span style="color: #231F20;">x</span>%
@@ -64,7 +63,7 @@
                                             <p class="s3" style="padding-left: 27pt; text-indent: 0pt; text-align: left;">
                                                 print(
     <span style="color: #3F70A0;">&#39;x is even&#39;</span>)
-                                            </p>
+                                            </p></div>
                                             <a href="part32.aspx">
                                                 <button type="button" class="btn btn-outline-primary btn-icon-text">
                                                     <i class="ti-file btn-icon-prepend"></i>

@@ -2,6 +2,7 @@
     CodeFile="Part19.aspx.cs" Inherits="pythonlearn_files_Part19" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+       <script src="ReadAloud.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div class="content-wrapper">
@@ -36,37 +37,34 @@
                                                 <h2>2.4  Statements
                                                 </h2>
                                             </div>
-                                            <p style="padding-left: 52pt; text-indent: 0pt; text-align: justify;">
+                                            <div class="card-body">
+                                            <p>
                                                 A
     <span class="s5">statement </span>is a unit of code that the Python interpreter can execute. We have seen two kinds of statements:
                                                 print being an expression statement and assignment.
-                                            </p>
-                                            <p style="padding-top: 6pt; padding-left: 51pt; text-indent: 0pt; text-align: justify;">
+                                            </p></div>
+                                            <div class="card-body">
+                                            <p>
                                                 When you type a statement in interactive mode, the interpreter executes it and displays
                                                 the result, if there is one.
-                                            </p>
-                                            <p style="text-indent: 0pt; text-align: left;">
-                                                <br />
-                                            </p>
-                                            <p style="padding-top: 3pt; padding-left: 7pt; text-indent: 0pt; text-align: left;">
+                                            </p></div>
+                                            <div class="card-body">
+                                            <p>
                                                 <a name="bookmark66">A script usually contains a sequence of statements. If there is
                                                     more than one statement, the results appear one at a time as the statements execute.</a>
-                                            </p>
-                                            <p style="padding-top: 6pt; padding-left: 7pt; text-indent: 0pt; text-align: left;">
+                                            </p></div>
+                                            <div class="card-body">
+                                            <p>
                                                 For example, the script
-                                            </p>
-                                            <p style="text-indent: 0pt; text-align: left;">
-                                                <br />
-                                            </p>
+                                            </p></div>
+                                           <div class="card-body">
                                             <p class="s3" style="padding-top: 6pt; padding-left: 7pt; text-indent: 0pt; text-align: left;">
                                                 print(
     <span style="color: #3FA070;">1</span>) x
     <span style="color: #656565;">= </span>
                                                 <span style="color: #3FA070;">2 </span>print(x)
                                             </p>
-                                            <p style="text-indent: 0pt; text-align: left;">
-                                                <br />
-                                            </p>
+                                           
                                             <p style="padding-left: 7pt; text-indent: 0pt; text-align: left;">
                                                 produces the output
                                             </p>
@@ -77,12 +75,12 @@
                                                 1
                                             </p>
                                             <p class="s25" style="padding-left: 7pt; text-indent: 0pt; text-align: left;">2</p>
-                                            <p style="text-indent: 0pt; text-align: left;">
-                                                <br />
-                                            </p>
-                                            <p style="padding-top: 7pt; padding-left: 6pt; text-indent: 0pt; text-align: left;">
+                                           
+                                               </div>
+                                            <div class="card-body">
+                                            <p >
                                                 The assignment statement produces no output.
-                                            </p>
+                                            </p></div>
                                             <a href="part18.aspx">
                                                 <button type="button" class="btn btn-outline-primary btn-icon-text">
                                                     <i class="ti-file btn-icon-prepend"></i>

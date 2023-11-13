@@ -2,6 +2,7 @@
     CodeFile="Part7.aspx.cs" Inherits="pythonlearn_files_Part7" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+       <script src="ReadAloud.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div class="content-wrapper">

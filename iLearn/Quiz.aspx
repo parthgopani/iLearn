@@ -2,6 +2,7 @@
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+       <script src="ReadAloud.js"></script>
     <script type="text/javascript">
         function preventBack() { window.history.forward(); }
         setTimeout("preventBack()", 0);

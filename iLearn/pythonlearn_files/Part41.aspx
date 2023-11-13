@@ -2,6 +2,7 @@
     CodeFile="Part41.aspx.cs" Inherits="pythonlearn_files_Part41" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+       <script src="ReadAloud.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div class="content-wrapper">
@@ -30,8 +31,8 @@
                                                 <h2>3.8  Short-circuit evaluation of logical expressions
                                                 </h2>
                                             </div>
-
-                                            <p style="padding-left: 7pt; text-indent: 0pt; text-align: justify;">
+                                            <div class="card-body">
+                                            <p>
                                                 When Python is processing a logical expression such as
     <span class="s3">x &gt;= 2 and (x/y) &gt; 2</span>, it evaluates the expression from left to right. Because of the definition
                                                 of
@@ -44,21 +45,25 @@
     <span class="s3">True </span>or
     <span class="s3">False</span>.
                                             </p>
-                                            <p style="padding-top: 6pt; padding-left: 7pt; text-indent: 0pt; text-align: justify;">
+                                                </div>
+                                            <div class="card-body">
+                                            <p >
                                                 When Python detects that there is nothing to be gained by evaluating the rest of
                                                 a logical expression, it stops its evaluation and does not do the computations in
                                                 the rest of the logical expression. When the evaluation of a logical expression
                                                 stops because the overall value is already known, it is called
     <span class="s5">short-circuiting </span>the evaluation.
-                                            </p>
-                                            <p style="padding-top: 6pt; padding-left: 7pt; text-indent: 0pt; text-align: justify;">
+                                            </p></div>
+                                            <div class="card-body">
+                                            <p >
                                                 While this may seem like a fine point, the short-circuit behavior leads to a clever
                                                 technique called the
     <span class="s5">guardian pattern</span>. Consider the following code sequence in the Python interpreter:
-                                            </p>
+                                            </p></div>
                                             <p style="text-indent: 0pt; text-align: left;">
                                                 <br />
                                             </p>
+                                            <div class="card-body">
                                             <p class="s22" style="padding-left: 7pt; text-indent: 0pt; text-align: left;">
                                                 &gt;&gt;&gt;
     <span style="color: #231F20;">x </span>=
@@ -130,8 +135,9 @@
                                             </p>
                                             <p style="text-indent: 0pt; text-align: left;">
                                                 <br />
-                                            </p>
-                                            <p style="padding-left: 6pt; text-indent: 0pt; text-align: justify;">
+                                            </p></div>
+                                            <div class="card-body">
+                                            <p >
                                                 The third calculation failed because Python was evaluating
     <span class="s3">(x/y) </span>and
     <span class="s3">y </span>was zero, which causes a runtime error. But the first and the second examples did
@@ -141,11 +147,13 @@
     <span class="s3">False </span>so the
     <span class="s3">(x/y) </span>was not ever executed due to the
     <span class="s5">short-circuit </span>rule and there was no error.
-                                            </p>
-                                            <p style="padding-top: 6pt; padding-left: 7pt; text-indent: 0pt; text-align: justify;">
+                                            </p></div>
+                                            <div class="card-body">
+                                            <p >
                                                 We can construct the logical expression to strategically place a
     <span class="s5">guard </span>evaluation just before the evaluation that might cause an error as follows:
-                                            </p>
+                                            </p></div>
+                                            <div class="card-body">
                                             <p style="text-indent: 0pt; text-align: left;">
                                                 <br />
                                             </p>
@@ -201,14 +209,15 @@
     <span style="color: #231F20;">y </span>!=
     <span style="color: #3FA070;">0</span>
                                             </p>
-                                            <p class="s5" style="padding-top: 1pt; padding-left: 52pt; text-indent: 0pt; text-align: left;">
+                                                </div>
+                                            <div class="card-body">
+                                            <p class="s5" >
                                                 <a name="bookmark117">3.9. DEBUGGING</a>
-                                                <span class="s11"></span>
-                                                <span class="p">39</span>
+                                              
                                             </p>
-                                            <p style="text-indent: 0pt; text-align: left;">
-                                                <br />
-                                            </p>
+                                           
+                                                </div>
+                                            <div class="card-body">
                                             <p class="s3" style="padding-left: 62pt; text-indent: -10pt; text-align: left;">
                                                 Traceback (most recent call last): File
     <span style="color: #3F70A0;">&quot;&lt;stdin&gt;&quot;</span>, line
@@ -222,10 +231,10 @@
                                             </p>
                                             <p class="s22" style="padding-left: 52pt; text-indent: 0pt; text-align: left;">&gt;&gt;&gt;
                                             </p>
-                                            <p style="text-indent: 0pt; text-align: left;">
-                                                <br />
-                                            </p>
-                                            <p style="padding-left: 51pt; text-indent: 0pt; text-align: justify;">
+                                           
+                                                </div>
+                                            <div class="card-body">
+                                            <p >
                                                 In the first logical expression,
     <span class="s3">x &gt;= 2 </span>is
     <span class="s3">False </span>so the evaluation stops at the
@@ -236,19 +245,22 @@
     <span class="s3">False </span>so we never reach
     <span class="s3">(x/y)</span>.
                                             </p>
-                                            <p style="padding-top: 6pt; padding-left: 51pt; text-indent: 0pt; text-align: justify;">
+                                                </div>
+                                            <div class="card-body">
+                                            <p >
                                                 In the third logical expression, the
     <span class="s3">y != 0 </span>is
     <span class="s5">after </span>the
     <span class="s3">(x/y) </span>calculation so the expression fails with an error.
-                                            </p>
-                                            <p style="padding-top: 6pt; padding-left: 51pt; text-indent: 0pt; text-align: justify;">
+                                            </p></div>
+                                            <div class="card-body">
+                                            <p >
                                                 In the second expression, we say that
     <span class="s3">y != 0 </span>acts as a
     <span class="s5">guard </span>to insure that we only execute
     <span class="s3">(x/y) </span>if
     <span class="s3">y </span>is non-zero.
-                                            </p>
+                                            </p></div>
                                             <a href="part40.aspx">
                                                 <button type="button" class="btn btn-outline-primary btn-icon-text">
                                                     <i class="ti-file btn-icon-prepend"></i>

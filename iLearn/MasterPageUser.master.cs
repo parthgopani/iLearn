@@ -11,7 +11,7 @@ public partial class MasterPageUser : System.Web.UI.MasterPage
     db_conn conn = new db_conn();
     protected void Page_Load(object sender, EventArgs e)
     {
-        UpdatePanelsVisibility();
+        //UpdatePanelsVisibility();
     }
     private void UpdatePanelsVisibility()
     {

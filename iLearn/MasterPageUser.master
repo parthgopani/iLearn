@@ -147,6 +147,10 @@
                             </li>
                         </ul>
                         <ul class="navbar-nav navbar-nav-right">
+                             <button type="button" onclick="onButtonClick()" class="btn btn-outline-primary btn-icon-text">
+     <i class="ti-file btn-icon-prepend"></i>
+     Read Aloud
+ </button>
                             <li class="nav-item nav-profile dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
                                     <img src="./../images/faces/face28.jpg" alt="profile" />

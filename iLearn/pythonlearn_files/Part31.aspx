@@ -2,6 +2,7 @@
     CodeFile="Part31.aspx.cs" Inherits="pythonlearn_files_Part31" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+       <script src="ReadAloud.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div class="content-wrapper">
@@ -36,7 +37,7 @@
                                                 <h2>3.2  Logical operators
                                                 </h2>
                                             </div>
-
+                                            <div class="card-body">
                                             <p style="padding-left: 6pt; text-indent: 0pt; text-align: justify;">
                                                 There are three
     <span class="s5">logical operators</span>:
@@ -71,21 +72,21 @@
                                                 Strictly speaking, the operands of the logical operators should be boolean expres-
                                                 sions, but Python is not very strict. Any nonzero number is interpreted as “true.”
                                             </p>
-                                            <p style="text-indent: 0pt; text-align: left;">
-                                                <br />
-                                            </p>
+                                            </div>
+                                            <div class="card-body">
                                             <p class="s22" style="padding-top: 6pt; padding-left: 6pt; text-indent: 0pt; text-align: left;">
                                                 &gt;&gt;&gt;
     <span style="color: #3FA070;">17 </span>and
     <span style="color: #19167C;">True True</span>
                                             </p>
-                                            <p style="text-indent: 0pt; text-align: left;">
-                                                <br />
-                                            </p>
+                                                </div>
+                                            <div class="card-body">
+                                            
                                             <p style="padding-top: 6pt; padding-left: 6pt; text-indent: 0pt; text-align: justify;">
                                                 This flexibility can be useful, but there are some subtleties to it that might be
                                                 confusing. You might want to avoid it until you are sure you know what you are doing.
                                             </p>
+                                                </div>
                                             <a href="part30.aspx">
                                                 <button type="button" class="btn btn-outline-primary btn-icon-text">
                                                     <i class="ti-file btn-icon-prepend"></i>

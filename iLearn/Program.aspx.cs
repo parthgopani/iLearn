@@ -35,7 +35,7 @@ public partial class Program : System.Web.UI.Page
     }
     private void bindprgcor()
     {
-        gf.fillcombo("select * from Registration r, Login l where r.Email = l.Email and l.Type='pcoordinator'", prgconame, "f_name","reg_id","");
+        gf.fillcombo("select * from Registration r, Login l where r.Email = l.Email and l.Type='p'", prgconame, "f_name","reg_id","");
     }
     private void bindgrid()
     {

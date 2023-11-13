@@ -4,58 +4,214 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="collapse" href="#learn" aria-expanded="false"
+                    aria-controls="ui-basic">
+                    <i class="icon-layout menu-icon"></i>
+                    <span class="menu-title">Learn Python</span>
+                    <i class="menu-arrow"></i>
+                </a>
+                <div class="collapse" id="learn">
+                    <ul class="nav flex-column sub-menu">
+                        <li class="nav-item">
+                            <a class="nav-link" href="pythonlearn_files/part3.aspx">
+                                <span class="menu-title">1.1  Creativity and motivation</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="pythonlearn_files/part4.aspx">
+                                <span class="menu-title">1.2  Computer hardware architecture</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pythonlearn_files/part5.aspx">
+                                <span class="menu-title">1.3  Understanding programming</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pythonlearn_files/part6.aspx">
+                                <span class="menu-title">1.4  Words and sentences</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pythonlearn_files/part7.aspx">
+                                <span class="menu-title">1.5  Conversing with Python</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pythonlearn_files/part8.aspx">
+                                <span class="menu-title">1.6  Terminology: Interpreter and compiler</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pythonlearn_files/part9.aspx">
+                                <span class="menu-title">1.7  Writing a program</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pythonlearn_files/part10.aspx">
+                                <span class="menu-title">1.8  What is a program?</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pythonlearn_files/part11.aspx">
+                                <span class="menu-title">1.9  The building blocks of programs</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pythonlearn_files/part12.aspx">
+                                <span class="menu-title">1.10  What could possibly go wrong?</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pythonlearn_files/part13.aspx">
+                                <span class="menu-title">1.11  Debugging</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pythonlearn_files/part14.aspx">
+                                <span class="menu-title">1.12  The learning journey</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="collapse" href="#variable" aria-expanded="false"
+                    aria-controls="ui-basic">
+                    <i class="icon-layout menu-icon"></i>
+                    <span class="menu-title">Basic Python</span>
+                    <i class="menu-arrow"></i>
+                </a>
+                <div class="collapse" id="variable">
+                    <ul class="nav flex-column sub-menu">
+                        <li class="nav-item">
+                            <a class="nav-link" href="pythonlearn_files/part16.aspx">
+                                <span class="menu-title">2.1  Values and types</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pythonlearn_files/part17.aspx">
+                                <span class="menu-title">2.2  Variables</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pythonlearn_files/part18.aspx">
+                                <span class="menu-title">2.3  Variable names and keywords</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pythonlearn_files/part19.aspx">
+                                <span class="menu-title">2.4  Statements</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pythonlearn_files/part20.aspx">
+                                <span class="menu-title">2.5  Operators and operands</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pythonlearn_files/part21.aspx">
+                                <span class="menu-title">2.6  Expressions</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pythonlearn_files/part22.aspx">
+                                <span class="menu-title">2.7  Order of operations</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pythonlearn_files/part23.aspx">
+                                <span class="menu-title">2.8  Modulus operator</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pythonlearn_files/part24.aspx">
+                                <span class="menu-title">2.9  String operations</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pythonlearn_files/part25.aspx">
+                                <span class="menu-title">2.10  Asking the user for input</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pythonlearn_files/part26.aspx">
+                                <span class="menu-title">2.11  Comments</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pythonlearn_files/part27.aspx">
+                                <span class="menu-title">2.12  Choosing mnemonic variable names</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pythonlearn_files/part28.aspx">
+                                <span class="menu-title">2.13  Debugging</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="collapse" href="#conditional" aria-expanded="false"
+                    aria-controls="ui-basic">
+                    <i class="icon-layout menu-icon"></i>
+                    <span class="menu-title">Conditional</span>
+                    <i class="menu-arrow"></i>
+                </a>
+                <div class="collapse" id="conditional">
+                    <ul class="nav flex-column sub-menu">
+                        <li class="nav-item">
+                            <a class="nav-link" href="pythonlearn_files/part30.aspx">
+                                <span class="menu-title">3.1  Boolean expressions</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pythonlearn_files/par31.aspx">
+                                <span class="menu-title">3.2  Logical operators</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pythonlearn_files/part32.aspx">
+                                <span class="menu-title">3.3  Conditional execution</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pythonlearn_files/part33.aspx">
+                                <span class="menu-title">3.4  Alternative execution</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pythonlearn_files/part34.aspx">
+                                <span class="menu-title">3.5  Chained conditionals</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pythonlearn_files/part35.aspx">
+                                <span class="menu-title">3.6  Nested conditionals</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pythonlearn_files/part36.aspx">
+                                <span class="menu-title">3.7  Catching exceptions using try and except</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pythonlearn_files/part37.aspx">
+                                <span class="menu-title">3.8  Short-circuit evaluation of logical expressions</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
     <div class="content-wrapper">
-         <p class="top_nav"><a href="pythonlearn_files/part1.aspx">Next &gt;</a></p>
- 
- <div class="toc">
-    
-     <a class="toc0" href="pythonlearn_files/part1.aspx">Contents</a>
-     <a class="toc0" href="pythonlearn_files/part2.aspx">Why should you learn to write programs?</a>
-     <a class="toc1" href="pythonlearn_files/part3.aspx">1.1  Creativity and motivation</a>
-     <a class="toc1" href="pythonlearn_files/part4.aspx">1.2  Computer hardware architecture</a>
-     <a class="toc1" href="pythonlearn_files/part5.aspx">1.3  Understanding programming</a>
-     <a class="toc1" href="pythonlearn_files/part6.aspx">1.4  Words and sentences</a>
-     <a class="toc1" href="pythonlearn_files/part7.aspx">1.5  Conversing with Python</a>
-     <a class="toc1" href="pythonlearn_files/part8.aspx">1.6  Terminology: Interpreter and compiler</a>
-     <a class="toc1" href="pythonlearn_files/part9.aspx">1.7  Writing a program</a>
-     <a class="toc1" href="pythonlearn_files/part10.aspx">1.8  What is a program?</a>
-     <a class="toc1" href="pythonlearn_files/part11.aspx">1.9  The building blocks of programs</a>
-     <a class="toc1" href="pythonlearn_files/part12.aspx">1.10  What could possibly go wrong?</a>
-     <a class="toc1" href="pythonlearn_files/part13.aspx">1.11  Debugging</a>
-     <a class="toc1" href="pythonlearn_files/part14.aspx">1.12  The learning journey</a>
-     <a class="toc0" href="pythonlearn_files/part15.aspx">Variables, expressions, and statements</a>
-     <a class="toc1" href="pythonlearn_files/part16.aspx">2.1  Values and types</a>
-     <a class="toc1" href="pythonlearn_files/part17.aspx">2.2  Variables</a>
-     <a class="toc1" href="pythonlearn_files/part18.aspx">2.3  Variable names and keywords</a>
-     <a class="toc1" href="pythonlearn_files/part19.aspx">2.4  Statements</a>
-     <a class="toc1" href="pythonlearn_files/part20.aspx">2.5  Operators and operands</a>
-     <a class="toc1" href="pythonlearn_files/part21.aspx">2.6  Expressions</a>
-     <a class="toc1" href="pythonlearn_files/part22.aspx">2.7  Order of operations</a>
-     <a class="toc1" href="pythonlearn_files/part23.aspx">2.8  Modulus operator</a>
-     <a class="toc1" href="pythonlearn_files/part24.aspx">2.9  String operations</a>
-     <a class="toc1" href="pythonlearn_files/part25.aspx">2.10  Asking the user for input</a>
-     <a class="toc1" href="pythonlearn_files/part26.aspx">2.11  Comments</a>
-     <a class="toc1" href="pythonlearn_files/part27.aspx">2.12  Choosing mnemonic variable names</a>
-     <a class="toc1" href="pythonlearn_files/part28.aspx">2.13  Debugging</a>
-     <a class="toc0" href="pythonlearn_files/part29.aspx">Conditional execution</a>
-     <a class="toc1" href="pythonlearn_files/part30.aspx">3.1  Boolean expressions</a>
-     <a class="toc1" href="pythonlearn_files/part31.aspx">3.2  Logical operators</a>
-     <a class="toc1" href="pythonlearn_files/part32.aspx">3.3  Conditional execution</a>
-     <a class="toc1" href="pythonlearn_files/part33.aspx">3.4  Alternative execution</a>
-     <a class="toc2" href="pythonlearn_files/part34.aspx">else :</a>
-     <a class="toc1" href="pythonlearn_files/part35.aspx">3.5  Chained conditionals</a>
-     <a class="toc2" href="pythonlearn_files/part36.aspx">else:</a>
-     <a class="toc1" href="pythonlearn_files/part37.aspx">3.6  Nested conditionals</a>
-     <a class="toc2" href="pythonlearn_files/part38.aspx">else:</a>
-     <a class="toc2" href="pythonlearn_files/part39.aspx">else:</a>
-     <a class="toc1" href="pythonlearn_files/part40.aspx">3.7  Catching exceptions using try and except</a>
-     <a class="toc1" href="pythonlearn_files/part41.aspx">3.8  Short-circuit evaluation of logical expressions</a>
-     <a class="toc1" href="pythonlearn_files/part42.aspx">3.9  Debugging</a>
-          </div>
- <p class="nav">&nbsp;&nbsp;</p>
- <p class="nav">&nbsp;</p>
- <p class="nav"><a href="pythonlearn_files/part1.aspx">Next &gt;</a></p>
- <p class="nav">&nbsp;&nbsp;</p>
 
     </div>
 </asp:Content>

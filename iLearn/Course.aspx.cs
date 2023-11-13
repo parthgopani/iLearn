@@ -23,7 +23,7 @@ public partial class Course : System.Web.UI.Page
     {
         try
         {
-            String qry = "insert into Course(Course_Name,Course_Code,Sem_Id) values('" + txtsubname.Text + "','" + txtsubcode.Text + "'," + dropsem.SelectedValue + ")";
+            String qry = "insert into Course(Course_Name,Course_Code,Sem_Id) values('" + txtcoursename.Text + "','" + txtcoursecode.Text + "'," + drpsem.SelectedValue + ")";
             con.modify(qry);
             Response.Write("<script>alert('Course Inserted Successfully')</script>");
             bind_grid();
@@ -42,7 +42,7 @@ public partial class Course : System.Web.UI.Page
     }
     public void bind_drop()
     {
-        gf.fillcombo("select * from Semester", dropsem, "Sem_Name", "Sem_Id", "select semester");
+        gf.fillcombo("select * from Semester", drpsem, "Sem_Name", "Sem_Id", "select semester");
     }
     protected void btncancel_Click(object sender, EventArgs e)
     {
@@ -54,7 +54,7 @@ public partial class Course : System.Web.UI.Page
     {
         try
         {
-            String qry = "update Course set Course_Name='" + txtsubname.Text + "',Course_Code='" + txtsubcode.Text + "',Sem_Id=" + dropsem.SelectedValue + " where Course_Id=" + hiddensubid.Value;
+            String qry = "update Course set Course_Name='" + txtcoursename.Text + "',Course_Code='" + txtcoursecode.Text + "',Sem_Id=" + drpsem.SelectedValue + " where Course_Id=" + hiddensubid.Value;
             con.modify(qry);
             Response.Write("<script>alert('Course Updated Successfully')</script>");
             bind_grid();
@@ -78,9 +78,9 @@ public partial class Course : System.Web.UI.Page
                 ds = con.select(str3);
                 if (ds.Tables[0].Rows.Count > 0)
                 {
-                    txtsubname.Text = ds.Tables[0].Rows[0]["Course_Name"].ToString();
-                    txtsubcode.Text = ds.Tables[0].Rows[0]["Course_Code"].ToString();
-                    dropsem.SelectedValue = ds.Tables[0].Rows[0]["Sem_Id"].ToString();
+                    txtcoursename.Text = ds.Tables[0].Rows[0]["Course_Name"].ToString();
+                    txtcoursecode.Text = ds.Tables[0].Rows[0]["Course_Code"].ToString();
+                    drpsem.SelectedValue = ds.Tables[0].Rows[0]["Sem_Id"].ToString();
                 }
                 UpdateDeleteShow();
             }

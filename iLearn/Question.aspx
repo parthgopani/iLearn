@@ -21,92 +21,92 @@
                                 <h4 class="card-title">Question Management</h4>
                                 <form id="form1" runat="server" class="forms-sample">
                                     <div class="form-group row">
-                                        <label for="lblsemester" class="col-sm-2 col-form-label">Semester</label>
+                                        <label for="lblsemester" class="col-sm-2 col-form-label">Semester:</label>
                                         <div class="col-sm-9">
                                             <asp:DropDownList ID="drpsemester" CssClass="form-control" runat="server"
                                                 AutoPostBack="true" data-toggle="dropdown" OnSelectedIndexChanged="drpsemester_SelectedIndexChanged">
                                             </asp:DropDownList>
                                             <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ControlToValidate="drpsemester"
-                                                ErrorMessage="Semester Required" ForeColor="Red" ValidationGroup="fieldcheck"></asp:RequiredFieldValidator>
+                                                ErrorMessage="Semester Required" ForeColor="Red" ValidationGroup="msg1"></asp:RequiredFieldValidator>
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="lblcourse" class="col-sm-2 col-form-label">Course</label>
+                                        <label for="lblcourse" class="col-sm-2 col-form-label">Course:</label>
                                         <div class="col-sm-9">
                                             <asp:DropDownList ID="drpcourse" CssClass="form-control" runat="server"
                                                 AutoPostBack="true" data-toggle="dropdown">
                                             </asp:DropDownList>
                                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="drpcourse"
-                                                ErrorMessage="Course Required" ForeColor="Red" ValidationGroup="fieldcheck"></asp:RequiredFieldValidator>
+                                                ErrorMessage="Course Required" ForeColor="Red" ValidationGroup="msg1"></asp:RequiredFieldValidator>
                                         </div>
                                     </div>
                                
                                     <div class="form-group row">
-                                        <label for="lblcomplexcitytype" class="col-sm-2 col-form-label">Complexcity Type</label>
+                                        <label for="lblcomplexcitytype" class="col-sm-2 col-form-label">Complexcity Type:</label>
                                         <div class="col-sm-9">
                                             <asp:DropDownList ID="drpcomplexcity" CssClass="form-control" runat="server"
                                                 AutoPostBack="true" data-toggle="dropdown">
                                             </asp:DropDownList>
                                             <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ControlToValidate="drpcomplexcity"
-                                                ErrorMessage="Complexcity Type Required" ForeColor="Red" ValidationGroup="fieldcheck"></asp:RequiredFieldValidator>
+                                                ErrorMessage="Complexcity Type Required" ForeColor="Red" ValidationGroup="msg1"></asp:RequiredFieldValidator>
                                         </div>
                                        </div>
                                     <div class="form-group row">
-                                        <label for="lblquestiontext" class="col-sm-2 col-form-label">Question Text</label>
+                                        <label for="lblquestiontext" class="col-sm-2 col-form-label">Question Text:</label>
                                         <div class="col-sm-9">
                                             <asp:TextBox ID="txtquestiontext" runat="server" CssClass="form-control"
                                                 placeholder="Enter Question Text"></asp:TextBox>
                                             <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtquestiontext"
-                                                ErrorMessage="Question Text Required" ForeColor="Red" ValidationGroup="fieldcheck"></asp:RequiredFieldValidator>
+                                                ErrorMessage="Question Text Required" ForeColor="Red" ValidationGroup="msg1"></asp:RequiredFieldValidator>
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="lbloption1" class="col-sm-2 col-form-label">Option 1</label>
+                                        <label for="lbloption1" class="col-sm-2 col-form-label">Option 1:</label>
                                         <div class="col-sm-9">
                                             <asp:TextBox ID="txtoption1" runat="server" CssClass="form-control"
                                                 placeholder="Enter Option 1"></asp:TextBox>
                                             <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtoption1"
-                                                ErrorMessage="Option 1 Required" ForeColor="Red" ValidationGroup="fieldcheck"></asp:RequiredFieldValidator>
+                                                ErrorMessage="Option 1 Required" ForeColor="Red" ValidationGroup="msg1"></asp:RequiredFieldValidator>
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="lbloption2" class="col-sm-2 col-form-label">Option 2</label>
+                                        <label for="lbloption2" class="col-sm-2 col-form-label">Option 2:</label>
                                         <div class="col-sm-9">
                                             <asp:TextBox ID="txtoption2" runat="server" CssClass="form-control"
                                                 placeholder="Enter Option 2"></asp:TextBox>
                                             <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtoption2"
-                                                ErrorMessage="Option 2 Required" ForeColor="Red" ValidationGroup="fieldcheck"></asp:RequiredFieldValidator>
+                                                ErrorMessage="Option 2 Required" ForeColor="Red" ValidationGroup="msg1"></asp:RequiredFieldValidator>
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="lbloption2" class="col-sm-2 col-form-label">Option 3</label>
+                                        <label for="lbloption2" class="col-sm-2 col-form-label">Option 3:</label>
                                         <div class="col-sm-9">
                                             <asp:TextBox ID="txtoption3" runat="server" CssClass="form-control"
                                                 placeholder="Enter Option 3"></asp:TextBox>
                                             <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtoption3"
-                                                ErrorMessage="Option 3 Required" ForeColor="Red" ValidationGroup="fieldcheck"></asp:RequiredFieldValidator>
+                                                ErrorMessage="Option 3 Required" ForeColor="Red" ValidationGroup="msg1"></asp:RequiredFieldValidator>
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="lbloption2" class="col-sm-2 col-form-label">Option 4</label>
+                                        <label for="lbloption2" class="col-sm-2 col-form-label">Option 4:</label>
                                         <div class="col-sm-9">
                                             <asp:TextBox ID="txtoption4" runat="server" CssClass="form-control"
                                                 placeholder="Enter Option 4"></asp:TextBox>
                                             <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="txtoption4"
-                                                ErrorMessage="Option 4 Required" ForeColor="Red" ValidationGroup="fieldcheck"></asp:RequiredFieldValidator>
+                                                ErrorMessage="Option 4 Required" ForeColor="Red" ValidationGroup="msg1"></asp:RequiredFieldValidator>
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="lblcorrectanswer" class="col-sm-2 col-form-label">Correct Answer</label>
+                                        <label for="lblcorrectanswer" class="col-sm-2 col-form-label">Correct Answer:</label>
                                         <div class="col-sm-9">
                                             <asp:TextBox ID="txtcorrectanswer" runat="server" CssClass="form-control"
-                                                placeholder="Enter Correct Answer"></asp:TextBox>
+                                                placeholder="Enter Correct Answer (a/b/c/d)"></asp:TextBox>
                                             <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="txtcorrectanswer"
-                                                ErrorMessage="Correct Answer Required" ForeColor="Red" ValidationGroup="fieldcheck"></asp:RequiredFieldValidator>
+                                                ErrorMessage="Correct Answer Required" ForeColor="Red" ValidationGroup="msg1"></asp:RequiredFieldValidator>
                                         </div>
                                     </div>
                                     <asp:Button ID="btnadd" runat="server" Text="ADD" class="btn btn-inverse-primary mr-2"
-                                        OnClick="btnadd_Click" />
+                                        OnClick="btnadd_Click" ValidationGroup="msg1"/>
                                     <asp:Button ID="btnupdate" runat="server" Text="UPDATE" class="btn btn-inverse-info mr-2"
                                         OnClick="btnupdate_Click" />
                                     <asp:Button ID="btndelete" runat="server" Text="DELETE" class="btn btn-inverse-danger mr-2"
@@ -129,6 +129,7 @@
                                                                             CommandArgument='<%#Bind("[Que_Id]") %>'></asp:LinkButton>
                                                                     </ItemTemplate>
                                                                 </asp:TemplateField>
+                                                                <asp:BoundField DataField="Sem_Name" HeaderText="Semester Name" />
                                                                 <asp:BoundField DataField="Course_Name" HeaderText="Course Name" />
                                                                 <asp:BoundField DataField="Complex_Type" HeaderText="Complexity" />
                                                                

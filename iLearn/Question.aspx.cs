@@ -29,7 +29,7 @@ public partial class Question : System.Web.UI.Page
         if (e.CommandName == "Que_Id")
         {
             hdnquestion.Value = e.CommandArgument.ToString();
-            String str1 = "select * from Question WHERE Que_Id='" + hdnquestion.Value + "'";
+            String str1 = "select * from Question q, Semester s, Course c WHERE s.Sem_Id = c.Sem_Id and c.Course_Id = q.Course_Id and q.Que_Id='" + hdnquestion.Value + "'";
             DataSet ds = new DataSet();
             ds = conn.select(str1);
 
@@ -37,6 +37,7 @@ public partial class Question : System.Web.UI.Page
             {
                 if (ds.Tables[0].Rows.Count > 0)
                 {
+                    drpsemester.SelectedValue = ds.Tables[0].Rows[0]["Sem_Id"].ToString();
                     drpcourse.SelectedValue = ds.Tables[0].Rows[0]["Course_Id"].ToString();
                     drpcomplexcity.SelectedValue = ds.Tables[0].Rows[0]["Complex_Id"].ToString();
                     txtquestiontext.Text = ds.Tables[0].Rows[0]["Que_Text"].ToString();

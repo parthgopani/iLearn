@@ -16,22 +16,22 @@
                                     <div class="card">
                                         <div class="card-body">
                                             <a href="part9.aspx">
-                                                <button type="button" class="btn btn-outline-primary btn-icon-text">
-                                                    <i class="ti-file btn-icon-prepend"></i>
-                                                    Previous
-                                                </button>
+                                                <button type="button" class="btn btn-outline-secondary btn-icon-text">
+                                    <i class="fa-solid fa-arrow-left" style="color: #000f;"></i>
+                                    Previous
+                                </button>
                                             </a>
                                             <a href="part1.aspx">
                                                 <button type="button" class="btn btn-outline-secondary btn-icon-text">
-                                                    <i class="ti-file btn-icon-append"></i>
-                                                    Contents
-                                                </button>
+                                    <i class="fa-solid fa-file" style="color: #000f;"></i>
+                                    Contents
+                                </button>
                                             </a>
                                             <a href="part11.aspx">
-                                                <button type="button" class="btn btn-outline-success btn-icon-text">
-                                                    <i class="ti-alert btn-icon-prepend"></i>
-                                                    Next
-                                                </button>
+                                                <button type="button" class="btn btn-outline-secondary btn-icon-text">
+                                    Next
+                                     <i class="fa-solid fa-arrow-right" style="color: #000f;"></i>
+                                </button>
                                             </a>
                                             <div class="card-body" style="text-align: center;">
                                                 <h2>1.8  What is a program?
@@ -63,12 +63,6 @@
                                                 For example, look at the following text about a clown and a car. Look at the text
                                                 and figure out the most common word and how many times it occurs.</p></div>
                                              <div class="card-body">
-                                            <p>
-                                                <a name="bookmark32">1.9. THE BUILDING BLOCKS OF PROGRAMS</a>
-                                                <span class="s11"></span>
-                                                <span class="p">11</span>
-                                            </p></div>
-                                             <div class="card-body">
                                             <p class="s25">the clown
                                                 ran after the car and the car ran into the tent and the tent fell down on the clown
                                                 and the car</p></div>
@@ -90,37 +84,32 @@
     <span style="color: #656565;">= </span>open(name,
     <span style="color: #3F70A0;">&#39;r&#39;</span>) counts
     <span style="color: #656565;">= </span>dict()
-                                            </p></div>
-                                            <div class="card-body">
+                                            </p>
                                             <p class="s3" >
                                                 <span class="s23">for </span>line
     <span style="color: #656565;">in </span>handle: words
     <span style="color: #656565;">= </span>line.split()
     <span class="s23">for </span>word
     <span style="color: #656565;">in </span>words:
-                                            </p></div>
-                                             <div class="card-body">
+                                            </p>
                                             <p class="s3" >
                                                 counts[word]
     <span style="color: #656565;">= </span>counts.get(word,
     <span style="color: #3FA070;">0</span>)
     <span style="color: #656565;">+ </span>
                                                 <span style="color: #3FA070;">1</span>
-                                            </p></div>
-                                            <div class="card-body">
+                                            </p>
                                             <p class="s3" >
                                                 bigcount
     <span style="color: #656565;">= </span>
                                                 <span style="color: #19167C;">None </span>bigword
     <span style="color: #656565;">= </span>
                                                 <span style="color: #19167C;">None</span>
-                                            </p></div>
-                                             <div class="card-body">
+                                            </p>
                                             <p class="s3" >
                                                 <span class="s23">for </span>word, count
     <span style="color: #656565;">in </span>list(counts.items()):
-                                            </p></div>
-                                             <div class="card-body">
+                                            </p>
                                             <p class="s22" >
                                                 <span class="s23">if </span>
                                                 <span style="color: #231F20;">bigcount </span>is
@@ -128,8 +117,7 @@
     <span style="color: #231F20;">count </span>&gt;
     <span style="color: #231F20;">bigcount: bigword </span>=
     <span style="color: #231F20;">word</span>
-                                            </p></div>
-                                             <div class="card-body">
+                                            </p>
                                             <p class="s3" >
                                                 bigcount
     <span style="color: #656565;">= </span>count print(bigword, bigcount)
@@ -160,22 +148,22 @@
     <span class="s5">through </span>Python.
                                             </p></div>
                                             <a href="part9.aspx">
-                                                <button type="button" class="btn btn-outline-primary btn-icon-text">
-                                                    <i class="ti-file btn-icon-prepend"></i>
-                                                    Previous
-                                                </button>
+                                                <button type="button" class="btn btn-outline-secondary btn-icon-text">
+                                    <i class="fa-solid fa-arrow-left" style="color: #000f;"></i>
+                                    Previous
+                                </button>
                                             </a>
                                             <a href="part1.aspx">
                                                 <button type="button" class="btn btn-outline-secondary btn-icon-text">
-                                                    <i class="ti-file btn-icon-append"></i>
-                                                    Contents
-                                                </button>
+                                    <i class="fa-solid fa-file" style="color: #000f;"></i>
+                                    Contents
+                                </button>
                                             </a>
                                             <a href="part11.aspx">
-                                                <button type="button" class="btn btn-outline-success btn-icon-text">
-                                                    <i class="ti-alert btn-icon-prepend"></i>
-                                                    Next
-                                                </button>
+                                                <button type="button" class="btn btn-outline-secondary btn-icon-text">
+                                    Next
+                                     <i class="fa-solid fa-arrow-right" style="color: #000f;"></i>
+                                </button>
                                             </a>
                                         </div>
                                     </div>

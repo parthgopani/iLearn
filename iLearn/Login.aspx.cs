@@ -54,6 +54,10 @@ public partial class Login : System.Web.UI.Page
                 {
                     Response.Redirect("UserDashboard.aspx");
                 }
+                else if (userType.ToString().ToLower().Trim() == "p")
+                {
+                    Response.Redirect("AdminDashboard.aspx");
+                }
                 else
                 {
                     Response.Write("<script>alert('You are Already LoggedIn !')</script>");
@@ -66,11 +70,10 @@ public partial class Login : System.Web.UI.Page
                 lblmsg.ForeColor = System.Drawing.Color.Black;
                 Response.Write("<script>alert('Incorrect Email or Password !!! ')</script>");
             }
-            
 
         }
         
-        catch (Exception ex)
+        catch (Exception)
         {
             lblmsg.Text = "Incorrect Email or Password !!!";
             lblmsg.ForeColor = System.Drawing.Color.Black;

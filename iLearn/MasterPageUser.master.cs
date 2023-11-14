@@ -15,7 +15,7 @@ public partial class MasterPageUser : System.Web.UI.MasterPage
     }
     private void UpdatePanelsVisibility()
     {
-        DataSet ds = new DataSet();
+        /*DataSet ds = new DataSet();
         string username = Session["Email"].ToString();
         string query = "select F_Name,L_Name from Registration where Email='" + username + "'";
         ds = conn.select(query);
@@ -30,7 +30,7 @@ public partial class MasterPageUser : System.Web.UI.MasterPage
             panel2.Visible = false;
             //panel1.Visible = false;
             //panel2.Visible = true;
-        }
+        }*/
     }
     protected void btnlogout_Click(object sender, EventArgs e)
     {

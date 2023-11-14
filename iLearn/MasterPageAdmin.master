@@ -86,7 +86,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">
+                        <a class="nav-link" href="ExamReport.aspx">
                             <i class="icon-paper menu-icon"></i>
                             <span class="menu-title">Exam Report</span>
                         </a>
@@ -98,7 +98,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">
+                        <a class="nav-link" href="QuestionImport.aspx">
                             <i class="icon-paper menu-icon"></i>
                             <span class="menu-title">Import Question</span>
                         </a>
@@ -110,13 +110,13 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">
+                        <a class="nav-link" href="Course.aspx">
                             <i class="icon-paper menu-icon"></i>
                             <span class="menu-title">Course</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">
+                        <a class="nav-link" href="Semester.aspx">
                             <i class="icon-paper menu-icon"></i>
                             <span class="menu-title">Semester</span>
                         </a>
@@ -126,6 +126,12 @@
                         <a class="nav-link" href="Complexity.aspx">
                             <i class="icon-paper menu-icon"></i>
                             <span class="menu-title">Complexity</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Complaints.aspx">
+                            <i class="icon-paper menu-icon"></i>
+                            <span class="menu-title">Complatints</span>
                         </a>
                     </li>
                 </ul>

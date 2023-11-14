@@ -16,22 +16,22 @@
                                     <div class="card">
                                         <div class="card-body">
                                             <a href="part11.aspx">
-                                                <button type="button" class="btn btn-outline-primary btn-icon-text">
-                                                    <i class="ti-file btn-icon-prepend"></i>
-                                                    Previous
-                                                </button>
+                                                <button type="button" class="btn btn-outline-secondary btn-icon-text">
+                                    <i class="fa-solid fa-arrow-left" style="color: #000f;"></i>
+                                    Previous
+                                </button>
                                             </a>
                                             <a href="part1.aspx">
                                                 <button type="button" class="btn btn-outline-secondary btn-icon-text">
-                                                    <i class="ti-file btn-icon-append"></i>
-                                                    Contents
-                                                </button>
+                                    <i class="fa-solid fa-file" style="color: #000f;"></i>
+                                    Contents
+                                </button>
                                             </a>
                                             <a href="part13.aspx">
-                                                <button type="button" class="btn btn-outline-success btn-icon-text">
-                                                    <i class="ti-alert btn-icon-prepend"></i>
-                                                    Next
-                                                </button>
+                                                <button type="button" class="btn btn-outline-secondary btn-icon-text">
+                                    Next
+                                     <i class="fa-solid fa-arrow-right" style="color: #000f;"></i>
+                                </button>
                                             </a>
                                             <div class="card-body" style="text-align: center;">
                                                 <h2>1.10  What could possibly go wrong?
@@ -54,15 +54,13 @@
                                                 &gt;&gt;&gt;
     <span style="color: #231F20;">print </span>
                                                 <span style="color: #3F70A0;">&#39;Hello world!&#39;</span>
-                                            </p></div>
-                                            <div class="card-body">
+                                            </p>
                                             <p class="s3" >
                                                 File
     <span style="color: #3F70A0;">&quot;&lt;stdin&gt;&quot;</span>, line
     <span style="color: #3FA070;">1 </span>primt
     <span style="color: #3F70A0;">&#39;Hello world!&#39;</span>
-                                            </p></div>
-                                            <div class="card-body">
+                                            </p>
                                             <p class="s22" >
                                                 ^
     <span style="color: #BC7A00;">SyntaxError</span>
@@ -72,8 +70,7 @@
                                             <p class="s3" >
                                                 <span style="color: #656565;">&gt;&gt;&gt; </span>primt (
     <span style="color: #3F70A0;">&#39;Hello world&#39;</span>) Traceback (most recent call last):
-                                            </p></div>
-                                            <div class="card-body">
+                                            </p>
                                             <p class="s3" >
                                                 File
     <span style="color: #3F70A0;">&quot;&lt;stdin&gt;&quot;</span>, line
@@ -84,12 +81,6 @@
     <span style="color: #3F70A0;">&#39;primt&#39; </span>
                                                 <span style="color: #656565;">is not </span>defined
                                             </p></div>
-                                            <div class="card-body">
-                                            <p class="s5" >
-                                                1.10. WHAT COULD POSSIBLY GO WRONG?
-    <span class="s11"></span>
-                                                <span class="p">13</span>
-                                            </p></div>
                                           <div class="card-body">
                                             <p class="s3" >
                                                 <span style="color: #656565;">&gt;&gt;&gt; </span>I hate you Python
@@ -97,8 +88,7 @@
     <span style="color: #3F70A0;">&quot;&lt;stdin&gt;&quot;</span>, line
     <span style="color: #3FA070;">1 </span>I hate you Python
     <span style="color: #656565;">!</span>
-                                            </p></div>
-                                            <div class="card-body">
+                                            </p>
                                             <p class="s22" style="text-indent: 0pt; text-align: center;">^</p>
                                             <p class="s24" style="padding-left: 52pt; text-indent: 0pt; text-align: left;">
                                                 SyntaxError
@@ -110,20 +100,15 @@
                                                 <span class="s23">if </span>you come out of there, I would teach you a lesson File
                                                 <span style="color: #3F70A0;">&quot;&lt;stdin&gt;&quot;</span>, line
     <span style="color: #3FA070;">1</span>
-                                            </p></div>
-                                            <div class="card-body">
+                                            </p>
                                             <p class="s23" >
                                                 if
     <span class="s3">you come out of there, I would teach you a lesson</span>
-                                            </p></div>
-                                            <div class="card-body">
-                                            <p class="s22" style="padding-left: 114pt; text-indent: 0pt; text-align: left;">^
                                             </p>
                                             <p class="s24" style="padding-left: 52pt; text-indent: 0pt; text-align: left;">
                                                 SyntaxError
     <span style="color: #231F20;">: invalid syntax</span>
-                                            </p></div>
-                                            <div class="card-body">
+                                            </p>
                                             <p class="s22" style="padding-left: 52pt; text-indent: 0pt; text-align: left;">&gt;&gt;&gt;
                                             </p></div>
 
@@ -190,22 +175,22 @@
                                                     hardest to do exactly what you have asked.</a>
                                             </p></div>
                                             <a href="part11.aspx">
-                                                <button type="button" class="btn btn-outline-primary btn-icon-text">
-                                                    <i class="ti-file btn-icon-prepend"></i>
-                                                    Previous
-                                                </button>
+                                                <button type="button" class="btn btn-outline-secondary btn-icon-text">
+                                    <i class="fa-solid fa-arrow-left" style="color: #000f;"></i>
+                                    Previous
+                                </button>
                                             </a>
                                             <a href="part1.aspx">
                                                 <button type="button" class="btn btn-outline-secondary btn-icon-text">
-                                                    <i class="ti-file btn-icon-append"></i>
-                                                    Contents
-                                                </button>
+                                    <i class="fa-solid fa-file" style="color: #000f;"></i>
+                                    Contents
+                                </button>
                                             </a>
                                             <a href="part13.aspx">
-                                                <button type="button" class="btn btn-outline-success btn-icon-text">
-                                                    <i class="ti-alert btn-icon-prepend"></i>
-                                                    Next
-                                                </button>
+                                                <button type="button" class="btn btn-outline-secondary btn-icon-text">
+                                    Next
+                                     <i class="fa-solid fa-arrow-right" style="color: #000f;"></i>
+                                </button>
                                             </a>
                                         </div>
                                     </div>

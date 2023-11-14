@@ -4,6 +4,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <div class="main-panel" style="width: 100%;">
     <div class="content-wrapper">
         <div class="row">
             <div class="col-md-12 grid-margin">
@@ -46,7 +47,7 @@
                                                     <div class="col-12 col-xl-12 mb-4 mb-xl-0">
                                                         <div class="card">
                                                             <div class="card-body">
-                                                                <asp:GridView ID="grdcurrexam" runat="server" AutoGenerateColumns="false" CssClass="gridview"
+                                                                <asp:GridView ID="grdcurrexam" runat="server" AutoGenerateColumns="false" CssClass="table table-mailbox"
                                                                     HorizontalAlign="Center" OnRowCommand="grdcurrexam_RowCommand">
                                                                     <Columns>
 
@@ -58,16 +59,12 @@
                                                                             </ItemTemplate>
                                                                         </asp:TemplateField>
                                                                         <asp:BoundField DataField="Exam_Start_Date" HeaderText="Quiz Start Date" DataFormatString="{0:yyyy-MM-dd}">
-                                                                            <ItemStyle HorizontalAlign="Center" />
                                                                         </asp:BoundField>
                                                                         <asp:BoundField DataField="Exam_End_Date" HeaderText="Quiz End Date" DataFormatString="{0:yyyy-MM-dd}">
-                                                                            <ItemStyle HorizontalAlign="Center" />
                                                                         </asp:BoundField>
                                                                         <asp:BoundField DataField="Total_Marks" HeaderText="Total Mark">
-                                                                            <ItemStyle HorizontalAlign="Center" />
                                                                         </asp:BoundField>
                                                                         <asp:BoundField DataField="Passing_Marks" HeaderText="Passing Mark">
-                                                                            <ItemStyle HorizontalAlign="Center" />
                                                                         </asp:BoundField>
 
                                                                     </Columns>
@@ -77,7 +74,7 @@
                                                                     <RowStyle BackColor="#CCCCCC" BorderColor="#CCCCCC" />
                                                                 </asp:GridView>
 
-                                                                <asp:GridView ID="grdresult" runat="server" AutoGenerateColumns="false" CssClass="gridview"
+                                                                <asp:GridView ID="grdresult" runat="server" AutoGenerateColumns="false" CssClass="table table-mailbox"
                                                                     HorizontalAlign="Center" OnRowCommand="grdresult_RowCommand">
                                                                     <Columns>
                                                                         <asp:TemplateField HeaderText="Quiz Name">
@@ -118,6 +115,8 @@
                 </div>
             </div>
         </div>
+    </div>
+
     </div>
 </asp:Content>
 

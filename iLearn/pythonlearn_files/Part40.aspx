@@ -2,6 +2,7 @@
     CodeFile="Part40.aspx.cs" Inherits="pythonlearn_files_Part40" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+       <script src="ReadAloud.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div class="content-wrapper">
@@ -36,16 +37,17 @@
                                                 <h2>3.7  Catching exceptions using try and except
                                                 </h2>
                                             </div>
-
-                                            <p style="padding-left: 6pt; text-indent: 0pt; text-align: justify;">
+                                            <div class="card-body">
+                                            <p >
                                                 Earlier we saw a code segment where we used the
     <span class="s3">input </span>and
     <span class="s3">int </span>functions to read and parse an integer number entered by the user. We also saw how treacherous doing
                                                 this could be:
-                                            </p>
+                                            </p></div>
                                             <p style="text-indent: 0pt; text-align: left;">
                                                 <br />
                                             </p>
+                                            <div class="card-body">
                                             <p class="s22" style="padding-left: 7pt; text-indent: 0pt; text-align: left;">
                                                 &gt;&gt;&gt;
     <span style="color: #231F20;">prompt </span>=
@@ -73,22 +75,22 @@
                                             </p>
                                             <p class="s22" style="padding-left: 7pt; text-indent: 0pt; text-align: left;">&gt;&gt;&gt;
                                             </p>
-                                            <p style="text-indent: 0pt; text-align: left;">
-                                                <br />
-                                            </p>
-                                            <p style="padding-top: 6pt; padding-left: 7pt; text-indent: 0pt; text-align: justify;">
+                                           </div>
+                                            <div class="card-body">
+                                            <p >
                                                 When we are executing these statements in the Python interpreter, we get a new prompt
-                                                from the interpreter, think “oops”, and move on to our next statement.</p>
-                                            <p style="padding-top: 6pt; padding-left: 7pt; text-indent: 0pt; text-align: justify;">
+                                                from the interpreter, think “oops”, and move on to our next statement.</p></div>
+                                            <div class="card-body">
+                                            <p >
                                                 However if you place this code in a Python script and this error occurs, your script
                                                 immediately stops in its tracks with a traceback. It does not execute the following
-                                                statement.</p>
-                                            <p style="padding-top: 6pt; padding-left: 7pt; text-indent: 0pt; text-align: justify;">
+                                                statement.</p></div>
+                                            <div class="card-body">
+                                            <p >
                                                 Here is a sample program to convert a Fahrenheit temperature to a Celsius tem- perature:
-                                            </p>
-                                            <p style="text-indent: 0pt; text-align: left;">
-                                                <br />
-                                            </p>
+                                            </p></div>
+                                           
+                                            <div class="card-body">
                                             <p class="s3" style="padding-top: 5pt; padding-left: 7pt; text-indent: 0pt; text-align: left;">
                                                 inp
     <span style="color: #656565;">= </span>input(
@@ -104,26 +106,25 @@
     <span style="color: #3FA070;">9.0 </span>
                                                 <span style="color: #231F20;">print(cel)</span>
                                             </p>
-                                            <p style="text-indent: 0pt; text-align: left;">
-                                                <br />
-                                            </p>
+                                           
+                                              
                                             <p style="padding-left: 7pt; text-indent: 0pt; text-align: left;">
+                                                 </p>
+                                                </div>
                                                 <a href="http://www.py4e.com/code3/fahren.py" class="s28" target="_blank">#  Code:  http://www.py4e.com/code3/fahren.py</a>
-                                            </p>
-                                            <p class="s5" style="padding-top: 1pt; padding-left: 52pt; text-indent: 0pt; text-align: left;">
+                                           <br /><br />
+                                            <p class="s5">
                                                 3.7. CATCHING EXCEPTIONS USING TRY AND EXCEPT
     <span class="s11"></span>
-                                                <span class="p">37</span>
                                             </p>
-                                            <p style="text-indent: 0pt; text-align: left;">
-                                                <br />
-                                            </p>
-                                            <p style="padding-left: 52pt; text-indent: 0pt; text-align: justify;">If we execute
+                                            
+                                            <div class="card-body">
+                                            <p >If we execute
                                                 this code and give it invalid input, it simply fails with an unfriendly error message:
                                             </p>
-                                            <p style="text-indent: 0pt; text-align: left;">
-                                                <br />
-                                            </p>
+                                                </div>
+                                           
+                                            <div class="card-body">
                                             <p class="s25" style="padding-left: 52pt; text-indent: 0pt; text-align: left;">python
                                                 fahren.py</p>
                                             <p class="s25" style="padding-left: 52pt; text-indent: 0pt; text-align: left;">Enter
@@ -142,24 +143,28 @@
                                             <p style="text-indent: 0pt; text-align: left;">
                                                 <br />
                                             </p>
-                                            <p style="padding-left: 52pt; text-indent: 0pt; text-align: justify;">
+                                                </div>
+                                            <div class="card-body">
+                                            <p >
                                                 There is a conditional execution structure built into Python to handle these types
                                                 of expected and unexpected errors called “try / except”. The idea of
     <span class="s3">try </span>and
     <span class="s3">except </span>is that you know that some sequence of instruction(s) may have a problem and you want to add
                                                 some statements to be executed if an error occurs. These extra statements (the except
                                                 block) are ignored if there is no error.
-                                            </p>
-                                            <p style="padding-top: 5pt; padding-left: 52pt; text-indent: 0pt; text-align: justify;">
+                                            </p></div>
+                                            <div class="card-body">
+                                            <p >
                                                 You can think of the
     <span class="s3">try </span>and
     <span class="s3">except </span>feature in Python as an “insurance policy” on a sequence of statements.
-                                            </p>
-                                            <p style="padding-top: 5pt; padding-left: 51pt; text-indent: 0pt; text-align: justify;">
+                                            </p></div>
+                                            <div class="card-body">
+                                            <p >
                                                 We can rewrite our temperature converter as follows:</p>
-                                            <p style="text-indent: 0pt; text-align: left;">
-                                                <br />
-                                            </p>
+                                          
+                                                </div>
+                                            <div class="card-body">
                                             <p class="s3" style="padding-left: 52pt; text-indent: 0pt; text-align: left;">
                                                 inp
     <span style="color: #656565;">= </span>input(
@@ -190,17 +195,15 @@
                                                 print(
     <span style="color: #3F70A0;">&#39;Please enter a number&#39;</span>)
                                             </p>
-                                            <p style="text-indent: 0pt; text-align: left;">
-                                                <br />
-                                            </p>
-                                            <p style="padding-left: 52pt; text-indent: 0pt; text-align: left;">
+                                           </div>
+                                            <div class="card-body">
+                                            <p s>
                                                 <a href="http://www.py4e.com/code3/fahren2.py" class="s28" target="_blank">#  Code:
                                                     http://www.py4e.com/code3/fahren2.py</a>
-                                            </p>
-                                            <p style="text-indent: 0pt; text-align: left;">
-                                                <br />
-                                            </p>
-                                            <p style="padding-left: 51pt; text-indent: 0pt; text-align: justify;">
+                                            </p></div>
+                                            
+                                            <div class="card-body">
+                                            <p >
                                                 Python starts by executing the sequence of statements in the
     <span class="s3">try </span>block. If all goes well, it skips the
     <span class="s3">except </span>block and proceeds. If an exception occurs in the
@@ -208,9 +211,8 @@
     <span class="s3">try </span>block and executes the sequence of statements in the
     <span class="s3">except </span>block.
                                             </p>
-                                            <p style="text-indent: 0pt; text-align: left;">
-                                                <br />
-                                            </p>
+                                           </div>
+                                            <div class="card-body">
                                             <p class="s25" style="padding-left: 52pt; text-indent: 0pt; text-align: left;">python
                                                 fahren2.py</p>
                                             <p class="s25" style="padding-left: 52pt; text-indent: 0pt; text-align: left;">Enter
@@ -222,16 +224,15 @@
                                                 fahren2.py</p>
                                             <p class="s25" style="padding-left: 52pt; text-indent: 0pt; text-align: left;">Enter
                                                 Fahrenheit Temperature:fred Please enter a number</p>
-                                            <p style="text-indent: 0pt; text-align: left;">
-                                                <br />
-                                            </p>
-                                            <p style="padding-left: 51pt; text-indent: 0pt; text-align: justify;">
+                                           </div>
+                                            <div class="card-body">
+                                            <p >
                                                 Handling an exception with a
     <span class="s3">try </span>statement is called
     <span class="s5">catching </span>an exception. In this example, the
     <span class="s3">except </span>clause prints an error message. In general, catching an exception gives you a chance to fix the
                                                 problem, or try again, or at least end the program gracefully.
-                                            </p>
+                                            </p></div>
                                             <a href="part39.aspx">
                                                 <button type="button" class="btn btn-outline-secondary btn-icon-text">
                                     <i class="fa-solid fa-arrow-left" style="color: #000f;"></i>

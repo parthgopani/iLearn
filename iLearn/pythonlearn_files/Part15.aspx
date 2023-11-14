@@ -2,6 +2,7 @@
     CodeFile="Part15.aspx.cs" Inherits="pythonlearn_files_Part15" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+       <script src="ReadAloud.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div class="content-wrapper">
@@ -36,7 +37,7 @@
                                                 <h2>Variables, expressions, and statements
                                                 </h2>
                                             </div>
-
+                                            <div class="card-body">
                                             <div class="toc">
                                                 <a class="toc0" href="part27.aspx">2.1  Values and types</a>
                                                 <a class="toc0" href="part28.aspx">2.2  Variables</a>
@@ -62,6 +63,7 @@
                                                 <a class="toc1" href="part45.aspx">Exercise 4: Assume that we execute the following
                                                     assignment state- ments:</a>
                                             </div>
+                                                </div>
                                             <a href="part14.aspx">
                                                 <button type="button" class="btn btn-outline-secondary btn-icon-text">
                                     <i class="fa-solid fa-arrow-left" style="color: #000f;"></i>

@@ -2,6 +2,7 @@
     CodeFile="Part32.aspx.cs" Inherits="pythonlearn_files_Part32" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+       <script src="ReadAloud.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div class="content-wrapper">
@@ -36,8 +37,8 @@
                                                 <h2>3.3  Conditional execution
                                                 </h2>
                                             </div>
-
-                                            <p style="padding-left: 6pt; text-indent: 0pt; text-align: justify;">
+                                            <div class="card-body">
+                                            <p >
                                                 In order to write useful programs, we almost always need the ability to check condi-
                                                 tions and change the behavior of the program accordingly.
     <span class="s5">Conditional statements </span>give us this ability. The simplest form is the
@@ -55,12 +56,13 @@
                                                 print(
     <span style="color: #3F70A0;">&#39;x is positive&#39;</span>)
                                             </p>
+                                                
                                             <p style="text-indent: 0pt; text-align: left;">
                                                 <br />
                                             </p>
                                             <p style="text-indent: 0pt; text-align: left;">
                                                 <span>
-                                                    <img width="158" height="136" alt="image" src="Image_009.png" /></span>
+                                                    <img width="158" height="136" alt="image" src="../images/pythonimages/Image_009.png" /></span>
                                             </p>
                                             <p class="s33" style="text-indent: 0pt; text-align: left;">Yes</p>
                                             <p style="text-indent: 0pt; text-align: left;" />
@@ -78,52 +80,54 @@
     <span class="s35"></span>is
     <span class="s35"></span>postitive’)
                                             </p>
+                                                </div>
+                                            <div class="card-body">
                                             <p style="text-indent: 0pt; text-align: left;" />
-                                            <p style="padding-top: 6pt; padding-left: 6pt; text-indent: 0pt; text-align: justify;">
+                                            <p >
                                                 The boolean expression after the
     <span class="s3">if </span>statement is called the
     <span class="s5">condition</span>. We end the
     <span class="s3">if </span>statement with a colon character (:) and the line(s) after the if statement are indented.
                                             </p>
+                                                </div>
                                             <p style="text-indent: 0pt; text-align: left;">
                                                 <br />
                                             </p>
                                             <p style="text-indent: 0pt; text-align: left;">
                                                 <br />
                                             </p>
-                                            <p style="padding-top: 3pt; padding-left: 142pt; text-indent: 0pt; text-align: left;">
-                                                Figure 3.1: If Logic</p>
-                                            <p class="s5" style="padding-top: 1pt; padding-left: 52pt; text-indent: 0pt; text-align: left;">
+                                         
+                                            <p class="s5" >
                                                 <a name="bookmark106">3.4. ALTERNATIVE EXECUTION</a>
-                                                <span class="s11"></span>
-                                                <span class="p">33</span>
-                                                <a name="bookmark108">&zwnj;</a>
+                                                
                                             </p>
                                             <p style="text-indent: 0pt; text-align: left;">
                                                 <br />
                                             </p>
-                                            <p style="padding-left: 52pt; text-indent: 0pt; text-align: justify;">If the logical
+                                            <div class="card-body">
+                                            <p >If the logical
                                                 condition is true, then the indented statement gets executed. If the logical condition
-                                                is false, the indented statement is skipped.</p>
-                                            <p style="padding-top: 5pt; padding-left: 51pt; text-indent: 0pt; text-align: justify;">
-                                                <span class="s3">if </span>statements have the same structure as function definitions
+                                                is false, the indented statement is skipped.</p></div>
+                                            <div class="card-body">
+                                                <p >
+                                                    <span class="s3">if </span>statements have the same structure as function definitions
                                                 or
     <span class="s3">for </span>
-                                                <a href="part49.aspx#bookmark108" class="s4">loops</a>
-                                                <span style="color: #00F; font-family: &quot; eras medium itc&quot; , sans-serif;
-                                                    font-style: normal; font-weight: normal; text-decoration: none; font-size: 6.5pt;
-                                                    vertical-align: 3pt;">1</span>. The statement consists of a header line that
+                                                    loops
+                      . The statement consists of a header line that
                                                 ends with the colon character (:) followed by an indented block. Statements like
                                                 this are called
     <span class="s5">compound statements </span>because they stretch across more than one line.
-                                            </p>
-                                            <p style="padding-top: 6pt; padding-left: 51pt; text-indent: 0pt; text-align: justify;">
+                                                </p></div>
+                                            <div class="card-body">
+                                            <p >
                                                 There is no limit on the number of statements that can appear in the body, but there
                                                 must be at least one. Occasionally, it is useful to have a body with no statements
                                                 (usually as a place holder for code you haven’t written yet). In that case, you
                                                 can use the
     <span class="s3">pass </span>statement, which does nothing.
                                             </p>
+                                                </div>
                                             <p style="text-indent: 0pt; text-align: left;">
                                                 <br />
                                             </p>
@@ -139,11 +143,13 @@
                                             <p style="text-indent: 0pt; text-align: left;">
                                                 <br />
                                             </p>
-                                            <p style="padding-left: 52pt; text-indent: 0pt; text-align: justify;">
+                                            <div class="card-body">
+                                            <p >
                                                 If you enter an
     <span class="s3">if </span>statement in the Python interpreter, the prompt will change from three chevrons to three dots to
                                                 indicate you are in the middle of a block of statements, as shown below:
                                             </p>
+                                                </div>
                                             <p style="text-indent: 0pt; text-align: left;">
                                                 <br />
                                             </p>
@@ -172,9 +178,10 @@
                                             <p style="text-indent: 0pt; text-align: left;">
                                                 <br />
                                             </p>
-                                            <p style="padding-left: 52pt; text-indent: 0pt; text-align: justify;">When using the
+                                            <div class="card-body">
+                                            <p >When using the
                                                 Python interpreter, you must leave a blank line at the end of a block, otherwise
-                                                Python will return an error:</p>
+                                                Python will return an error:</p></div>
                                             <p style="text-indent: 0pt; text-align: left;">
                                                 <br />
                                             </p>
@@ -213,9 +220,10 @@
                                             <p style="text-indent: 0pt; text-align: left;">
                                                 <br />
                                             </p>
-                                            <p style="padding-left: 51pt; text-indent: 0pt; text-align: justify;">A blank line at
+                                            <div class="card-body">
+                                            <p >A blank line at
                                                 the end of a block of statements is not necessary when writing and executing a script,
-                                                but it may improve readability of your code.</p>
+                                                but it may improve readability of your code.</p></div>
                                             <a href="part31.aspx">
                                                 <button type="button" class="btn btn-outline-secondary btn-icon-text">
                                     <i class="fa-solid fa-arrow-left" style="color: #000f;"></i>

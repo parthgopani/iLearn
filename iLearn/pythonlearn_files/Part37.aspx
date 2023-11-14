@@ -2,6 +2,7 @@
     CodeFile="Part37.aspx.cs" Inherits="pythonlearn_files_Part37" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+       <script src="ReadAloud.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div class="content-wrapper">
@@ -32,7 +33,26 @@
                                      <i class="fa-solid fa-arrow-right" style="color: #000f;"></i>
                                 </button>
                                             </a>
-                                            
+                                            <div class="card-body" style="text-align: center;">
+                                                <h2>3.6  Nested conditionals
+                                                </h2>
+                                            </div>
+                                            <div class="card-body">
+                                            <p >One conditional
+                                                can also be nested within another. We could have written the three-branch example
+                                                like this:</p></div>
+                                           
+                                            <div class="card-body">
+                                            <p class="s3" style="padding-left: 52pt; text-indent: 0pt; text-align: left;">
+                                                <span class="s23">if </span>x
+    <span style="color: #656565;">== </span>y:
+                                            </p>
+                                            <p class="s3" style="padding-left: 72pt; text-indent: 0pt; text-align: left;">
+                                                print(
+    <span style="color: #3F70A0;">&#39;x and y are equal&#39;</span>)
+                                            </p>
+                                                </div>
+                                           
                                             <a href="part36.aspx">
                                                 <button type="button" class="btn btn-outline-secondary btn-icon-text">
                                     <i class="fa-solid fa-arrow-left" style="color: #000f;"></i>

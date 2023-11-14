@@ -2,6 +2,7 @@
     CodeFile="Part21.aspx.cs" Inherits="pythonlearn_files_Part21" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+       <script src="ReadAloud.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div class="content-wrapper">
@@ -36,17 +37,15 @@
                                                 <h2>2.6  Expressions
                                                 </h2>
                                             </div>
-
-                                            <p style="padding-left: 52pt; text-indent: 0pt; text-align: justify;">
+                                            <div class="card-body">
+                                            <p >
                                                 An
     <span class="s5">expression </span>is a combination of values, variables, and operators. A value all by itself is considered
                                                 an expression, and so is a variable, so the following are all legal expressions
                                                 (assuming that the variable
     <span class="s3">x </span>has been assigned a value):
-                                            </p>
-                                            <p style="text-indent: 0pt; text-align: left;">
-                                                <br />
-                                            </p>
+                                            </p></div>
+                                           <div class="card-body">
                                             <p class="s15" style="padding-left: 52pt; text-indent: 0pt; text-align: left;">17
                                             </p>
                                             <p class="s3" style="padding-left: 52pt; text-indent: 0pt; text-align: left;">x</p>
@@ -57,32 +56,28 @@
                                             </p>
                                             <p style="text-indent: 0pt; text-align: left;">
                                                 <br />
-                                            </p>
-                                            <p style="padding-left: 52pt; text-indent: 0pt; text-align: justify;">
+                                            </p></div>
+                                            <div class="card-body">
+                                            <p >
                                                 If you type an expression in interactive mode, the interpreter
     <span class="s5">evaluates </span>it and displays the result:
-                                            </p>
-                                            <p style="text-indent: 0pt; text-align: left;">
-                                                <br />
-                                            </p>
+                                            </p></div>
+                                            
+                                            <div class="card-body">
                                             <p class="s22" style="padding-left: 52pt; text-indent: 0pt; text-align: left;">
                                                 &gt;&gt;&gt;
     <span style="color: #3FA070;">1 </span>+
     <span style="color: #3FA070;">1</span>
                                             </p>
                                             <p class="s15" style="padding-left: 52pt; text-indent: 0pt; text-align: left;">2
-                                            </p>
-                                            <p style="text-indent: 0pt; text-align: left;">
-                                                <br />
-                                            </p>
-                                            <p style="padding-top: 5pt; padding-left: 52pt; text-indent: 0pt; text-align: justify;">
+                                            </p></div>
+                                            <div class="card-body">
+                                            <p >
                                                 But in a script, an expression all by itself doesn’t do anything! This is a common
                                                 source of confusion for beginners.</p>
-                                            <p class="toc">&nbsp;</p>
-                                            <div class="toc">
-                                                <a class="toc0" href="part33.aspx">Exercise 1: Type the following statements in the
-                                                    Python interpreter to see what they do:</a>
-                                            </div>
+                                          
+                                            
+                                                </div>
                                             <a href="part20.aspx">
                                                 <button type="button" class="btn btn-outline-secondary btn-icon-text">
                                     <i class="fa-solid fa-arrow-left" style="color: #000f;"></i>

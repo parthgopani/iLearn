@@ -2,6 +2,8 @@
     CodeFile="Part6.aspx.cs" Inherits="pythonlearn_files_Part6" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=m3W56MGf"></script>
+    <script src="ReadAloud.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div class="content-wrapper">
@@ -13,24 +15,27 @@
                             <div class="card-body">
                                 <div class="col-md-12 grid-margin stretch-card">
                                     <div class="card">
+                                                                                                                    <div class="card-body">
+    <button type="button" class="btn btn-primary" onclick="readAloud()">Read Aloud</button>
+</div>
                                         <div class="card-body">
                                             <a href="part5.aspx">
                                                 <button type="button" class="btn btn-outline-secondary btn-icon-text">
-                                    <i class="fa-solid fa-arrow-left" style="color: #000f;"></i>
-                                    Previous
-                                </button>
+                                                    <i class="fa-solid fa-arrow-left" style="color: #000f;"></i>
+                                                    Previous
+                                                </button>
                                             </a>
                                             <a href="part1.aspx">
                                                 <button type="button" class="btn btn-outline-secondary btn-icon-text">
-                                    <i class="fa-solid fa-file" style="color: #000f;"></i>
-                                    Contents
-                                </button>
+                                                    <i class="fa-solid fa-file" style="color: #000f;"></i>
+                                                    Contents
+                                                </button>
                                             </a>
                                             <a href="part7.aspx">
                                                 <button type="button" class="btn btn-outline-secondary btn-icon-text">
-                                    Next
+                                                    Next
                                      <i class="fa-solid fa-arrow-right" style="color: #000f;"></i>
-                                </button>
+                                                </button>
                                             </a>
                                             <div class="card-body" style="text-align: center;">
                                                 <h2>1.4  Words and sentences
@@ -232,53 +237,54 @@
                                                 </div>
                                             </div>
                                             <div class="card-body">
-                                            <p>
-                                                That is it, and
+                                                <p>
+                                                    That is it, and
                                                 unlike a dog, Python is already completely trained. When you say “try”, Python will
-                                                try every time you say it without fail.
-                                            </p>
+                                                    try every time you say it without fail.
+                                                </p>
                                             </div>
                                             <div class="card-body">
-                                            <p>
-                                                We will learn these reserved words and how they are used in
+                                                <p>
+                                                    We will learn these reserved words and how they are used in
                                                 good time, but for now we will focus on the Python equivalent of “speak” (in human-to-dog
-                                                language). The nice thing about telling Python to speak is that we can even tell
-                                                it what to say by giving it a message in quotes: <a href="http://xkcd.com/231/" class="s19" target="_blank">http://xkcd.com/231/</a>
-                                            </p>
-                                                </div>
+                                                    language). The nice thing about telling Python to speak is that we can even tell
+                                                    it what to say by giving it a message in quotes: <a href="http://xkcd.com/231/" class="s19"
+                                                        target="_blank">http://xkcd.com/231/</a>
+                                                </p>
+                                            </div>
                                             <div class="card-body">
-                                            <p>
-                                                <a name="bookmark26">print(</a>
-                                                <span style="color: #3F70A0;">&#39;Hello world!&#39;</span>)
-                                            </p>
-                                                </div>
+                                                <p>
+                                                    <a name="bookmark26">print(</a>
+                                                    <span style="color: #3F70A0;">&#39;Hello world!&#39;</span>)
+                                                </p>
+                                            </div>
                                             <div class="card-body">
-                                            <p>
-                                                And we have even written our first syntactically correct Python sentence. Our sentence
-                                                starts with the function
+                                                <p>
+                                                    And we have even written our first syntactically correct Python sentence. Our sentence
+                                                    starts with the function
     <span class="s5">print </span>followed by a string of text of our choosing enclosed in single quotes. The strings in the print
                                                 statements are enclosed in quotes. Single quotes and double quotes do the same thing;
-                                                most people use single quotes except in cases like this where a single quote (which
-                                                is also an apostrophe) appears in the string.
-                                            </p>
-                                                </div>
+                                                    most people use single quotes except in cases like this where a single quote (which
+                                                    is also an apostrophe) appears in the string.
+                                                </p>
+                                            </div>
                                             <a href="part5.aspx">
                                                 <button type="button" class="btn btn-outline-secondary btn-icon-text">
-                                    <i class="fa-solid fa-arrow-left" style="color: #000f;"></i>
-                                    Previous
-                                </button>
+                                                    <i class="fa-solid fa-arrow-left" style="color: #000f;"></i>
+                                                    Previous
+                                                </button>
                                             </a>
                                             <a href="part1.aspx">
                                                 <button type="button" class="btn btn-outline-secondary btn-icon-text">
-                                    <i class="fa-solid fa-file" style="color: #000f;"></i>
-                                    Contents
-                                </button>
+                                                    <i class="fa-solid fa-file" style="color: #000f;"></i>
+                                                    Contents
+                                                </button>
                                             </a>
                                             <a href="part7.aspx">
                                                 <button type="button" class="btn btn-outline-secondary btn-icon-text">
-                                    Next
+                                                    Next
                                      <i class="fa-solid fa-arrow-right" style="color: #000f;"></i>
-                                </button>
+                                                </button>
                                             </a>
                                         </div>
                                     </div>
@@ -290,5 +296,12 @@
             </div>
         </div>
     </div>
+    <script>
+    function readAloud() {
+        var paragraphs = document.querySelectorAll('.card-body p');
+        var textToRead = Array.from(paragraphs).map(p => p.textContent).join(' ');
+        responsiveVoice.speak(textToRead);
+    }
+    </script>
 </asp:Content>
 

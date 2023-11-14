@@ -1,26 +1,62 @@
 ﻿
     var isReading = false;
-    var utterance;
+    var paragraphs;
+    var currentIndex = 0;
 
-    // Function to read the text content of the page
-    function readPageContent() {
-          var pageContent = document.body.innerText;
-    utterance = new SpeechSynthesisUtterance(pageContent);
-    window.speechSynthesis.speak(utterance);
-    isReading = true;
-      }
+    function readAloud() {
+    if (!isReading) {
+        paragraphs = document.querySelectorAll('.card-body p');
+    currentIndex = 0;
 
-    // Function to stop the speech synthesis
-    function stopReading() {
-        window.speechSynthesis.cancel();
+    // Start reading aloud
+    readNextParagraph();
+    } else {
+        // Stop reading
+        responsiveVoice.cancel();
     isReading = false;
-      }
 
-    // Function to be called when the button is clicked
-    function onButtonClick() {
-          if (isReading) {
-        stopReading();
-          } else {
-        readPageContent();
-          }
-      }
+    // Remove highlighting
+    removeHighlight();
+    }
+}
+
+    function readNextParagraph() {
+    if (currentIndex < paragraphs.length) {
+        var paragraph = paragraphs[currentIndex];
+    var textToRead = paragraph.textContent;
+
+    // Highlight the text
+    highlightText(paragraph);
+
+    // Start reading the current paragraph
+    responsiveVoice.speak(textToRead, "UK English Female", {onend: onReadingEnd });
+    isReading = true;
+    } else {
+        // Stop reading if all paragraphs have been read
+        isReading = false;
+    removeHighlight();
+    }
+}
+
+    function highlightText(paragraph) {
+        paragraph.innerHTML = paragraph.textContent.replace(/(\S+)/g, "<span class='highlight'>$1</span>");
+
+    var words = paragraph.querySelectorAll('.highlight');
+    words.forEach(word => {
+        word.addEventListener('click', function () {
+            responsiveVoice.speak(word.textContent);
+        });
+    });
+}
+
+    function removeHighlight() {
+        paragraphs.forEach(paragraph => {
+            paragraph.innerHTML = paragraph.textContent; // Restore original text
+        });
+}
+
+    function onReadingEnd() {
+        // Move to the next paragraph
+        currentIndex++;
+    readNextParagraph();
+}

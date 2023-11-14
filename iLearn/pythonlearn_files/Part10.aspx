@@ -179,17 +179,6 @@
             </div>
         </div>
     </div>
-    <script>
-    function readAloud() {
-        // Select the paragraphs you want to read aloud
-        var paragraphs = document.querySelectorAll('.card-body p');
-
-        // Concatenate the text content of selected paragraphs
-        var textToRead = Array.from(paragraphs).map(p => p.textContent).join(' ');
-
-        // Use ResponsiveVoice for text-to-speech
-        responsiveVoice.speak(textToRead);
-    }
-    </script>
+   
 </asp:Content>
 

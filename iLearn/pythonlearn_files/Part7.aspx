@@ -305,13 +305,7 @@
             </div>
         </div>
     </div>
-    <script>
-    function readAloud() {
-        var paragraphs = document.querySelectorAll('.card-body p');
-        var textToRead = Array.from(paragraphs).map(p => p.textContent).join(' ');
-        responsiveVoice.speak(textToRead);
-    }
-    </script>
+   
 </asp:Content>
 
 

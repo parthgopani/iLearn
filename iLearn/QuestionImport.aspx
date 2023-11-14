@@ -1,8 +1,9 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPageAdmin.master" AutoEventWireup="true" CodeFile="QuestionImport.aspx.cs" Inherits="QuestionImport" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPageAdmin.master" AutoEventWireup="true"
+    CodeFile="QuestionImport.aspx.cs" Inherits="QuestionImport" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div class="content-wrapper">
         <div class="row">
             <div class="col-md-12 grid-margin">
@@ -18,8 +19,8 @@
                                             <asp:DropDownList ID="drpsemester" CssClass="form-control" runat="server"
                                                 AutoPostBack="true" data-toggle="dropdown">
                                             </asp:DropDownList>
-                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ControlToValidate="drpsemester"
-                                                ErrorMessage="Semester Required" ForeColor="Red" ValidationGroup="fieldcheck"></asp:RequiredFieldValidator>
+                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="drpsemester"
+                                                ErrorMessage="Semester Required" ForeColor="Red" ValidationGroup="msg1"></asp:RequiredFieldValidator>
                                         </div>
                                     </div>
                                     <div class="form-group row">
@@ -29,22 +30,22 @@
                                                 AutoPostBack="true" data-toggle="dropdown">
                                             </asp:DropDownList>
                                             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="drpcourse"
-                                                ErrorMessage="Course Required" ForeColor="Red" ValidationGroup="fieldcheck"></asp:RequiredFieldValidator>
+                                                ErrorMessage="Course Required" ForeColor="Red" ValidationGroup="msg1"></asp:RequiredFieldValidator>
                                         </div>
-</div>
+                                    </div>
                                     <div class="form-group row">
                                         <label for="lblupload" class="col-sm-2 col-form-label">Import Questions:</label>
                                         <div class="col-sm-9">
                                             <asp:FileUpload runat="server" ID="fileuploadexcel" />
-                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ValidationGroup="msg1"
+                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ValidationGroup="msg1"
                                                 ControlToValidate="fileuploadexcel" ErrorMessage="File Upload Required" ForeColor="Red"></asp:RequiredFieldValidator>
                                         </div>
                                     </div>
-                                    <asp:Button ID="btnupload" runat="server" Text="IMPORT" class="btn btn-inverse-primary mr-2"
+                                    <asp:Button ID="btnupload" runat="server" Text="IMPORT" ValidationGroup="msg1" class="btn btn-inverse-primary mr-2"
                                         OnClick="btnupload_Click" />
                                     <div class="col-sm-9">
                                         <asp:Label runat="server" ID="lblmsg"></asp:Label>
-</div>
+                                    </div>
                                 </form>
                             </div>
                         </div>

@@ -2,6 +2,7 @@
     CodeFile="Part25.aspx.cs" Inherits="pythonlearn_files_Part25" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+       <script src="ReadAloud.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div class="content-wrapper">
@@ -15,44 +16,40 @@
                                     <div class="card">
                                         <div class="card-body">
                                             <a href="part24.aspx">
-                                                <button type="button" class="btn btn-outline-primary btn-icon-text">
-                                                    <i class="ti-file btn-icon-prepend"></i>
-                                                    Previous
-                                                </button>
+                                                <button type="button" class="btn btn-outline-secondary btn-icon-text">
+                                    <i class="fa-solid fa-arrow-left" style="color: #000f;"></i>
+                                    Previous
+                                </button>
                                             </a>
                                             <a href="part1.aspx">
                                                 <button type="button" class="btn btn-outline-secondary btn-icon-text">
-                                                    <i class="ti-file btn-icon-append"></i>
-                                                    Contents
-                                                </button>
+                                    <i class="fa-solid fa-file" style="color: #000f;"></i>
+                                    Contents
+                                </button>
                                             </a>
                                             <a href="part26.aspx">
-                                                <button type="button" class="btn btn-outline-success btn-icon-text">
-                                                    <i class="ti-alert btn-icon-prepend"></i>
-                                                    Next
-                                                </button>
+                                                <button type="button" class="btn btn-outline-secondary btn-icon-text">
+                                    Next
+                                     <i class="fa-solid fa-arrow-right" style="color: #000f;"></i>
+                                </button>
                                             </a>
                                             <div class="card-body" style="text-align: center;">
                                                 <h2>2.10  Asking the user for input
                                                 </h2>
                                             </div>
-
-                                            <p style="padding-left: 51pt; text-indent: 0pt; text-align: justify;">
+                                             <div class="card-body">
+                                            <p >
                                                 Sometimes we would like to take the value for a variable from the user via their
                                                 keyboard. Python provides a built-in function called
     <span class="s3">input </span>
-                                                <a href="part36.aspx#bookmark76" class="s4">that gets input from the keyboard</a>
-                                                <span style="color: #00F; font-family: &quot; eras medium itc&quot; , sans-serif;
-                                                    font-style: normal; font-weight: normal; text-decoration: none; font-size: 6.5pt;
-                                                    vertical-align: 3pt;">1</span>. When this function is called, the program stops
+                                                that gets input from the keyboard
+                                                . When this function is called, the program stops
                                                 and waits for the user to type something. When the user presses
     <span class="s3">Return </span>or
     <span class="s3">Enter</span>, the program resumes and
     <span class="s3">input </span>returns what the user typed as a string.
-                                            </p>
-                                            <p style="text-indent: 0pt; text-align: left;">
-                                                <br />
-                                            </p>
+                                            </p></div>
+                                            <div class="card-body">
                                             <p class="s22" style="padding-left: 51pt; text-indent: 0pt; text-align: left;">
                                                 &gt;&gt;&gt;
     <span style="color: #231F20;">inp </span>=
@@ -62,17 +59,15 @@
                                                 &gt;&gt;&gt;
     <span style="color: #231F20;">print(inp) Some silly stuff</span>
                                             </p>
-                                            <p style="text-indent: 0pt; text-align: left;">
-                                                <br />
-                                            </p>
-                                            <p style="padding-left: 51pt; text-indent: 0pt; text-align: justify;">
+                                                </div>
+                                            <div class="card-body">
+                                            <p >
                                                 Before getting input from the user, it is a good idea to print a prompt telling
                                                 the user what to input. You can pass a string to
     <span class="s3">input </span>to be displayed to the user before pausing for input:
                                             </p>
-                                            <p style="text-indent: 0pt; text-align: left;">
-                                                <br />
-                                            </p>
+                                                </div>
+                                            <div class="card-body">
                                             <p class="s3" style="padding-left: 52pt; text-indent: 0pt; text-align: left;">
                                                 <span style="color: #656565;">&gt;&gt;&gt; </span>name
     <span style="color: #656565;">= </span>input(
@@ -85,24 +80,22 @@
                                                 &gt;&gt;&gt;
     <span style="color: #231F20;">print(name) Chuck</span>
                                             </p>
-                                            <p style="text-indent: 0pt; text-align: left;">
-                                                <br />
-                                            </p>
-                                            <p style="padding-left: 51pt; text-indent: 0pt; text-align: justify;">
+                                                </div>
+                                             <div class="card-body">
+                                            <p >
                                                 The sequence
     <span class="s3">\n </span>at the end of the prompt represents a
     <span class="s5">newline</span>, which is a special character that causes a line break. That’s why the user’s input appears
                                                 below the prompt.
-                                            </p>
-                                            <p style="padding-top: 6pt; padding-left: 51pt; text-indent: 0pt; text-align: justify;">
+                                            </p></div>
+                                             <div class="card-body">
+                                            <p >
                                                 If you expect the user to type an integer, you can try to convert the return value
                                                 to
     <span class="s3">int </span>using the
     <span class="s3">int() </span>function:
-                                            </p>
-                                            <p style="text-indent: 0pt; text-align: left;">
-                                                <br />
-                                            </p>
+                                            </p></div>
+                                             <div class="card-body">
                                             <p class="s22" style="padding-left: 52pt; text-indent: 0pt; text-align: left;">
                                                 &gt;&gt;&gt;
     <span style="color: #231F20;">prompt </span>=
@@ -119,18 +112,15 @@
     <span style="color: #3FA070;">17</span>
                                             </p>
                                             <p style="padding-left: 52pt; text-indent: 0pt; line-height: 1pt; text-align: left;">
-                                                <span>
-                                                    <img width="190" height="1" alt="image" src="Image_007.png" /></span>
+                                                
                                             </p>
                                             <p class="s8" style="padding-left: 63pt; text-indent: 0pt; text-align: left;">
-                                                1
-    <span class="s9">In Python 2.0, this function was named </span>
+                                                    <span class="s9">In Python 2.0, this function was named </span>
                                                 <span class="s29">raw_input</span>
                                                 <span class="s30">.</span>
                                             </p>
-                                            <p style="text-indent: 0pt; text-align: left;">
-                                                <br />
-                                            </p>
+                                                 </div>
+                                            <div class="card-body">
                                             <p class="s22" style="padding-top: 3pt; padding-left: 7pt; text-indent: 0pt; text-align: left;">
                                                 <a name="bookmark77">&gt;&gt;&gt; </a>
                                                 <span style="color: #231F20;">int(speed) </span>
@@ -141,9 +131,9 @@
     <span style="color: #231F20;">int(speed) </span>+
     <span style="color: #3FA070;">5 22</span>
                                             </p>
-                                            <p style="text-indent: 0pt; text-align: left;">
-                                                <br />
-                                            </p>
+                                                </div>
+
+                                            <div class="card-body">
                                             <p style="padding-left: 7pt; text-indent: 0pt; text-align: justify;">But if the user
                                                 types something other than a string of digits, you get an error:</p>
                                             <p style="text-indent: 0pt; text-align: left;">
@@ -169,28 +159,27 @@
     <span class="s23">with </span>base
     <span style="color: #3FA070;">10</span>:
                                             </p>
-                                            <p style="text-indent: 0pt; text-align: left;">
-                                                <br />
-                                            </p>
+                                                </div>
+                                             <div class="card-body">
                                             <p style="padding-left: 6pt; text-indent: 0pt; text-align: justify;">We will see how
-                                                to handle this kind of error later.</p>
+                                                to handle this kind of error later.</p></div>
                                             <a href="part24.aspx">
-                                                <button type="button" class="btn btn-outline-primary btn-icon-text">
-                                                    <i class="ti-file btn-icon-prepend"></i>
-                                                    Previous
-                                                </button>
+                                                <button type="button" class="btn btn-outline-secondary btn-icon-text">
+                                    <i class="fa-solid fa-arrow-left" style="color: #000f;"></i>
+                                    Previous
+                                </button>
                                             </a>
                                             <a href="part1.aspx">
                                                 <button type="button" class="btn btn-outline-secondary btn-icon-text">
-                                                    <i class="ti-file btn-icon-append"></i>
-                                                    Contents
-                                                </button>
+                                    <i class="fa-solid fa-file" style="color: #000f;"></i>
+                                    Contents
+                                </button>
                                             </a>
                                             <a href="part26.aspx">
-                                                <button type="button" class="btn btn-outline-success btn-icon-text">
-                                                    <i class="ti-alert btn-icon-prepend"></i>
-                                                    Next
-                                                </button>
+                                                <button type="button" class="btn btn-outline-secondary btn-icon-text">
+                                    Next
+                                     <i class="fa-solid fa-arrow-right" style="color: #000f;"></i>
+                                </button>
                                             </a>
                                         </div>
                                     </div>

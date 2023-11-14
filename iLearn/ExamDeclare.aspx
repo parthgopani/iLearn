@@ -13,10 +13,10 @@
                     <div class="col-12 col-xl-12 mb-4 mb-xl-0">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Exam Declararion</h4>
+                                <h4 class="card-title">Exam Declararion:</h4>
                                 <form id="form1" runat="server" class="forms-sample">
                                     <div class="form-group row">
-                                        <label for="lblexamname" class="col-sm-2 col-form-label">Exam Name</label>
+                                        <label for="lblexamname" class="col-sm-2 col-form-label">Exam Name:</label>
                                         <div class="col-sm-9">
                                             <asp:TextBox ID="txtexamname" runat="server" CssClass="form-control"
                                                 placeholder="Enter Exam Name"></asp:TextBox>
@@ -25,7 +25,7 @@
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="lblcourse" class="col-sm-2 col-form-label">Course</label>
+                                        <label for="lblcourse" class="col-sm-2 col-form-label">Course:</label>
                                         <div class="col-sm-9">
                                             <asp:DropDownList ID="drpcourse" CssClass="form-control" runat="server"
                                                 AutoPostBack="false" data-toggle="dropdown">
@@ -42,11 +42,16 @@
                                             <div class="form-group row">
                                                 <div class="input-group">
                                                     <label for="lblexamsdate" class="col-sm-2 col-form-label">
-                                                        Exam Start
-                                                Date</label>
+                                                        Exam Start Date:</label>
                                                     <div class="col-sm-8">
                                                         <asp:TextBox ID="txtstartdate" runat="server" CssClass="form-control"
                                                             placeholder="Enter Exam Start Date"></asp:TextBox>
+                                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtstartdate"
+                                                            ErrorMessage="Start Date Required " ForeColor="Red" ValidationGroup="msg1"></asp:RequiredFieldValidator>
+                                                        <asp:CalendarExtender ID="txtstartdatecal" runat="server" Format="yyyy/MM/dd"
+                                                            PopupButtonID="calimgbtn" PopupPosition="TopRight"
+                                                            TargetControlID="txtstartdate">
+                                                        </asp:CalendarExtender>
                                                     </div>
                                                     <div class="input-group-append">
                                                         <asp:ImageButton ID="calimgbtn" runat="server" class="btn btn-sm btn-primary"
@@ -54,39 +59,34 @@
                                                             OnClick="calimgbtn_Click" />
                                                     </div>
                                                 </div>
-                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtstartdate"
-                                                    ErrorMessage="Start Date Required " ForeColor="Red" ValidationGroup="msg1"></asp:RequiredFieldValidator>
-                                                <asp:CalendarExtender ID="txtstartdatecal" runat="server" Format="yyyy/MM/dd"
-                                                    PopupButtonID="calimgbtn" PopupPosition="TopRight"
-                                                    TargetControlID="txtstartdate">
-                                                </asp:CalendarExtender>
+
                                             </div>
                                             <div class="form-group row">
                                                 <div class="input-group">
                                                     <label for="lblexamedate" class="col-sm-2 col-form-label">
-                                                        Exam End
-                                                Date</label>
+                                                        Exam End Date:</label>
                                                     <div class="col-sm-8">
                                                         <asp:TextBox ID="txtenddate" runat="server" CssClass="form-control"
                                                             placeholder="Enter Exam End Date"></asp:TextBox>
+                                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtenddate"
+                                                            ErrorMessage="End Date Required " ForeColor="Red" ValidationGroup="msg1"></asp:RequiredFieldValidator>
+                                                        <asp:CalendarExtender ID="txtenddatecal" runat="server" Format="yyyy/MM/dd"
+                                                            PopupButtonID="calimgbtn1" PopupPosition="TopRight"
+                                                            TargetControlID="txtenddate">
+                                                        </asp:CalendarExtender>
                                                     </div>
                                                     <div class="input-group-append">
                                                         <asp:ImageButton ID="calimgbtn1" runat="server" class="btn btn-sm btn-primary"
                                                             Height="45px" Width="55px" ImageUrl="~/images/calender.png" />
                                                     </div>
                                                 </div>
-                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtenddate"
-                                                    ErrorMessage="End Date Required " ForeColor="Red" ValidationGroup="msg1"></asp:RequiredFieldValidator>
-                                                <asp:CalendarExtender ID="txtenddatecal" runat="server" Format="yyyy/MM/dd"
-                                                    PopupButtonID="calimgbtn1" PopupPosition="TopRight"
-                                                    TargetControlID="txtenddate">
-                                                </asp:CalendarExtender>
+
                                             </div>
                                         </ContentTemplate>
                                     </asp:UpdatePanel>
 
                                     <div class="form-group row">
-                                        <label for="lbltotmarks" class="col-sm-2 col-form-label">Total Marks</label>
+                                        <label for="lbltotmarks" class="col-sm-2 col-form-label">Total Marks:</label>
                                         <div class="col-sm-9">
                                             <asp:TextBox ID="txttotmarks" runat="server" CssClass="form-control"
                                                 placeholder="Enter Total Marks"></asp:TextBox>
@@ -95,7 +95,7 @@
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="lblpassmarks" class="col-sm-2 col-form-label">Passing Marks</label>
+                                        <label for="lblpassmarks" class="col-sm-2 col-form-label">Passing Marks:</label>
                                         <div class="col-sm-9">
                                             <asp:TextBox ID="txtpassmarks" runat="server" CssClass="form-control"
                                                 placeholder="Enter Passing Marks"></asp:TextBox>
@@ -104,7 +104,7 @@
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="lblduration" class="col-sm-2 col-form-label">Duration</label>
+                                        <label for="lblduration" class="col-sm-2 col-form-label">Duration:</label>
                                         <div class="col-sm-9">
                                             <asp:TextBox ID="txtduration" runat="server" CssClass="form-control"
                                                 placeholder="Enter Duration"></asp:TextBox>
@@ -113,7 +113,7 @@
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="lbltotque" class="col-sm-2 col-form-label">Total Question</label>
+                                        <label for="lbltotque" class="col-sm-2 col-form-label">Total Question:</label>
                                         <div class="col-sm-9">
                                             <asp:TextBox ID="txttotque" runat="server" CssClass="form-control"
                                                 placeholder="Enter Total Question"></asp:TextBox>
@@ -122,7 +122,7 @@
                                         </div>
                                     </div>
                                     <asp:Button ID="btnsubmit" runat="server" Text="SUBMIT" class="btn btn-inverse-primary mr-2"
-                                        OnClick="btnsubmit_Click" ValidationGroup="msg1"/>
+                                        OnClick="btnsubmit_Click" ValidationGroup="msg1" />
                                     <asp:Button ID="btnupdate" runat="server" Text="UPDATE" class="btn btn-inverse-info mr-2"
                                         OnClick="btnupdate_Click" />
                                     <asp:Button ID="btndelete" runat="server" Text="DELETE" class="btn btn-inverse-danger mr-2"
@@ -135,9 +135,9 @@
                                                     <div class="card-body">
                                                         <asp:HiddenField ID="hdnfield" runat="server" />
                                                         <asp:GridView ID="grdexam" runat="server" AutoGenerateColumns="false"
-                                                            OnRowCommand="grdexam_RowCommand" AllowPaging="true" PageSize="15"
+                                                            OnRowCommand="grdexam_RowCommand" AllowPaging="True" PageSize="15"
                                                             OnPageIndexChanging="grdexam_PageIndexChanging" AllowSorting="true"
-                                                            OnSorting="grdexam_Sorting" HorizontalAlign="Center" CssClass="gridview">
+                                                            OnSorting="grdexam_Sorting" HorizontalAlign="Center" CssClass="table table-mailbox">
                                                             <Columns>
                                                                 <asp:TemplateField HeaderText="Exam">
                                                                     <ItemTemplate>

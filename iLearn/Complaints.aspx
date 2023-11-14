@@ -62,7 +62,7 @@
                                 <SortedDescendingHeaderStyle BackColor="#4870BE"></SortedDescendingHeaderStyle>
                             </asp:GridView>
                             
-                            <asp:SqlDataSource ID="SqlDataSourceComp" runat="server" ConnectionString="<%$ ConnectionStrings:ComplainConn %>" SelectCommand="SELECT * FROM [ComplaintDetails] ORDER BY [Complaint_Id] DESC"></asp:SqlDataSource>
+                            <asp:SqlDataSource ID="SqlDataSourceComp" runat="server" ConnectionString="<%$ ConnectionStrings:MyConnection %>" SelectCommand="SELECT * FROM [ComplaintDetails] ORDER BY [Complaint_Id] DESC"></asp:SqlDataSource>
                             
                         </div>
 

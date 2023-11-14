@@ -2,6 +2,7 @@
     CodeFile="Part29.aspx.cs" Inherits="pythonlearn_files_Part29" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+       <script src="ReadAloud.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div class="content-wrapper">
@@ -15,22 +16,22 @@
                                     <div class="card">
                                         <div class="card-body">
                                             <a href="part28.aspx">
-                                                <button type="button" class="btn btn-outline-primary btn-icon-text">
-                                                    <i class="ti-file btn-icon-prepend"></i>
-                                                    Previous
-                                                </button>
+                                                <button type="button" class="btn btn-outline-secondary btn-icon-text">
+                                    <i class="fa-solid fa-arrow-left" style="color: #000f;"></i>
+                                    Previous
+                                </button>
                                             </a>
                                             <a href="part1.aspx">
                                                 <button type="button" class="btn btn-outline-secondary btn-icon-text">
-                                                    <i class="ti-file btn-icon-append"></i>
-                                                    Contents
-                                                </button>
+                                    <i class="fa-solid fa-file" style="color: #000f;"></i>
+                                    Contents
+                                </button>
                                             </a>
                                             <a href="part30.aspx">
-                                                <button type="button" class="btn btn-outline-success btn-icon-text">
-                                                    <i class="ti-alert btn-icon-prepend"></i>
-                                                    Next
-                                                </button>
+                                                <button type="button" class="btn btn-outline-secondary btn-icon-text">
+                                    Next
+                                     <i class="fa-solid fa-arrow-right" style="color: #000f;"></i>
+                                </button>
                                             </a>
                                             <div class="card-body" style="text-align: center;">
                                                 <h2>Conditional execution
@@ -62,22 +63,22 @@
                                                     between 0.0 and</a>
                                             </div>
                                             <a href="part28.aspx">
-                                                <button type="button" class="btn btn-outline-primary btn-icon-text">
-                                                    <i class="ti-file btn-icon-prepend"></i>
-                                                    Previous
-                                                </button>
+                                                <button type="button" class="btn btn-outline-secondary btn-icon-text">
+                                    <i class="fa-solid fa-arrow-left" style="color: #000f;"></i>
+                                    Previous
+                                </button>
                                             </a>
                                             <a href="part1.aspx">
                                                 <button type="button" class="btn btn-outline-secondary btn-icon-text">
-                                                    <i class="ti-file btn-icon-append"></i>
-                                                    Contents
-                                                </button>
+                                    <i class="fa-solid fa-file" style="color: #000f;"></i>
+                                    Contents
+                                </button>
                                             </a>
                                             <a href="part30.aspx">
-                                                <button type="button" class="btn btn-outline-success btn-icon-text">
-                                                    <i class="ti-alert btn-icon-prepend"></i>
-                                                    Next
-                                                </button>
+                                                <button type="button" class="btn btn-outline-secondary btn-icon-text">
+                                    Next
+                                     <i class="fa-solid fa-arrow-right" style="color: #000f;"></i>
+                                </button>
                                             </a>
                                         </div>
                                     </div>

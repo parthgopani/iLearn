@@ -2,6 +2,7 @@
     CodeFile="Part23.aspx.cs" Inherits="pythonlearn_files_Part23" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+       <script src="ReadAloud.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div class="content-wrapper">
@@ -15,37 +16,35 @@
                                     <div class="card">
                                         <div class="card-body">
                                             <a href="part22.aspx">
-                                                <button type="button" class="btn btn-outline-primary btn-icon-text">
-                                                    <i class="ti-file btn-icon-prepend"></i>
-                                                    Previous
-                                                </button>
+                                                <button type="button" class="btn btn-outline-secondary btn-icon-text">
+                                    <i class="fa-solid fa-arrow-left" style="color: #000f;"></i>
+                                    Previous
+                                </button>
                                             </a>
                                             <a href="part1.aspx">
                                                 <button type="button" class="btn btn-outline-secondary btn-icon-text">
-                                                    <i class="ti-file btn-icon-append"></i>
-                                                    Contents
-                                                </button>
+                                    <i class="fa-solid fa-file" style="color: #000f;"></i>
+                                    Contents
+                                </button>
                                             </a>
                                             <a href="part24.aspx">
-                                                <button type="button" class="btn btn-outline-success btn-icon-text">
-                                                    <i class="ti-alert btn-icon-prepend"></i>
-                                                    Next
-                                                </button>
+                                                <button type="button" class="btn btn-outline-secondary btn-icon-text">
+                                    Next
+                                     <i class="fa-solid fa-arrow-right" style="color: #000f;"></i>
+                                </button>
                                             </a>
                                             <div class="card-body" style="text-align: center;">
                                                 <h2>2.8  Modulus operator
                                                 </h2>
                                             </div>
-
-                                            <p style="padding-left: 7pt; text-indent: 0pt; text-align: justify;">
+                                            <div class="card-body">
+                                            <p >
                                                 The
     <span class="s5">modulus operator </span>works on integers and yields the remainder when the first operand is divided by the
                                                 second. In Python, the modulus operator is a percent sign (
     <span class="s3">%</span>). The syntax is the same as for other operators:
-                                            </p>
-                                            <p style="text-indent: 0pt; text-align: left;">
-                                                <br />
-                                            </p>
+                                            </p></div>
+                                             <div class="card-body">
                                             <p class="s22" style="padding-left: 7pt; text-indent: 0pt; text-align: left;">
                                                 &gt;&gt;&gt;
     <span style="color: #231F20;">quotient </span>=
@@ -68,41 +67,42 @@
     <span style="color: #231F20;">print(remainder) </span>
                                                 <span style="color: #3FA070;">1</span>
                                             </p>
-                                            <p style="text-indent: 0pt; text-align: left;">
-                                                <br />
-                                            </p>
-                                            <p style="padding-left: 7pt; text-indent: 0pt; text-align: justify;">So 7 divided by
-                                                3 is 2 with 1 left over.</p>
-                                            <p style="padding-top: 6pt; padding-left: 6pt; text-indent: 0pt; text-align: justify;">
+                                                 </div>
+                                             <div class="card-body">
+                                            <p >So 7 divided by
+                                                3 is 2 with 1 left over.</p></div>
+                                             <div class="card-body">
+                                            <p >
                                                 The modulus operator turns out to be surprisingly useful. For example, you can check
                                                 whether one number is divisible by another: if
     <span class="s3">x % y </span>is zero, then
     <span class="s3">x </span>is divisible by
     <span class="s3">y</span>.
-                                            </p>
-                                            <p style="padding-top: 6pt; padding-left: 7pt; text-indent: 0pt; text-align: justify;">
+                                            </p></div>
+                                             <div class="card-body">
+                                            <p >
                                                 You can also extract the right-most digit or digits from a number. For example,
                                                 <span class="s3">x % 10 </span>yields the right-most digit of
     <span class="s3">x </span>(in base 10). Similarly,
     <span class="s3">x % 100 </span>yields the last two digits.
-                                            </p>
+                                            </p></div>
                                             <a href="part22.aspx">
-                                                <button type="button" class="btn btn-outline-primary btn-icon-text">
-                                                    <i class="ti-file btn-icon-prepend"></i>
-                                                    Previous
-                                                </button>
+                                                <button type="button" class="btn btn-outline-secondary btn-icon-text">
+                                    <i class="fa-solid fa-arrow-left" style="color: #000f;"></i>
+                                    Previous
+                                </button>
                                             </a>
                                             <a href="part1.aspx">
                                                 <button type="button" class="btn btn-outline-secondary btn-icon-text">
-                                                    <i class="ti-file btn-icon-append"></i>
-                                                    Contents
-                                                </button>
+                                    <i class="fa-solid fa-file" style="color: #000f;"></i>
+                                    Contents
+                                </button>
                                             </a>
                                             <a href="part24.aspx">
-                                                <button type="button" class="btn btn-outline-success btn-icon-text">
-                                                    <i class="ti-alert btn-icon-prepend"></i>
-                                                    Next
-                                                </button>
+                                                <button type="button" class="btn btn-outline-secondary btn-icon-text">
+                                    Next
+                                     <i class="fa-solid fa-arrow-right" style="color: #000f;"></i>
+                                </button>
                                             </a>
                                         </div>
                                     </div>

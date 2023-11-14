@@ -2,6 +2,7 @@
     CodeFile="Part28.aspx.cs" Inherits="pythonlearn_files_Part28" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+       <script src="ReadAloud.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div class="content-wrapper">
@@ -15,42 +16,41 @@
                                     <div class="card">
                                         <div class="card-body">
                                             <a href="part27.aspx">
-                                                <button type="button" class="btn btn-outline-primary btn-icon-text">
-                                                    <i class="ti-file btn-icon-prepend"></i>
-                                                    Previous
-                                                </button>
+                                                <button type="button" class="btn btn-outline-secondary btn-icon-text">
+                                    <i class="fa-solid fa-arrow-left" style="color: #000f;"></i>
+                                    Previous
+                                </button>
                                             </a>
                                             <a href="part1.aspx">
                                                 <button type="button" class="btn btn-outline-secondary btn-icon-text">
-                                                    <i class="ti-file btn-icon-append"></i>
-                                                    Contents
-                                                </button>
+                                    <i class="fa-solid fa-file" style="color: #000f;"></i>
+                                    Contents
+                                </button>
                                             </a>
                                             <a href="part29.aspx">
-                                                <button type="button" class="btn btn-outline-success btn-icon-text">
-                                                    <i class="ti-alert btn-icon-prepend"></i>
-                                                    Next
-                                                </button>
+                                                <button type="button" class="btn btn-outline-secondary btn-icon-text">
+                                    Next
+                                     <i class="fa-solid fa-arrow-right" style="color: #000f;"></i>
+                                </button>
                                             </a>
                                             <div class="card-body" style="text-align: center;">
                                                 <h2>2.13  Debugging
                                                 </h2>
                                             </div>
-
-                                            <p style="padding-left: 7pt; text-indent: 0pt; text-align: justify;">
+                                            <div class="card-body">
+                                            <p >
                                                 At this point, the syntax error you are most likely to make is an illegal variable
                                                 name, like
     <span class="s3">class </span>and
     <span class="s3">yield</span>, which are keywords, or
     <span class="s3">odd~job </span>and
     <span class="s3">US$</span>, which contain illegal characters.
-                                            </p>
-                                            <p style="padding-top: 7pt; padding-left: 7pt; text-indent: 0pt; text-align: justify;">
+                                            </p></div>
+                                            <div class="card-body">
+                                            <p >
                                                 If you put a space in a variable name, Python thinks it is two operands without
-                                                an operator:</p>
-                                            <p style="text-indent: 0pt; text-align: left;">
-                                                <br />
-                                            </p>
+                                                an operator:</p></div>
+                                           <div class="card-body">
                                             <p class="s22" style="padding-top: 8pt; padding-left: 7pt; text-indent: 0pt; text-align: left;">
                                                 &gt;&gt;&gt;
     <span style="color: #231F20;">bad name </span>=
@@ -77,15 +77,12 @@
                                                 ^
     <span style="color: #BC7A00;">SyntaxError</span>
                                                 <span style="color: #231F20;">: invalid token</span>
-                                            </p>
+                                            </p></div>
                                             <p class="s5" style="padding-top: 1pt; padding-left: 52pt; text-indent: 0pt; text-align: left;">
                                                 <a name="bookmark84">2.14. GLOSSARY</a>
-                                                <span class="s11"></span>
-                                                <span class="p">29</span>
+                                                
                                             </p>
-                                            <p style="text-indent: 0pt; text-align: left;">
-                                                <br />
-                                            </p>
+                                            <div class="card-body">
                                             <p style="padding-left: 52pt; text-indent: 0pt; text-align: justify;">
                                                 For syntax errors, the error messages don’t help much. The most common messages
                                                 are
@@ -95,10 +92,8 @@
                                             <p style="padding-top: 6pt; padding-left: 51pt; text-indent: 0pt; text-align: justify;">
                                                 The runtime error you are most likely to make is a “use before def;” that is, trying
                                                 to use a variable before you have assigned a value. This can happen if you spell
-                                                a variable name wrong:</p>
-                                            <p style="text-indent: 0pt; text-align: left;">
-                                                <br />
-                                            </p>
+                                                a variable name wrong:</p></div>
+                                           <div class="card-body">
                                             <p class="s22" style="padding-left: 52pt; text-indent: 0pt; text-align: left;">
                                                 &gt;&gt;&gt;
     <span style="color: #231F20;">principal </span>=
@@ -114,10 +109,8 @@
                                                 <span style="color: #BC7A00;">NameError</span>: name
     <span style="color: #3F70A0;">&#39;principle&#39; </span>
                                                 <span style="color: #656565;">is not </span>defined
-                                            </p>
-                                            <p style="text-indent: 0pt; text-align: left;">
-                                                <br />
-                                            </p>
+                                            </p></div>
+                                           <div class="card-body">
                                             <p style="padding-left: 51pt; text-indent: 0pt; text-align: justify;">
                                                 Variables names are case sensitive, so
     <span class="s3">LaTeX </span>is not the same as
@@ -137,32 +130,30 @@
     <span style="color: #3FA070;">1.0 </span>/
     <span style="color: #3FA070;">2.0 </span>*
     <span style="color: #231F20;">pi</span>
-                                            </p>
-                                            <p style="text-indent: 0pt; text-align: left;">
-                                                <br />
-                                            </p>
+                                            </p></div>
+                                            <div class="card-body">
                                             <p style="padding-left: 51pt; text-indent: 0pt; text-align: justify;">
                                                 But the division happens first, so you would get
     <span class="s3">π/</span>2, which is not the same thing! There is no way for Python to know what you meant to write, so in
                                                 this case you don’t get an error message; you just get the wrong answer.
-                                            </p>
+                                            </p></div>
                                             <a href="part27.aspx">
-                                                <button type="button" class="btn btn-outline-primary btn-icon-text">
-                                                    <i class="ti-file btn-icon-prepend"></i>
-                                                    Previous
-                                                </button>
+                                                <button type="button" class="btn btn-outline-secondary btn-icon-text">
+                                    <i class="fa-solid fa-arrow-left" style="color: #000f;"></i>
+                                    Previous
+                                </button>
                                             </a>
                                             <a href="part1.aspx">
                                                 <button type="button" class="btn btn-outline-secondary btn-icon-text">
-                                                    <i class="ti-file btn-icon-append"></i>
-                                                    Contents
-                                                </button>
+                                    <i class="fa-solid fa-file" style="color: #000f;"></i>
+                                    Contents
+                                </button>
                                             </a>
                                             <a href="part29.aspx">
-                                                <button type="button" class="btn btn-outline-success btn-icon-text">
-                                                    <i class="ti-alert btn-icon-prepend"></i>
-                                                    Next
-                                                </button>
+                                                <button type="button" class="btn btn-outline-secondary btn-icon-text">
+                                    Next
+                                     <i class="fa-solid fa-arrow-right" style="color: #000f;"></i>
+                                </button>
                                             </a>
                                         </div>
                                     </div>

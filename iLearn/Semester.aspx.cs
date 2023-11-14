@@ -50,7 +50,7 @@ public void binddrp()
 {
 
 
-    gf.fillcombo("select * from Program", drpsem, "Program_Name", "Program_Id", "Select Program");
+    gf.fillcombo("select * from Program", drpcourse, "Program_Name", "Program_Id", "Select Program");
 
 }
 
@@ -68,7 +68,7 @@ protected void grdsem_RowCommand(object sender, GridViewCommandEventArgs e)
             if (ds.Tables[0].Rows.Count > 0)
             {
                 txtsemname.Text = ds.Tables[0].Rows[0]["Sem_Name"].ToString();
-                drpsem.SelectedValue = ds.Tables[0].Rows[0]["Program_Id"].ToString();
+                drpcourse.SelectedValue = ds.Tables[0].Rows[0]["Program_Id"].ToString();
             }
             enabled_up_del();
             btnsubmit.Visible = false;
@@ -91,7 +91,7 @@ protected void btnsubmit_Click(object sender, EventArgs e)
 {
     try
     {
-        string qry = "insert into Semester (Sem_Name, Program_Id) values ('" + txtsemname.Text + "'," + drpsem.SelectedValue + ")";
+        string qry = "insert into Semester (Sem_Name, Program_Id) values ('" + txtsemname.Text + "'," + drpcourse.SelectedValue + ")";
         conn.modify(qry);
         Response.Write("<script>alert('Semester Inserted Successfully')</script>");
         bindgrid();
@@ -107,7 +107,7 @@ protected void btnupdate_Click(object sender, EventArgs e)
 {
     try
     {
-        string qry = "update Semester set Sem_Name = '" + txtsemname.Text + "', Program_Id=" + drpsem.SelectedValue + " where Sem_Id = " + hdnsem.Value;
+        string qry = "update Semester set Sem_Name = '" + txtsemname.Text + "', Program_Id=" + drpcourse.SelectedValue + " where Sem_Id = " + hdnsem.Value;
         conn.modify(qry);
         Response.Write("<script>alert('Semester Updated Successfully')</script>");
 

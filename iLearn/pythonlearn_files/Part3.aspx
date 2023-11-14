@@ -2,7 +2,8 @@
     CodeFile="Part3.aspx.cs" Inherits="pythonlearn_files_Part3" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
-       <script src="ReadAloud.js"></script>
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=m3W56MGf"></script>
+    <script src="ReadAloud.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div class="content-wrapper">
@@ -14,24 +15,28 @@
                             <div class="card-body">
                                 <div class="col-md-12 grid-margin stretch-card">
                                     <div class="card">
+
+                                                                            <div class="card-body">
+    <button type="button" class="btn btn-primary" onclick="readAloud()">Read Aloud</button>
+</div>
                                         <div class="card-body">
                                             <a href="part2.aspx">
                                                 <button type="button" class="btn btn-outline-secondary btn-icon-text">
-                                    <i class="fa-solid fa-arrow-left" style="color: #000f;"></i>
-                                    Previous
-                                </button>
+                                                    <i class="fa-solid fa-arrow-left" style="color: #000f;"></i>
+                                                    Previous
+                                                </button>
                                             </a>
                                             <a href="part1.aspx">
                                                 <button type="button" class="btn btn-outline-secondary btn-icon-text">
-                                    <i class="fa-solid fa-file" style="color: #000f;"></i>
-                                    Contents
-                                </button>
+                                                    <i class="fa-solid fa-file" style="color: #000f;"></i>
+                                                    Contents
+                                                </button>
                                             </a>
                                             <a href="part4.aspx">
                                                 <button type="button" class="btn btn-outline-secondary btn-icon-text">
-                                    Next
+                                                    Next
                                      <i class="fa-solid fa-arrow-right" style="color: #000f;"></i>
-                                </button>
+                                                </button>
                                             </a>
                                             <div class="card-body" style="text-align: center;">
                                                 <h2>1.1  Creativity and motivation
@@ -74,23 +79,24 @@
                                             </div>
                                             <a href="part1.aspx">
                                                 <button type="button" class="btn btn-outline-secondary btn-icon-text">
-                                    <i class="fa-solid fa-arrow-left" style="color: #000f;"></i>
-                                    Previous
-                                </button>
+                                                    <i class="fa-solid fa-arrow-left" style="color: #000f;"></i>
+                                                    Previous
+                                                </button>
                                             </a>
                                             <a href="part1.aspx">
                                                 <button type="button" class="btn btn-outline-secondary btn-icon-text">
-                                    <i class="fa-solid fa-file" style="color: #000f;"></i>
-                                    Contents
-                                </button>
+                                                    <i class="fa-solid fa-file" style="color: #000f;"></i>
+                                                    Contents
+                                                </button>
                                             </a>
                                             <a href="part3.aspx">
                                                 <button type="button" class="btn btn-outline-secondary btn-icon-text">
-                                    Next
+                                                    Next
                                      <i class="fa-solid fa-arrow-right" style="color: #000f;"></i>
-                                </button>
+                                                </button>
                                             </a>
                                         </div>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -100,5 +106,12 @@
             </div>
         </div>
     </div>
+    <script>
+        function readAloud() {
+            var paragraphs = document.querySelectorAll('.card-body p');
+            var textToRead = Array.from(paragraphs).map(p => p.textContent).join(' ');
+            responsiveVoice.speak(textToRead);
+        }
+    </script>
 </asp:Content>
 

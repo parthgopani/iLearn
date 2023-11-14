@@ -2,6 +2,7 @@
     CodeFile="Part41.aspx.cs" Inherits="pythonlearn_files_Part41" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=m3W56MGf"></script>
        <script src="ReadAloud.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
@@ -14,6 +15,9 @@
                             <div class="card-body">
                                 <div class="col-md-12 grid-margin stretch-card">
                                     <div class="card">
+                                                                                                                    <div class="card-body">
+    <button type="button" class="btn btn-primary" onclick="readAloud()">Read Aloud</button>
+</div>
                                         <div class="card-body">
                                             <a href="part40.aspx">
                                                 <button type="button" class="btn btn-outline-secondary btn-icon-text">
@@ -283,5 +287,12 @@
             </div>
         </div>
     </div>
+    <script>
+    function readAloud() {
+        var paragraphs = document.querySelectorAll('.card-body p');
+        var textToRead = Array.from(paragraphs).map(p => p.textContent).join(' ');
+        responsiveVoice.speak(textToRead);
+    }
+    </script>
 </asp:Content>
 

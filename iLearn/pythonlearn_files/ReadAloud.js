@@ -26,7 +26,7 @@
     var textToRead = paragraph.textContent;
 
     // Highlight the text
-    highlightText(paragraph);
+    //highlightText(paragraph);
 
     // Start reading the current paragraph
     responsiveVoice.speak(textToRead, "UK English Female", {onend: onReadingEnd });
@@ -34,12 +34,12 @@
     } else {
         // Stop reading if all paragraphs have been read
         isReading = false;
-    removeHighlight();
+    //removeHighlight();
     }
 }
 
-    function highlightText(paragraph) {
-        paragraph.innerHTML = paragraph.textContent.replace(/(\S+)/g, "<span class='highlight'>$1</span>");
+    //function highlightText(paragraph) {
+       // paragraph.innerHTML = paragraph.textContent.replace(/(\S+)/g, "<span class='highlight'>$1</span>");
 
     var words = paragraph.querySelectorAll('.highlight');
     words.forEach(word => {
@@ -49,10 +49,10 @@
     });
 }
 
-    function removeHighlight() {
-        paragraphs.forEach(paragraph => {
-            paragraph.innerHTML = paragraph.textContent; // Restore original text
-        });
+    //function removeHighlight() {
+       // paragraphs.forEach(paragraph => {
+       //     paragraph.innerHTML = paragraph.textContent; // Restore original text
+       // });
 }
 
     function onReadingEnd() {

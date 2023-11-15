@@ -261,7 +261,7 @@
                                         <p class="card-title">Latest Posts</p>
                                         <div class="card tale-bg">
                                             <div class="card-people mt-auto">
-                                                <img src="images/posts/latest1.jpg" alt="">
+                                                <img src="images/Post1.jpg" alt="">
                                             </div>
                                         </div>
                                     </div>
@@ -289,7 +289,7 @@
                                     <div class="card-body">
                                         <div class="card tale-bg">
                                             <div class="card-people mt-auto">
-                                                <img src="images/posts/latest2.jpg" alt="">
+                                                <img src="images/Post2.jpg" alt="">
                                             </div>
                                         </div>
                                     </div>
@@ -318,13 +318,13 @@
                                     <div class="card-body">
                                         <div class="card tale-bg">
                                             <div class="card-people mt-auto">
-                                                <img src="images/posts/latest1.jpg" alt="">
+                                                <img src="images/Post3.jpg" alt="">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="card-body" style="padding-top:15%";>
+                                    <div class="card-body" style="padding-top:7%";>
                                         <p class="card-title">
                                             <a href="https://realpython.com/courses/building-systems-classes-exercises/">Python
                                                 Basics Exercises: Building Systems With Classes

@@ -6,7 +6,7 @@
 <html>
 <head runat="server">
     <title>iLearn</title>
-    <!--<script language="javascript">
+    <script language="javascript">
     function FullScreen() {
         top.resizeTo(window.screen.availWidth, window.screen.availHeight);
         top.moveTo(0, 0);
@@ -57,7 +57,7 @@
                 vertical-align: middle;
                 border: 1px solid #ddd;
             }
-    </style>-->
+    </style>
     <style>
         .card-body p {
             font-size: 110%;

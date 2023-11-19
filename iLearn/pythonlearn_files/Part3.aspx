@@ -16,9 +16,9 @@
                                 <div class="col-md-12 grid-margin stretch-card">
                                     <div class="card">
 
-                                                                            <div class="card-body">
-    <button type="button" class="btn btn-primary" onclick="readAloud()">Read Aloud</button>
-</div>
+                                        <div class="card-body">
+                                            <button type="button" class="btn btn-primary" onclick="readAloud()">Read Aloud</button>
+                                        </div>
                                         <div class="card-body">
                                             <a href="part2.aspx">
                                                 <button type="button" class="btn btn-outline-secondary btn-icon-text">
@@ -58,7 +58,7 @@
                                             <div class="card-body">
                                                 <p style="text-indent: 0pt; text-align: center;">
                                                     <span>
-                                                        <img width="169" height="95" alt="image" src="../images/pythonimages/Image_003.png" /></span>
+                                                        <img width="280" height="170" alt="image" src="../images/pythonimages/Image_003.png" /></span>
                                                 </p>
                                             </div>
                                             <div class="card-body">
@@ -96,7 +96,7 @@
                                                 </button>
                                             </a>
                                         </div>
-                                        
+
                                     </div>
                                 </div>
                             </div>
@@ -106,6 +106,6 @@
             </div>
         </div>
     </div>
-  
+
 </asp:Content>
 

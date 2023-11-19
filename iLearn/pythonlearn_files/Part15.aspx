@@ -3,7 +3,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <script src="https://code.responsivevoice.org/responsivevoice.js?key=m3W56MGf"></script>
-       <script src="ReadAloud.js"></script>
+    <script src="ReadAloud.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div class="content-wrapper">
@@ -15,76 +15,97 @@
                             <div class="card-body">
                                 <div class="col-md-12 grid-margin stretch-card">
                                     <div class="card">
-                                                                                                                    <div class="card-body">
-    <button type="button" class="btn btn-primary" onclick="readAloud()">Read Aloud</button>
-</div>
+                                        <div class="card-body">
+                                            <button type="button" class="btn btn-primary" onclick="readAloud()">Read Aloud</button>
+                                        </div>
                                         <div class="card-body">
                                             <a href="part14.aspx">
                                                 <button type="button" class="btn btn-outline-secondary btn-icon-text">
-                                    <i class="fa-solid fa-arrow-left" style="color: #000f;"></i>
-                                    Previous
-                                </button>
+                                                    <i class="fa-solid fa-arrow-left" style="color: #000f;"></i>
+                                                    Previous
+                                                </button>
                                             </a>
                                             <a href="part1.aspx">
                                                 <button type="button" class="btn btn-outline-secondary btn-icon-text">
-                                    <i class="fa-solid fa-file" style="color: #000f;"></i>
-                                    Contents
-                                </button>
+                                                    <i class="fa-solid fa-file" style="color: #000f;"></i>
+                                                    Contents
+                                                </button>
                                             </a>
                                             <a href="part16.aspx">
                                                 <button type="button" class="btn btn-outline-secondary btn-icon-text">
-                                    Next
+                                                    Next
                                      <i class="fa-solid fa-arrow-right" style="color: #000f;"></i>
-                                </button>
+                                                </button>
                                             </a>
                                             <div class="card-body" style="text-align: center;">
                                                 <h2>Variables, expressions, and statements
                                                 </h2>
                                             </div>
-                                            <div class="card-body">
-                                            <div class="toc">
-                                                <a class="toc0" href="part27.aspx">2.1  Values and types</a>
-                                                <a class="toc0" href="part28.aspx">2.2  Variables</a>
-                                                <a class="toc0" href="part29.aspx">2.3  Variable names and keywords</a>
-                                                <a class="toc0" href="part30.aspx">2.4  Statements</a>
-                                                <a class="toc0" href="part31.aspx">2.5  Operators and operands</a>
-                                                <a class="toc0" href="part32.aspx">2.6  Expressions</a>
-                                                <a class="toc1" href="part33.aspx">Exercise 1: Type the following statements in the
-                                                    Python interpreter to see what they do:</a>
-                                                <a class="toc0" href="part34.aspx">2.7  Order of operations</a>
-                                                <a class="toc0" href="part35.aspx">2.8  Modulus operator</a>
-                                                <a class="toc0" href="part36.aspx">2.9  String operations</a>
-                                                <a class="toc0" href="part37.aspx">2.10  Asking the user for input</a>
-                                                <a class="toc0" href="part38.aspx">2.11  Comments</a>
-                                                <a class="toc0" href="part39.aspx">2.12  Choosing mnemonic variable names</a>
-                                                <a class="toc0" href="part40.aspx">2.13  Debugging</a>
-                                                <a class="toc0" href="part41.aspx">2.14  Glossary</a>
-                                                <a class="toc0" href="part42.aspx">2.15  Exercises</a>
-                                                <a class="toc1" href="part43.aspx">Exercise 2: Write a program that uses input to prompt
-                                                    a user for their name and then welcomes them.</a>
-                                                <a class="toc1" href="part44.aspx">Exercise 3: Write a program to prompt the user for
-                                                    hours and rate per hour to compute gross pay.</a>
-                                                <a class="toc1" href="part45.aspx">Exercise 4: Assume that we execute the following
-                                                    assignment state- ments:</a>
-                                            </div>
-                                                </div>
+                                        </div>
+
+                                        <div class="card-body">
+                                            <p>
+                                                <a href="part15.aspx#bookmark17">2  Variables, expressions, and statements</a>
+                                            </p>
+                                            <p>
+                                                <a href="part16.aspx#bookmark18">2.1   Values and types</a>
+                                            </p>
+                                            <p>
+                                                <a href="part17.aspx#bookmark20">2.2   Variables</a>
+                                            </p>
+                                            <p>
+                                                <a href="part18.aspx#bookmark22">2.3   Variable names and keywords</a>
+                                            </p>
+                                            <p>
+                                                <a href="part19.aspx#bookmark24">2.4   Statements</a>
+                                            </p>
+                                            <p>
+                                                <a href="part20.aspx#bookmark27">2.5   Operators and operands</a>
+                                            </p>
+                                            <p>
+                                                <a href="part21.aspx#bookmark28">2.6   Expressions</a>
+                                            </p>
+                                            <p>
+                                                <a href="part22.aspx#bookmark30">2.7   Order of operations</a>
+                                            </p>
+                                            <p>
+                                                <a href="part23.aspx#bookmark31">2.8   Modulus operator</a>
+                                            </p>
+                                            <p>
+                                                <a href="part24.aspx#bookmark33">2.9   String operations</a>
+                                            </p>
+                                            <p>
+                                                <a href="part25.aspx#bookmark34">2.10  Asking the user for input</a>
+                                            </p>
+                                            <p>
+                                                <a href="part26.aspx#bookmark36">2.11  Comments</a>
+                                            </p>
+                                            <p>
+                                                <a href="part27.aspx#bookmark38">2.12  Choosing mnemonic variable names</a>
+                                            </p>
+                                            <p>
+                                                <a href="part28.aspx#bookmark38">2.13  Debugging</a>
+                                            </p>
+                                        </div>
+
+                                        <div class="card-body">
                                             <a href="part14.aspx">
                                                 <button type="button" class="btn btn-outline-secondary btn-icon-text">
-                                    <i class="fa-solid fa-arrow-left" style="color: #000f;"></i>
-                                    Previous
-                                </button>
+                                                    <i class="fa-solid fa-arrow-left" style="color: #000f;"></i>
+                                                    Previous
+                                                </button>
                                             </a>
                                             <a href="part1.aspx">
                                                 <button type="button" class="btn btn-outline-secondary btn-icon-text">
-                                    <i class="fa-solid fa-file" style="color: #000f;"></i>
-                                    Contents
-                                </button>
+                                                    <i class="fa-solid fa-file" style="color: #000f;"></i>
+                                                    Contents
+                                                </button>
                                             </a>
                                             <a href="part16.aspx">
                                                 <button type="button" class="btn btn-outline-secondary btn-icon-text">
-                                    Next
-                                     <i class="fa-solid fa-arrow-right" style="color: #000f;"></i>
-                                </button>
+                                                    Next
+                                                <i class="fa-solid fa-arrow-right" style="color: #000f;"></i>
+                                                </button>
                                             </a>
                                         </div>
                                     </div>
@@ -96,6 +117,5 @@
             </div>
         </div>
     </div>
-   
 </asp:Content>
 

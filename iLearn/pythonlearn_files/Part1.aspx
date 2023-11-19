@@ -21,7 +21,7 @@
                 <div class="col-md-12 grid-margin stretch-card">
                     <div class="card">
                         <div class="card-body">
-                            <a href="part1.aspx">
+                            <a href="../PythonTutorial.aspx">
                                 <button type="button" class="btn btn-outline-secondary btn-icon-text">
                                     <i class="fa-solid fa-arrow-left" style="color: #000f;"></i>
                                     Previous
@@ -175,7 +175,7 @@
                 <div class="col-md-12 grid-margin stretch-card">
                     <div class="card">
                         <div class="card-body">
-                            <a href="part1.aspx">
+                            <a href="../PythonTutorial.aspx">
                                 <button type="button" class="btn btn-outline-secondary btn-icon-text">
                                     <i class="fa-solid fa-arrow-left" style="color: #000f;"></i>
                                     Previous

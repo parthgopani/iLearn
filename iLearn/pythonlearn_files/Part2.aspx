@@ -15,32 +15,32 @@
                             <div class="card-body">
                                 <div class="col-md-12 grid-margin stretch-card">
                                     <div class="card">
-                                                                                                                    <div class="card-body">
-    <button type="button" class="btn btn-primary" onclick="readAloud()">Read Aloud</button>
-</div>
+                                        <div class="card-body">
+                                            <button type="button" class="btn btn-primary" onclick="readAloud()">Read Aloud</button>
+                                        </div>
                                         <div class="card-body">
                                             <a href="part1.aspx">
                                                 <button type="button" class="btn btn-outline-secondary btn-icon-text">
-                                    <i class="fa-solid fa-arrow-left" style="color: #000f;"></i>
-                                    Previous
-                                </button>
+                                                    <i class="fa-solid fa-arrow-left" style="color: #000f;"></i>
+                                                    Previous
+                                                </button>
                                             </a>
                                             <a href="part1.aspx">
                                                 <button type="button" class="btn btn-outline-secondary btn-icon-text">
-                                    <i class="fa-solid fa-file" style="color: #000f;"></i>
-                                    Contents
-                                </button>
+                                                    <i class="fa-solid fa-file" style="color: #000f;"></i>
+                                                    Contents
+                                                </button>
                                             </a>
                                             <a href="part3.aspx">
                                                 <button type="button" class="btn btn-outline-secondary btn-icon-text">
-                                    Next
+                                                    Next
                                      <i class="fa-solid fa-arrow-right" style="color: #000f;"></i>
-                                </button>
+                                                </button>
                                             </a>
-                                            <div class="card-body" style="text-align:center;">
+                                            <div class="card-body" style="text-align: center;">
                                                 <h2>Why should you learn to write programs?</h2>
-                                                </div>
-                                                <div class="card-body">
+                                            </div>
+                                            <div class="card-body">
                                                 <p>
                                                     Writing programs (or programming) is a very creative and rewarding activity. You
                                                     can write programs for many reasons, ranging from making your living to solving
@@ -51,12 +51,12 @@
     how to program you will figure out what you want to do with your newfound skills.
                                                 </p>
                                             </div>
-                                             <div class="card-body">
-                                            <p style="text-indent: 0pt; text-align: center;">
-                                                <span>
-                                                    <img width="169" height="94" alt="image" src="../images/pythonimages/Image_002.png" /></span>
-                                            </p>
-                                                 </div>
+                                            <div class="card-body">
+                                                <p style="text-indent: 0pt; text-align: center;">
+                                                    <span>
+                                                        <img width="280" height="170" alt="image" src="../images/pythonimages/Image_002.png" /></span>
+                                                </p>
+                                            </div>
                                             <div class="card-body">
                                                 <p>
                                                     We are surrounded in our daily lives with computers ranging from laptops to cell
@@ -86,69 +86,70 @@
                                             <div class="row">
                                                 <div class="col-md-9 stretch-card">
                                                     <div class="card">
-                                                    <div class="card-body">
-                                                        <p>
-                                                            For example, look at the first three paragraphs of this chapter and tell me the
-                                                            most commonly used word and how many times the word is used. While you were able
-                                                            to read and understand the words in a few seconds, counting them is almost painful
-                                                            because it is not the kind of problem that human minds are designed to solve. For
-                                                            a computer, the opposite is true, reading and understanding text from a piece of
-                                                            paper is hard for a computer to do but counting the words and telling you how many
-                                                            times the most used word was used is very easy for the computer:
-                                                        </p>
-                                                    </div>
+                                                        <div class="card-body">
+                                                            <p>
+                                                                For example, look at the first three paragraphs of this chapter and tell me the
+                                                                most commonly used word and how many times the word is used. While you were able
+                                                                to read and understand the words in a few seconds, counting them is almost painful
+                                                                because it is not the kind of problem that human minds are designed to solve. For
+                                                                a computer, the opposite is true, reading and understanding text from a piece of
+                                                                paper is hard for a computer to do but counting the words and telling you how many
+                                                                times the most used word was used is very easy for the computer:
+                                                            </p>
                                                         </div>
+                                                    </div>
                                                 </div>
                                                 <div class="col-md-3 stretch-card">
                                                     <div class="card">
-                                                    <div class="card-body">
-                                                        <h4 class="card-title">Example</h4>
-                                                        <p class="s3">
-                                                            python words.py
+                                                        <div class="card-body">
+                                                            <h4 class="card-title">Example</h4>
+                                                            <p class="s3">
+                                                                python words.py
                                                     <br />
-                                                            Enter file:words.txt
+                                                                Enter file:words.txt
                                                     <br />
-                                                            to
+                                                                to
     <span style="color: #3FA070;">16</span>
-                                                        </p>
-                                                    </div>
+                                                            </p>
                                                         </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        <div class="card-body">
-                                            <p>
-                                                Our “personal information
+                                            <div class="card-body">
+                                                <p>
+                                                    Our “personal information
         analysis assistant” quickly told us that the word “to” was used sixteen times in
         the first three paragraphs of this chapter.
-                                            </p>
+                                                </p>
+                                            </div>
+                                            <div class="card-body">
+                                                <p>
+                                                    This very fact that computers are good at things that humans are not is why you
+                                                    need to become skilled at talking “computer language”. Once you learn this new language,
+                                                    you can delegate mundane tasks to your partner (the computer), leaving more time
+                                                    for you to do the things that you are uniquely suited for. You bring creativity,
+                                                    intuition, and inventiveness to this partnership.
+                                                </p>
+                                            </div>
+                                            <a href="part1.aspx">
+                                                <button type="button" class="btn btn-outline-primary btn-icon-text">
+                                                    <i class="ti-file btn-icon-prepend"></i>
+                                                    Previous
+                                                </button>
+                                            </a>
+                                            <a href="part1.aspx">
+                                                <button type="button" class="btn btn-outline-secondary btn-icon-text">
+                                                    <i class="ti-file btn-icon-append"></i>
+                                                    Contents
+                                                </button>
+                                            </a>
+                                            <a href="part3.aspx">
+                                                <button type="button" class="btn btn-outline-success btn-icon-text">
+                                                    <i class="ti-alert btn-icon-prepend"></i>
+                                                    Next
+                                                </button>
+                                            </a>
                                         </div>
-                                        <div class="card-body">
-                                            <p>
-                                                This very fact that computers are good at things that humans are not is why you
-                                                need to become skilled at talking “computer language”. Once you learn this new language,
-                                                you can delegate mundane tasks to your partner (the computer), leaving more time
-                                                for you to do the things that you are uniquely suited for. You bring creativity,
-                                                intuition, and inventiveness to this partnership.
-                                            </p>
-                                        </div>
-                                        <a href="part1.aspx">
-                                            <button type="button" class="btn btn-outline-primary btn-icon-text">
-                                                <i class="ti-file btn-icon-prepend"></i>
-                                                Previous
-                                            </button>
-                                        </a>
-                                        <a href="part1.aspx">
-                                            <button type="button" class="btn btn-outline-secondary btn-icon-text">
-                                                <i class="ti-file btn-icon-append"></i>
-                                                Contents
-                                            </button>
-                                        </a>
-                                        <a href="part3.aspx">
-                                            <button type="button" class="btn btn-outline-success btn-icon-text">
-                                                <i class="ti-alert btn-icon-prepend"></i>
-                                                Next
-                                            </button>
-                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -158,7 +159,6 @@
             </div>
         </div>
     </div>
-    </div>
-   
+
 </asp:Content>
 

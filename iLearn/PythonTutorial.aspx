@@ -171,7 +171,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="pythonlearn_files/par31.aspx">
+                            <a class="nav-link" href="pythonlearn_files/part31.aspx">
                                 <span class="menu-title">3.2  Logical operators</span>
                             </a>
                         </li>

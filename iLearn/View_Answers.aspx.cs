@@ -87,10 +87,11 @@ public partial class View_Answers : System.Web.UI.Page
 
     protected void btnback_Click(object sender, EventArgs e)
     {
-
+        //Response.Redirect("ExamResult.aspx");
         if (btnback.Text == "Back")
         {
-            Server.Transfer("ExamResult.aspx?User_Id=" + Session["Reg_Id"] + "&Exam_Id=" + Session["eid"] + "&Course_Id=" + Session["cid"] + "", false);
+            //Server.Transfer("ExamResult.aspx?User_Id=" + Session["Reg_Id"] + "&Exam_Id=" + Session["eid"] + "&Course_Id=" + Session["cid"] + "", false);
+            Response.Redirect("ExamResult.aspx?User_Id=" + Session["Reg_Id"] + "&Exam_Id=" + Session["eid"] + "&Course_Id=" + Session["cid"] + "", false);
         }
     }
 }

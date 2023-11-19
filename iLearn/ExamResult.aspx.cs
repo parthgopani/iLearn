@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Antlr.Runtime.Tree;
+using System;
 using System.Activities.Expressions;
 using System.Collections.Generic;
 using System.Data;
@@ -109,6 +110,11 @@ public partial class ExamResult : System.Web.UI.Page
 
     protected void Button1_Click(object sender, EventArgs e)
     {
-        Server.Transfer("View_Answers.aspx?User_Id=" + Session["Reg_Id"] + "&Exam_Id=" + Session["eid"] + "&Course_Id=" + Session["cid"] + "", false);
+        //Response.Redirect("View_Answers.aspx");
+        if (Button1.Text == "View Answers")
+        {
+            //Server.Transfer("View_Answers.aspx?User_Id=" + Session["Reg_Id"] + "&Exam_Id=" + Session["eid"] + "&Course_Id=" + Session["cid"] + "", false);
+            Response.Redirect("View_Answers.aspx?User_Id=" + Session["Reg_Id"] + "&Exam_Id=" + Session["eid"] + "&Course_Id=" + Session["cid"] + "", false);
+        }
     }
 }

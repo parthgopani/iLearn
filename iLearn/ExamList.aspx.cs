@@ -111,7 +111,8 @@ public partial class ExamList : System.Web.UI.Page
                 ds = conn.select(str1);
                 Session["eid"] = hdnexamlist.Value;
                 Session["cid"] = ds.Tables[0].Rows[0]["Course_Id"].ToString();
-                Server.Transfer("ExamResult.aspx?User_Id=" + Session["Reg_Id"] + "&Exam_Id=" + Session["eid"] + "&Course_Id=" + Session["cid"] + "", false);
+                //Server.Transfer("ExamResult.aspx?User_Id=" + Session["Reg_Id"] + "&Exam_Id=" + Session["eid"] + "&Course_Id=" + Session["cid"] + "", false);
+                Response.Redirect("ExamResult.aspx?User_Id=" + Session["Reg_Id"] + "&Exam_Id=" + Session["eid"] + "&Course_Id=" + Session["cid"] + "", false);
             }
         }
         catch (Exception)

@@ -1,49 +1,47 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="LandingPage.aspx.cs" Inherits="LandingPage" %>
 
 <!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <link rel="shortcut icon" href="images/logo-mini.png" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        .btn-outline-ilearn {
-            color: #4b49ac;
-            background-color: #ffffff;
-            border-color: #4b49ac;
-            font-weight: bold;
-            letter-spacing: 0.05em;
-        }
-
-            .btn-outline-ilearn:hover,
-            .btn-outline-ilearn:active,
-            .btn-outline-ilearn:focus,
-            .btn-outline-ilearn.active {
-                background: #4b49ac;
-                color: #ffffff;
-                border-color: #4b49ac;
-            }
-
-        * {
-            box-sizing: border-box;
-        }
-
         body {
             margin: 0;
-            font-family: Arial;
+            font-family: Arial, sans-serif;
             font-size: 17px;
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Two columns, each taking up half of the available space */
+        }
+
+        #division1 {
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #4b49ac;
+            color: #fff;
+            overflow: hidden;
         }
 
         #myVideo {
+            height: 90vh;
+            object-fit: contain;
             width: 100%;
-            height: 100%;
         }
 
-        .content {
-            position: fixed;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-            color: #f1f1f1;
-            width: 100%;
+        #division2 {
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #ddd;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+        }
+
+        .brand-logo {
+            margin-bottom: 20px;
         }
 
         #myBtn {
@@ -51,48 +49,42 @@
             font-size: 18px;
             padding: 10px;
             border: none;
-            background: #000;
+            background: #4b49ac;
             color: #fff;
             cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
         }
 
-            #myBtn:hover {
-                background: #ddd;
-                color: black;
-            }
-
-        p {
-            padding-left: 20px;
-            padding-right: 20px;
+        #myBtn:hover {
+            background: #fff;
+            color: #4b49ac;
         }
     </style>
-    <title>Ilearn</title>
+    <title>ILearn</title>
 </head>
 <body>
-    <form id="form1" runat="server">
-        <video autoplay muted loop id="myVideo">
-            <source src="images/video/herovideo2.mp4" type="video/mp4">
-            Your browser does not support HTML5 video.
-        </video>
+    <form id="form2" runat="server">
+        <div id="division1">
+            <video autoplay muted loop id="myVideo">
+                <source src="images/video/Original.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
 
-        <div class="content">
-            <div class="brand-logo text-center" align="center">
-                <img src="/images/logo.png" alt="logo" style="height: 74px; width: 195px">
+        <div id="division2">
+            <div class="brand-logo">
+                <img src="/images/logo.png" alt="logo" style="height: 70px; width: 190px">
             </div>
-            <h1 align="center">Welcome To Ilearn! </h1>
-            <p align="center">
-                We're passionate about making Python programming accessible and enjoyable for 
-    learners of all levels. Our platform combines the power of video lessons, comprehensive 
-    PDF materials, and interactive quizzes to provide a holistic learning experience. 
-    Whether you're a beginner or an experienced coder, ILearn is your go-to destination for 
-    mastering Python.
-            </p>
-            <div align="center">
-                <asp:Button ID="myBtn" runat="server" Text="Login" OnClick="myBtn_Click" />
+
+            <div class="card">
+                <p>
+                    We're passionate about making Python programming accessible and enjoyable for learners of all levels. Our platform combines the power of video lessons, comprehensive PDF materials, and interactive quizzes to provide a holistic learning experience. Whether you're a beginner or an experienced coder, ILearn is your go-to destination for mastering Python.
+                </p>
             </div>
+
+            <asp:Button ID="myBtn" runat="server" Text="Login" OnClick="myBtn_Click" />
         </div>
     </form>
-
 </body>
-
 </html>

@@ -58,7 +58,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row" style="margin-top: 8%;">
+                <div class="row" style="margin-top: 15%;">
                     <div class="col-md-12 grid-margin stretch-card">
                         <div class="card position-relative">
                             <div class="card-body">

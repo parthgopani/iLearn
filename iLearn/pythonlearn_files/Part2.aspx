@@ -132,21 +132,21 @@
                                                 </p>
                                             </div>
                                             <a href="part1.aspx">
-                                                <button type="button" class="btn btn-outline-primary btn-icon-text">
-                                                    <i class="ti-file btn-icon-prepend"></i>
+                                                <button type="button" class="btn btn-outline-secondary btn-icon-text">
+                                                    <i class="fa-solid fa-arrow-left" style="color: #000f;"></i>
                                                     Previous
                                                 </button>
                                             </a>
                                             <a href="part1.aspx">
                                                 <button type="button" class="btn btn-outline-secondary btn-icon-text">
-                                                    <i class="ti-file btn-icon-append"></i>
+                                                    <i class="fa-solid fa-file" style="color: #000f;"></i>
                                                     Contents
                                                 </button>
                                             </a>
                                             <a href="part3.aspx">
-                                                <button type="button" class="btn btn-outline-success btn-icon-text">
-                                                    <i class="ti-alert btn-icon-prepend"></i>
+                                                <button type="button" class="btn btn-outline-secondary btn-icon-text">
                                                     Next
+                                                    <i class="fa-solid fa-arrow-right" style="color: #000f;"></i>
                                                 </button>
                                             </a>
                                         </div>

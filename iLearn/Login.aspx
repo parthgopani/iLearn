@@ -2,6 +2,8 @@
     CodeFile="Login.aspx.cs" Inherits="Login" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+ 
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div class="auth-form-light text-left py-5 px-4 px-sm-5">
@@ -12,7 +14,7 @@
         <h6 class="font-weight-light">Sign in to continue.</h6>
         <div class="body bg-gray">
             <div class="form-group">
-                Email
+                <label for="txtEmail">Email</label>
             </div>
             <div class="form-group">
                 <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" placeholder="Eg : user@iLearn.com"></asp:TextBox>
@@ -22,7 +24,7 @@
                     ErrorMessage="Email address is invalid!" ForeColor="#FF3300" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
             </div>
             <div class="form-group">
-                Password
+                <label for="txtPassword">Password</label>
             </div>
             <div class="form-group">
                 <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" CssClass="form-control"

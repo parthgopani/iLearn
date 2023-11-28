@@ -1,14 +1,15 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPageAdmin.master" AutoEventWireup="true" CodeFile="Question.aspx.cs" Inherits="Question" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPageAdmin.master" AutoEventWireup="true"
+    CodeFile="Question.aspx.cs" Inherits="Question" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
-<script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
     <script type='text/x-mathjax-config'>
     MathJax.Hub.Config({
         tex2jax: { inlineMath: [['$', '$']]}
     });
-</script>
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div class="content-wrapper">
@@ -40,7 +41,7 @@
                                                 ErrorMessage="Course Required" ForeColor="Red" ValidationGroup="msg1"></asp:RequiredFieldValidator>
                                         </div>
                                     </div>
-                               
+
                                     <div class="form-group row">
                                         <label for="lblcomplexcitytype" class="col-sm-2 col-form-label">Complexcity Type:</label>
                                         <div class="col-sm-9">
@@ -50,7 +51,7 @@
                                             <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ControlToValidate="drpcomplexcity"
                                                 ErrorMessage="Complexcity Type Required" ForeColor="Red" ValidationGroup="msg1"></asp:RequiredFieldValidator>
                                         </div>
-                                       </div>
+                                    </div>
                                     <div class="form-group row">
                                         <label for="lblquestiontext" class="col-sm-2 col-form-label">Question Text:</label>
                                         <div class="col-sm-9">
@@ -106,12 +107,13 @@
                                         </div>
                                     </div>
                                     <asp:Button ID="btnadd" runat="server" Text="ADD" class="btn btn-inverse-primary mr-2"
-                                        OnClick="btnadd_Click" ValidationGroup="msg1"/>
+                                        OnClick="btnadd_Click" ValidationGroup="msg1" />
                                     <asp:Button ID="btnupdate" runat="server" Text="UPDATE" class="btn btn-inverse-info mr-2"
                                         OnClick="btnupdate_Click" />
                                     <asp:Button ID="btndelete" runat="server" Text="DELETE" class="btn btn-inverse-danger mr-2"
                                         OnClick="btndelete_Click" />
-                                    <asp:Button ID="btncancel" runat="server" Text="CANCEL" class="btn btn-inverse-dark" OnClick="btncancel_Click" />
+                                    <asp:Button ID="btncancel" runat="server" Text="CANCEL" class="btn btn-inverse-dark"
+                                        OnClick="btncancel_Click" />
                                     <div class="col-md-12 grid-margin">
                                         <div class="row">
                                             <div class="col-12 col-xl-12 mb-4 mb-xl-0">
@@ -120,31 +122,31 @@
                                                         <asp:GridView ID="grdquestion" runat="server" AutoGenerateColumns="false"
                                                             OnRowCommand="grdquestion_RowCommand" AllowPaging="true" PageSize="15"
                                                             OnPageIndexChanging="grdquestion_PageIndexChanging" AllowSorting="true"
-                                                            HorizontalAlign="Center" CssClass="gridview">
+                                                            HorizontalAlign="Center" CssClass="gridview rounded-gridview">
                                                             <Columns>
                                                                 <asp:TemplateField HeaderText="Question">
                                                                     <ItemTemplate>
                                                                         <asp:LinkButton ID="LinkButton1" runat="server"
                                                                             Text='<%#Bind("[Que_Id]") %>' CommandName="Que_Id"
-                                                                            CommandArgument='<%#Bind("[Que_Id]") %>'></asp:LinkButton>
+                                                                            CommandArgument='<%#Bind("[Que_Id]") %>' ForeColor="Black"
+                                                                            Font-Bold="True"></asp:LinkButton>
                                                                     </ItemTemplate>
                                                                 </asp:TemplateField>
                                                                 <asp:BoundField DataField="Sem_Name" HeaderText="Semester Name" />
                                                                 <asp:BoundField DataField="Course_Name" HeaderText="Course Name" />
                                                                 <asp:BoundField DataField="Complex_Type" HeaderText="Complexity" />
-                                                               
-                                                                <asp:BoundField DataField="Que_Text" HeaderText="Question Text"  HtmlEncode="false"/>
+
+                                                                <asp:BoundField DataField="Que_Text" HeaderText="Question Text" HtmlEncode="false" />
                                                                 <asp:BoundField DataField="O1" HeaderText="Option 1" />
                                                                 <asp:BoundField DataField="O2" HeaderText="Option 2" />
                                                                 <asp:BoundField DataField="O3" HeaderText="Option 3" />
                                                                 <asp:BoundField DataField="O4" HeaderText="Option 4" />
                                                                 <asp:BoundField DataField="Correct_Ans" HeaderText="Correct Answer" />
                                                             </Columns>
-                                                            <FooterStyle BackColor="#FFFF99" BorderColor="#FF9900" BorderStyle="Dashed"
-                                                                Wrap="True" />
-                                                            <HeaderStyle BackColor="Gray" BorderColor="Gray" />
-                                                            <PagerStyle BackColor="LightGray" BorderColor="LightGray" />
-                                                            <RowStyle BackColor="#CCCCCC" BorderColor="#CCCCCC" />
+                                                            <FooterStyle BackColor="#F7F7F7" Wrap="True" />
+                                                            <HeaderStyle BackColor="#F7F7F7" />
+                                                            <PagerStyle BackColor="#F7F7F7" />
+                                                            <RowStyle BackColor="#F7F7F7" />
                                                         </asp:GridView>
                                                         <asp:HiddenField ID="hdnquestion" runat="server" />
                                                     </div>

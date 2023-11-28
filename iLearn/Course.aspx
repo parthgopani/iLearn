@@ -52,14 +52,15 @@
                                                 <div class="card">
                                                     <div class="card-body">
                                                         <asp:GridView ID="grid_Course" runat="server" AutoGenerateColumns="false" OnRowCommand="sub_rowcmd"
-                                                            AllowPaging="True" AllowSorting="true" PageSize="10" CssClass="table table-mailbox"
+                                                            AllowPaging="True" AllowSorting="true" PageSize="10" CssClass="gridview rounded-gridview"
                                                             HorizontalAlign="Center" OnPageIndexChanging="grid_Course_PageIndexChanging">
                                                             <Columns>
                                                                 <asp:TemplateField HeaderText="Sub Id">
                                                                     <ItemTemplate>
                                                                         <asp:LinkButton ID="LinkButton1" runat="server" Text="<%#Bind('[Course_Id]') %>"
                                                                             CommandName="Course_Id"
-                                                                            CommandArgument='<%#Bind("[Course_Id]") %>'>
+                                                                            CommandArgument='<%#Bind("[Course_Id]") %>' ForeColor="Black"
+                                                                            Font-Bold="True">
                                                                         </asp:LinkButton>
                                                                     </ItemTemplate>
                                                                 </asp:TemplateField>
@@ -67,10 +68,10 @@
                                                                 <asp:BoundField DataField="Course_Code" HeaderText="Course Code" />
                                                                 <asp:BoundField DataField="Sem_Name" HeaderText="Semester" />
                                                             </Columns>
-                                                            <FooterStyle BackColor="#FFFF99" BorderColor="#FF9900" BorderStyle="Dashed" Wrap="True" />
-                                                            <HeaderStyle BackColor="Gray" BorderColor="Gray" />
-                                                            <PagerStyle BackColor="LightGray" BorderColor="LightGray" />
-                                                            <RowStyle BackColor="#CCCCCC" BorderColor="#CCCCCC" />
+                                                            <FooterStyle BackColor="#F7F7F7" Wrap="True" />
+                                                            <HeaderStyle BackColor="#F7F7F7" />
+                                                            <PagerStyle BackColor="#F7F7F7" />
+                                                            <RowStyle BackColor="#F7F7F7" />
                                                         </asp:GridView>
                                                         <asp:HiddenField ID="hdnsem" runat="server" />
                                                         <asp:HiddenField ID="hiddensubid" runat="server" />

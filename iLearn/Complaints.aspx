@@ -14,7 +14,7 @@
                         <div class="card-body">
                             <h4 class="card-title">Complaints</h4>
 
-                            <asp:GridView ID="GrdComplaints" runat="server" AutoGenerateColumns="False" DataKeyNames="Complaint_Id" CellPadding="4" ForeColor="#333333" DataSourceID="SqlDataSourceComp">
+                            <asp:GridView ID="GrdComplaints" runat="server" AutoGenerateColumns="False" DataKeyNames="Complaint_Id" CssClass="gridview rounded-gridview" CellPadding="4" ForeColor="#333333" DataSourceID="SqlDataSourceComp">
 
                                 <AlternatingRowStyle BackColor="White"></AlternatingRowStyle>
                                 <Columns>
@@ -33,23 +33,21 @@
                                     <asp:TemplateField HeaderText="Reply">
                                         <ItemTemplate>
                                             
-                                            <asp:TextBox ID="txtReply" runat="server" CssClass="form-control mb-2" TextMode="MultiLine"></asp:TextBox>
+                                            <asp:TextBox ID="txtReply" runat="server" CssClass="form-control mb-2" TextMode="MultiLine" ForeColor="Black"
+                                                                                        Font-Bold="True"></asp:TextBox>
                                             
-                                            <asp:Button ID="btnReply" runat="server" Text="Reply" CssClass=" btn btn-warning btn-sm mx-auto" CommandArgument='<%# Eval("Complaint_Id") %>' />
+                                            <asp:Button ID="btnReply" runat="server" Text="Reply" CssClass=" btn btn-warning btn-sm mx-auto" CommandArgument='<%# Eval("Complaint_Id") %>' ForeColor="Black"
+                                                                                        Font-Bold="True"/>
                                         </ItemTemplate>
                                     </asp:TemplateField>
                                 </Columns>
                                 <EditRowStyle BackColor="#2461BF"></EditRowStyle>
 
                                 
-
-                                <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White"></FooterStyle>
-
-                                <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White"></HeaderStyle>
-
-                                <PagerStyle HorizontalAlign="Center" BackColor="#2461BF" ForeColor="White"></PagerStyle>
-
-                                <RowStyle BackColor="#EFF3FB"></RowStyle>
+                                <FooterStyle BackColor="#F7F7F7" Wrap="True" />
+<HeaderStyle BackColor="#F7F7F7" />
+<PagerStyle BackColor="#F7F7F7" />
+<RowStyle BackColor="#F7F7F7" />
 
                                 <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333"></SelectedRowStyle>
 

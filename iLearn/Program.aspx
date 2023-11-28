@@ -50,25 +50,25 @@
                                                         <asp:HiddenField ID="hdnprogram" runat="server" />
                                                         <asp:GridView ID="Grdprogram" runat="server" AutoGenerateColumns="False" AllowPaging="True"
                                                             OnRowCommand="Grdprogram_RowCommand" AllowSorting="True" OnSelectedIndexChanging="Grdprogram_SelectedIndexChanging"
-                                                            PageSize="15" OnPageIndexChanging="Grdprogram_PageIndexChanging" CssClass="table table-mailbox"
+                                                            PageSize="15" OnPageIndexChanging="Grdprogram_PageIndexChanging" CssClass="gridview rounded-gridview"
                                                             HorizontalAlign="Center">
 
                                                             <Columns>
                                                                 <asp:TemplateField HeaderText="Program">
                                                                     <ItemTemplate>
                                                                         <asp:LinkButton ID="LinkButton1" runat="server" Text='<%# Bind("Program_Id") %>'
-                                                                            CommandName="Program_Id" CommandArgument='<%# Bind("Program_Id") %>'></asp:LinkButton>
+                                                                            CommandName="Program_Id" CommandArgument='<%# Bind("Program_Id") %>' ForeColor="Black"
+                                                                            Font-Bold="True"></asp:LinkButton>
                                                                     </ItemTemplate>
 
-                                                                    <HeaderStyle BackColor="Gray" BorderColor="Gray"></HeaderStyle>
                                                                 </asp:TemplateField>
                                                                 <asp:BoundField DataField="Program_Name" HeaderText="Program name" />
                                                                 <asp:BoundField DataField="f_name" HeaderText="Program Coordinator Name" />
                                                             </Columns>
-                                                            <FooterStyle BackColor="#FFFF99" BorderColor="#FF9900" BorderStyle="Dashed" Wrap="true" />
-                                                            <HeaderStyle BackColor="Gray" BorderColor="Gray" />
-                                                            <PagerStyle BackColor="LightGray" BorderColor="LightGray" />
-                                                            <RowStyle BackColor="#CCCCCC" BorderColor="#CCCCCC" />
+                                                            <FooterStyle BackColor="#F7F7F7" Wrap="True" />
+                                                            <HeaderStyle BackColor="#F7F7F7" />
+                                                            <PagerStyle BackColor="#F7F7F7" />
+                                                            <RowStyle BackColor="#F7F7F7" />
                                                         </asp:GridView>
                                                     </div>
                                                 </div>

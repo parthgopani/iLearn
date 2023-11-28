@@ -46,23 +46,24 @@
                                                     <div class="card-body">
                                                         <asp:GridView ID="Grdsem" AutoGenerateColumns="false" runat="server" OnRowCommand="grdsem_RowCommand"
                                                             AllowPaging="true" AllowSorting="true" OnSelectedIndexChanging="Grdsem_SelectedIndexChanging"
-                                                            PageSize="15" OnPageIndexChanging="Grdsem_PageIndexChanging" CssClass="table table-mailbox"
+                                                            PageSize="15" OnPageIndexChanging="Grdsem_PageIndexChanging" CssClass="gridview rounded-gridview"
                                                             HorizontalAlign="Center">
                                                             <Columns>
                                                                 <asp:TemplateField HeaderText="Sem_Id">
                                                                     <ItemTemplate>
                                                                         <asp:LinkButton ID="LinkButton1" runat="server" Text="<%#Bind('[Sem_Id]') %>" CommandName="Sem_Id"
-                                                                            CommandArgument='<%#Bind("[Sem_Id]") %>'>
+                                                                            CommandArgument='<%#Bind("[Sem_Id]") %>' ForeColor="Black"
+                                                                            Font-Bold="True">
                                                                         </asp:LinkButton>
                                                                     </ItemTemplate>
                                                                 </asp:TemplateField>
                                                                 <asp:BoundField DataField="Sem_Name" HeaderText="Semester" />
                                                                 <asp:BoundField DataField="Program_Name" HeaderText="Program Name" />
                                                             </Columns>
-                                                            <FooterStyle BackColor="#FFFF99" BorderColor="#FF9900" BorderStyle="Dashed" Wrap="True" />
-                                                            <HeaderStyle BackColor="Gray" BorderColor="Gray" />
-                                                            <PagerStyle BackColor="LightGray" BorderColor="LightGray" />
-                                                            <RowStyle BackColor="#CCCCCC" BorderColor="#CCCCCC" />
+                                                            <FooterStyle BackColor="#F7F7F7" Wrap="True" />
+                                                            <HeaderStyle BackColor="#F7F7F7" />
+                                                            <PagerStyle BackColor="#F7F7F7" />
+                                                            <RowStyle BackColor="#F7F7F7" />
                                                         </asp:GridView>
                                                         <asp:HiddenField ID="hdnsem" runat="server" />
                                                     </div>

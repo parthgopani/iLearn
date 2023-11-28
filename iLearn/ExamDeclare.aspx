@@ -137,13 +137,14 @@
                                                         <asp:GridView ID="grdexam" runat="server" AutoGenerateColumns="false"
                                                             OnRowCommand="grdexam_RowCommand" AllowPaging="True" PageSize="15"
                                                             OnPageIndexChanging="grdexam_PageIndexChanging" AllowSorting="true"
-                                                            OnSorting="grdexam_Sorting" HorizontalAlign="Center" CssClass="table table-mailbox">
+                                                            OnSorting="grdexam_Sorting" HorizontalAlign="Center" CssClass="gridview rounded-gridview">
                                                             <Columns>
                                                                 <asp:TemplateField HeaderText="Exam">
                                                                     <ItemTemplate>
                                                                         <asp:LinkButton ID="LinkButton1" runat="server"
                                                                             Text='<%#Bind("[Exam_Id]") %>' CommandName="Exam_Id"
-                                                                            CommandArgument='<%#Bind("[Exam_Id]") %>'></asp:LinkButton>
+                                                                            CommandArgument='<%#Bind("[Exam_Id]") %>' ForeColor="Black"
+                                                                            Font-Bold="True"></asp:LinkButton>
                                                                     </ItemTemplate>
                                                                 </asp:TemplateField>
                                                                 <asp:BoundField DataField="exam_name" HeaderText="Exam Name" />
@@ -155,11 +156,10 @@
                                                                 <asp:BoundField DataField="duration" HeaderText="Duration" />
                                                                 <asp:BoundField DataField="total_question" HeaderText="Total Question" />
                                                             </Columns>
-                                                            <FooterStyle BackColor="#FFFF99" BorderColor="#FF9900" BorderStyle="Dashed"
-                                                                Wrap="True" />
-                                                            <HeaderStyle BackColor="Gray" BorderColor="Gray" />
-                                                            <PagerStyle BackColor="LightGray" BorderColor="LightGray" />
-                                                            <RowStyle BackColor="#CCCCCC" BorderColor="#CCCCCC" />
+                                                            <FooterStyle BackColor="#F7F7F7" Wrap="True" />
+                                                            <HeaderStyle BackColor="#F7F7F7" />
+                                                            <PagerStyle BackColor="#F7F7F7" />
+                                                            <RowStyle BackColor="#F7F7F7" />
                                                         </asp:GridView>
                                                         <asp:HiddenField ID="hdnexam" runat="server" />
                                                         <asp:HiddenField ID="hdnexamid" runat="server" />

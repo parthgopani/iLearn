@@ -1,4 +1,5 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPageAdmin.master" AutoEventWireup="true" CodeFile="ExamReport.aspx.cs" Inherits="ExamReport" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPageAdmin.master" AutoEventWireup="true"
+    CodeFile="ExamReport.aspx.cs" Inherits="ExamReport" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <style>
@@ -29,7 +30,9 @@
                                     <div class="form-group row">
                                         <label for="lblsemester" class="col-sm-2 col-form-label">Select Semester</label>
                                         <div class="col-sm-9">
-                                            <asp:DropDownList ID="drpSemester" runat="server" CssClass="form-control" data-toggle="dropdown" AutoPostBack="true" OnSelectedIndexChanged="drpSemester_SelectedIndexChanged"></asp:DropDownList>
+                                            <asp:DropDownList ID="drpSemester" runat="server" CssClass="form-control" data-toggle="dropdown"
+                                                AutoPostBack="true" OnSelectedIndexChanged="drpSemester_SelectedIndexChanged">
+                                            </asp:DropDownList>
                                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="drpSemester"
                                                 ErrorMessage="Semester is Required" ForeColor="Red" ValidationGroup="msg1"></asp:RequiredFieldValidator>
                                         </div>
@@ -39,7 +42,8 @@
                                     <div class="form-group row">
                                         <label for="lblExam" class="col-sm-2 col-form-label">Select Exam</label>
                                         <div class="col-sm-9">
-                                            <asp:DropDownList ID="drpExamName" runat="server" CssClass="form-control" data-toggle="dropdown" AutoPostBack="true"></asp:DropDownList>
+                                            <asp:DropDownList ID="drpExamName" runat="server" CssClass="form-control" data-toggle="dropdown"
+                                                AutoPostBack="true"></asp:DropDownList>
                                             <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="drpExamName"
                                                 ErrorMessage="Exam is Required" ForeColor="Red" ValidationGroup="msg1"></asp:RequiredFieldValidator>
                                         </div>
@@ -49,12 +53,12 @@
                                         <div class="box-body p-3 table-responsive">
                                             <div class="rounded-button">
                                                 <asp:Button ID="btnResult" runat="server" Text="RESULTS" OnClick="btnResult_Click"
-                                                    CssClass="btn btn-outline-success btn-sm" ValidationGroup="msg1"/>
+                                                    class="btn btn-inverse-primary mr-2" ValidationGroup="msg1" />
                                             </div>
                                         </div>
                                     </div>
 
-                                   <!-- <div class="col-xs-12">
+                                    <!-- <div class="col-xs-12">
                                         <div class="box-body">
                                             <div class="callout callout-info">
                                                 <asp:Label ID="lblPass" runat="server" Text=""></asp:Label>
@@ -68,11 +72,12 @@
                                             <div class="col-12 col-xl-12 mb-4 mb-xl-0">
                                                 <div class="card">
                                                     <div class="card-body">
-                                                        <asp:GridView ID="GrdExamReport" AutoGenerateColumns="true" runat="server" CssClass="table table-mailbox" OnRowDataBound="GrdExamReport_RowDataBound">
-                                                            <HeaderStyle BackColor="Gray" BorderColor="Gray" />
-                                                            <FooterStyle BackColor="#FFFF99" BorderColor="#FF9900" BorderStyle="Dashed" Wrap="true" />
-                                                            <PagerStyle BackColor="LightGray" BorderColor="LightGray" />
-                                                            <RowStyle BackColor="#CCCCCC" BorderColor="#CCCCCC" />
+                                                        <asp:GridView ID="GrdExamReport" AutoGenerateColumns="true" runat="server" CssClass="gridview rounded-gridview"
+                                                            OnRowDataBound="GrdExamReport_RowDataBound">
+                                                            <FooterStyle BackColor="#F7F7F7" Wrap="True" />
+                                                            <HeaderStyle BackColor="#F7F7F7" />
+                                                            <PagerStyle BackColor="#F7F7F7" />
+                                                            <RowStyle BackColor="#F7F7F7" />
                                                         </asp:GridView>
                                                     </div>
                                                 </div>

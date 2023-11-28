@@ -3,7 +3,7 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 <head runat="server">
     <meta charset="utf-8" />
     <title>iLearn</title>
@@ -28,7 +28,11 @@
                 vertical-align: middle;
                 border: 1px solid #ddd;
             }
-    </style>
+    .rounded-gridview {
+        border-radius: 20px; 
+        overflow: hidden;
+    }
+</style>
 </head>
 <body>
 

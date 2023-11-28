@@ -56,7 +56,7 @@
                                                     <div class="input-group-append">
                                                         <asp:ImageButton ID="calimgbtn" runat="server" class="btn btn-sm btn-primary"
                                                             Height="45px" Width="55px" ImageUrl="~/images/calender.png"
-                                                            OnClick="calimgbtn_Click" />
+                                                            OnClick="calimgbtn_Click" alt="Start date image"/>
                                                     </div>
                                                 </div>
 
@@ -77,7 +77,7 @@
                                                     </div>
                                                     <div class="input-group-append">
                                                         <asp:ImageButton ID="calimgbtn1" runat="server" class="btn btn-sm btn-primary"
-                                                            Height="45px" Width="55px" ImageUrl="~/images/calender.png" />
+                                                            Height="45px" Width="55px" ImageUrl="~/images/calender.png" alt="End date image"/>
                                                     </div>
                                                 </div>
 

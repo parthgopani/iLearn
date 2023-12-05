@@ -36,29 +36,6 @@ public partial class ContactUs : System.Web.UI.Page
         complaintID.Text = "You should get a reply within 48hrs on your Email with Complaint Id" + newComplaintId + "";
 
     }
-    //public void getComplaintID()
-    //{
-    //    String mycon = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Shivam\\Downloads\\iLearn\\iLearn\\iLearn\\App_Data\\iLearn.mdf;Integrated Security=True";
-    //    SqlConnection sqlcon = new SqlConnection(mycon);
-    //    String qry = "SELECT max(Complaint_Id) from ComplaintDetails";
-    //    SqlCommand cmd = new SqlCommand();
-    //    cmd.CommandText = qry; 
-    //    cmd.Connection = sqlcon;
-    //    SqlDataAdapter da = new SqlDataAdapter();
-    //    da.SelectCommand = cmd;
-    //    DataSet ds = new DataSet();
-    //    da.Fill(ds);
-        
-    //    sqlcon.Close();
-
-    //    //if (ds.Tables[0].Rows.Count > 0)
-    //    //{
-    //    //    int a;
-    //    //    a = Convert.ToInt16(ds.Tables[0].Rows[0][0].ToString());
-    //    //    a = a + 1;
-    //    //    complaintId = a;
-    //    //    sqlcon.Close();
-    //    //}
-    //}
+   
 
 }

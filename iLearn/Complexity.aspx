@@ -37,24 +37,24 @@
                                                         <asp:GridView ID="Grdcomplexity" runat="server" AutoGenerateColumns="False" AllowPaging="True"
                                                             AllowSorting="true"
                                                             OnRowCommand="Grdcomplexity_RowCommand"
-                                                            PageSize="15" CssClass="table table-mailbox" HorizontalAlign="Center">
+                                                            PageSize="15" CssClass="gridview rounded-gridview" HorizontalAlign="Center">
 
                                                             <Columns>
                                                                 <asp:TemplateField HeaderText="Complexity Id">
                                                                     <ItemTemplate>
                                                                         <asp:LinkButton ID="LinkButton1" runat="server" Text='<%# Bind("Complex_Id") %>'
-                                                                            CommandName="Complex_Id" CommandArgument='<%# Bind("Complex_Id") %>'></asp:LinkButton>
+                                                                            CommandName="Complex_Id" CommandArgument='<%# Bind("Complex_Id") %>' ForeColor="Black"
+                                                                            Font-Bold="True"></asp:LinkButton>
                                                                     </ItemTemplate>
 
                                                                 </asp:TemplateField>
 
                                                                 <asp:BoundField DataField="Complex_Type" HeaderText="Complexity" />
                                                             </Columns>
-                                                            <FooterStyle BackColor="#FFFF99" BorderColor="#FF9900" BorderStyle="Dashed"
-                                                                Wrap="True" />
-                                                            <HeaderStyle BackColor="Gray" BorderColor="Gray" />
-                                                            <PagerStyle BackColor="LightGray" BorderColor="LightGray" />
-                                                            <RowStyle BackColor="#CCCCCC" BorderColor="#CCCCCC" />
+                                                            <FooterStyle BackColor="#F7F7F7" Wrap="True" />
+                                                            <HeaderStyle BackColor="#F7F7F7" />
+                                                            <PagerStyle BackColor="#F7F7F7" />
+                                                            <RowStyle BackColor="#F7F7F7" />
                                                         </asp:GridView>
                                                         <asp:HiddenField ID="hdncomplexityid" runat="server" />
                                                     </div>

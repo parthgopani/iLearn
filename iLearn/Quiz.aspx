@@ -59,7 +59,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <div class="form-check">
-                                            <asp:Label ID="lblred" runat="server" Text=""></asp:Label>
+                                            <strong><asp:Label ID="lblred" runat="server" Text="" style="color: red; font-size: 20px;"></asp:Label></strong>
                                         </div>
                                         <div class="form-check" style="padding-left: 5%;">
                                             <asp:RadioButton ID="o1" runat="server" GroupName="options" AutoPostBack="false"

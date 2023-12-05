@@ -21,7 +21,7 @@
 
                                                     <tbody>
                                                         <tr>
-                                                            <td>Exam Name : </td>
+                                                            <td>Quiz Name : </td>
 
                                                             <td>
                                                                 <asp:Label ID="lblExamName" runat="server" Text=""></asp:Label>

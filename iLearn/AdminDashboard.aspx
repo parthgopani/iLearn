@@ -43,7 +43,7 @@
                     <div class="col-md-6 mb-4 stretch-card transparent">
                         <div class="card card-dark-blue">
                             <div class="card-body">
-                                <p class="mb-4">Total Exams</p>
+                                <p class="mb-4">Total Quiz</p>
                                 <p class="fs-30 mb-2"></p>
                                 <p>
                                     <asp:Label ID="lblExamCount" runat="server" Text=""></asp:Label>

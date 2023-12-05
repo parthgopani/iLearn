@@ -83,13 +83,13 @@
                     <li class="nav-item">
                         <a class="nav-link" href="ExamDeclare.aspx">
                             <i class="icon-paper menu-icon"></i>
-                            <span class="menu-title">Exam Declaration</span>
+                            <span class="menu-title">Quiz Declaration</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="ExamReport.aspx">
                             <i class="icon-paper menu-icon"></i>
-                            <span class="menu-title">Exam Report</span>
+                            <span class="menu-title">Quiz Report</span>
                         </a>
                     </li>
                     <li class="nav-item">

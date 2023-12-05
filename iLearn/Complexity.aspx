@@ -11,7 +11,7 @@
                     <div class="col-12 col-xl-12 mb-4 mb-xl-0">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Exam Declararion</h4>
+                                <h4 class="card-title">Quiz Declararion</h4>
                                 <form id="form1" runat="server" class="forms-sample">
                                     <div class="form-group row">
                                         <label for="lblComplexity" class="col-sm-2 col-form-label">Complexity Type:</label>

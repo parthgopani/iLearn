@@ -13,15 +13,15 @@
                     <div class="col-12 col-xl-12 mb-4 mb-xl-0">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Exam Declararion:</h4>
+                                <h4 class="card-title">Quiz Declararion:</h4>
                                 <form id="form1" runat="server" class="forms-sample">
                                     <div class="form-group row">
-                                        <label for="lblexamname" class="col-sm-2 col-form-label">Exam Name:</label>
+                                        <label for="lblexamname" class="col-sm-2 col-form-label">Quiz Name:</label>
                                         <div class="col-sm-9">
                                             <asp:TextBox ID="txtexamname" runat="server" CssClass="form-control"
-                                                placeholder="Enter Exam Name"></asp:TextBox>
+                                                placeholder="Enter Quiz Name"></asp:TextBox>
                                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtexamname"
-                                                ErrorMessage="Exam Name Required" ForeColor="Red" ValidationGroup="msg1"></asp:RequiredFieldValidator>
+                                                ErrorMessage="Quiz Name Required" ForeColor="Red" ValidationGroup="msg1"></asp:RequiredFieldValidator>
                                         </div>
                                     </div>
                                     <div class="form-group row">
@@ -42,10 +42,10 @@
                                             <div class="form-group row">
                                                 <div class="input-group">
                                                     <label for="lblexamsdate" class="col-sm-2 col-form-label">
-                                                        Exam Start Date:</label>
+                                                        Quiz Start Date:</label>
                                                     <div class="col-sm-8">
                                                         <asp:TextBox ID="txtstartdate" runat="server" CssClass="form-control"
-                                                            placeholder="Enter Exam Start Date"></asp:TextBox>
+                                                            placeholder="Enter Quiz Start Date"></asp:TextBox>
                                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtstartdate"
                                                             ErrorMessage="Start Date Required " ForeColor="Red" ValidationGroup="msg1"></asp:RequiredFieldValidator>
                                                         <asp:CalendarExtender ID="txtstartdatecal" runat="server" Format="yyyy/MM/dd"
@@ -64,10 +64,10 @@
                                             <div class="form-group row">
                                                 <div class="input-group">
                                                     <label for="lblexamedate" class="col-sm-2 col-form-label">
-                                                        Exam End Date:</label>
+                                                        Quiz End Date:</label>
                                                     <div class="col-sm-8">
                                                         <asp:TextBox ID="txtenddate" runat="server" CssClass="form-control"
-                                                            placeholder="Enter Exam End Date"></asp:TextBox>
+                                                            placeholder="Enter Quiz End Date"></asp:TextBox>
                                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtenddate"
                                                             ErrorMessage="End Date Required " ForeColor="Red" ValidationGroup="msg1"></asp:RequiredFieldValidator>
                                                         <asp:CalendarExtender ID="txtenddatecal" runat="server" Format="yyyy/MM/dd"
@@ -147,10 +147,10 @@
                                                                             Font-Bold="True"></asp:LinkButton>
                                                                     </ItemTemplate>
                                                                 </asp:TemplateField>
-                                                                <asp:BoundField DataField="exam_name" HeaderText="Exam Name" />
+                                                                <asp:BoundField DataField="exam_name" HeaderText="Quiz Name" />
                                                                 <asp:BoundField DataField="course_name" HeaderText="Course Name" />
-                                                                <asp:BoundField DataField="exam_start_date" HeaderText="Exam Start Date" DataFormatString="{0:yyyy-MM-dd}" />
-                                                                <asp:BoundField DataField="exam_end_date" HeaderText="Exam End Date" DataFormatString="{0:yyyy-MM-dd}" />
+                                                                <asp:BoundField DataField="exam_start_date" HeaderText="Quiz Start Date" DataFormatString="{0:yyyy-MM-dd}" />
+                                                                <asp:BoundField DataField="exam_end_date" HeaderText="Quiz End Date" DataFormatString="{0:yyyy-MM-dd}" />
                                                                 <asp:BoundField DataField="total_marks" HeaderText="Total Marks" />
                                                                 <asp:BoundField DataField="passing_marks" HeaderText="Passing Marks" />
                                                                 <asp:BoundField DataField="duration" HeaderText="Duration" />

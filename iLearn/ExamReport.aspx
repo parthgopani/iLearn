@@ -24,7 +24,7 @@
                     <div class="col-12 col-xl-12 mb-4 mb-xl-0">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Exam Report</h4>
+                                <h4 class="card-title">Quiz Report</h4>
                                 <form id="examReport" runat="server">
 
                                     <div class="form-group row">
@@ -40,12 +40,12 @@
 
 
                                     <div class="form-group row">
-                                        <label for="lblExam" class="col-sm-2 col-form-label">Select Exam</label>
+                                        <label for="lblExam" class="col-sm-2 col-form-label">Select Quiz</label>
                                         <div class="col-sm-9">
                                             <asp:DropDownList ID="drpExamName" runat="server" CssClass="form-control" data-toggle="dropdown"
                                                 AutoPostBack="true"></asp:DropDownList>
                                             <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="drpExamName"
-                                                ErrorMessage="Exam is Required" ForeColor="Red" ValidationGroup="msg1"></asp:RequiredFieldValidator>
+                                                ErrorMessage="Quiz is Required" ForeColor="Red" ValidationGroup="msg1"></asp:RequiredFieldValidator>
                                         </div>
                                     </div>
 

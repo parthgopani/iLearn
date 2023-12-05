@@ -39,7 +39,7 @@ public partial class ExamList : System.Web.UI.Page
         else
         {
             lblmsg.Visible = true;
-            lblmsg.Text = "Any Exam Is Not Given By You Yet!!! ";
+            lblmsg.Text = "Any Quiz Is Not Given By You Yet!!! ";
             grdresult.Visible = false;
         }
 
@@ -65,7 +65,7 @@ public partial class ExamList : System.Web.UI.Page
         else
         {
             lblmsg.Visible = true;
-            lblmsg.Text = "Currently No Exam Available For You !!! ";
+            lblmsg.Text = "Currently No Quiz Available For You !!! ";
             grdcurrexam.Visible = false;
         }
 

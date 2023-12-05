@@ -68,7 +68,7 @@ Learning is most effective when it's interactive. Test your knowledge with our q
                     </div>
                     <div class="col-md-4 mt-3">
                         <div class="horizontal-rectangle-card">
-               <img style="width:100%; margin-top:120px;" src="https://elearningindustry.com/wp-content/uploads/2014/11/Online-Learning-Advantages-Why-Online-Learning-Offers-Plenty-of-Incentives.jpg">
+               <img alt="image1" style="width:100%; margin-top:120px;" src="https://elearningindustry.com/wp-content/uploads/2014/11/Online-Learning-Advantages-Why-Online-Learning-Offers-Plenty-of-Incentives.jpg">
                         </div>
                     </div>
                 </div>
@@ -84,7 +84,7 @@ Learning is most effective when it's interactive. Test your knowledge with our q
                 <div class="row">
                     <div class="col-md-4 d-flex flex-column justify-content-start">
                         <div class="ml-xl-4 mt-3">
-               <img style="width:100%; margin-top:120px;" src="https://www.shutterstock.com/image-vector/benefits-online-learning-professor-presenting-600nw-1932564986.jpg">
+               <img alt="image2" style="width:100%; margin-top:120px;" src="https://www.shutterstock.com/image-vector/benefits-online-learning-professor-presenting-600nw-1932564986.jpg">
                         </div>                    </div>
                     <div class="col-md-8 mt-3">
                         <div class="horizontal-rectangle-card">
@@ -141,7 +141,7 @@ Learning is most effective when it's interactive. Test your knowledge with our q
 
                     <div class="col-md-3 d-flex justify-content-center">
                         <div class="ml-xl-4 mt-3">
-                          <img style="border-radius: 25%; width: 130px;" src="https://img.freepik.com/premium-vector/men-icon-trendy-avatar-character-cheerful-happy-people-flat-vector-illustration-round-frame-male-portraits-group-team-adorable-guys-isolated-white-background_275421-281.jpg">
+                          <img alt="image3" style="border-radius: 25%; width: 130px;" src="https://img.freepik.com/premium-vector/men-icon-trendy-avatar-character-cheerful-happy-people-flat-vector-illustration-round-frame-male-portraits-group-team-adorable-guys-isolated-white-background_275421-281.jpg">
       <br />
                             <br />
         <h4 style="color:#782FB0;" class="d-flex justify-content-center">Developer</h4>
@@ -152,7 +152,7 @@ Learning is most effective when it's interactive. Test your knowledge with our q
 
                     <div class="col-md-3 d-flex justify-content-center">
                     <div class="ml-xl-4 mt-3">
-                     <img style="border-radius: 25%; width: 130px;" src="https://img.freepik.com/premium-vector/avatar-icon001_750950-50.jpg">
+                     <img alt="image5" style="border-radius: 25%; width: 130px;" src="https://img.freepik.com/premium-vector/avatar-icon001_750950-50.jpg">
       <br />
                         <br />
         <h4 style="color:#782FB0;"  class="d-flex justify-content-center">Developer</h4>
@@ -163,7 +163,7 @@ Learning is most effective when it's interactive. Test your knowledge with our q
 
                     <div class="col-md-3  d-flex justify-content-center">
                      <div class="ml-xl-4 mt-3">
-                   <img style="border-radius: 25%; width: 130px;" src="https://img.freepik.com/premium-vector/men-icon-trendy-avatar-character-cheerful-happy-people-flat-vector-illustration-round-frame-male-portraits-group-team-adorable-guys-isolated-white-background_275421-281.jpg">
+                   <img alt="image6" style="border-radius: 25%; width: 130px;" src="https://img.freepik.com/premium-vector/men-icon-trendy-avatar-character-cheerful-happy-people-flat-vector-illustration-round-frame-male-portraits-group-team-adorable-guys-isolated-white-background_275421-281.jpg">
       <br />
                          <br />
         <h4 style="color:#782FB0;"  class="d-flex justify-content-center">Developer</h4>
@@ -174,7 +174,7 @@ Learning is most effective when it's interactive. Test your knowledge with our q
 
                     <div class="col-md-3 d-flex justify-content-center">
                      <div class="ml-xl-4 mt-3">
-                     <img style="border-radius: 25%; width: 130px;" src="https://img.freepik.com/premium-vector/avatar-icon001_750950-50.jpg">
+                     <img alt="image7" style="border-radius: 25%; width: 130px;" src="https://img.freepik.com/premium-vector/avatar-icon001_750950-50.jpg">
       <br />
                          <br />
         <h4 style="color:#782FB0;"  class="d-flex justify-content-center">Developer</h4>
